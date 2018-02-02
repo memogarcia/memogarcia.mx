@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.6.2">Jekyll</generator>
+  
+  
+  <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2018-02-02T20:29:30+01:00</updated>
+  <id>http://localhost:4000//</id>
+
+  
+    <title type="html">Memo Garcia</title>
+  
+
+  
+    <subtitle></subtitle>
+  
+
+  
+
+  
+  
+    <entry>
+      
+      <title type="html">Using python to glue everything</title>
+      
+      <link href="http://localhost:4000/2017/10/21/gluing-python.html" rel="alternate" type="text/html" title="Using python to glue everything" />
+      <published>2017-10-21T15:22:38+02:00</published>
+      <updated>2017-10-21T15:22:38+02:00</updated>
+      <id>http://localhost:4000/2017/10/21/gluing-python</id>
+      <content type="html" xml:base="http://localhost:4000/2017/10/21/gluing-python.html">&lt;p&gt;Bash is powerful but so is Python. And sometimes you need the best of both.&lt;/p&gt;
+
+&lt;p&gt;In order to do that, Python allows you to pipe in and out data from stdin which is quite powerful and elegant.&lt;/p&gt;
+
+&lt;p&gt;This is a very basic example but it demostrates the capabilities you can get by combining both.&lt;/p&gt;
+
+&lt;p&gt;First, create a &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; script that will read data from stdin.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python3&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fileinput&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileinput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Save it as &lt;code class=&quot;highlighter-rouge&quot;&gt;piping.py&lt;/code&gt; and give it execution permissions.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod +x piping.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;By using fileinput you get for “free” the following functionality:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; | ./piping.py | wc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Bash is powerful but so is Python. And sometimes you need the best of both.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Pratai, event driven platform for OpenStack</title>
+      
+      <link href="http://localhost:4000/2017/10/21/pratai.html" rel="alternate" type="text/html" title="Pratai, event driven platform for OpenStack" />
+      <published>2017-10-21T15:21:38+02:00</published>
+      <updated>2017-10-21T15:21:38+02:00</updated>
+      <id>http://localhost:4000/2017/10/21/pratai</id>
+      <content type="html" xml:base="http://localhost:4000/2017/10/21/pratai.html">&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is a Work-In-Progress Document.&lt;/p&gt;
+
+&lt;p&gt;Read the docs at &lt;a href=&quot;https://github.com/memogarcia/pratai-docs&quot;&gt;memogarcia/pratai-docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+
+&lt;p&gt;Pratai provides an incredibly flexible and resilient platform to migrate
+workloads to the cloud that respond to events without having to manage any
+server or network.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How it works&lt;/h3&gt;
+
+&lt;p&gt;The goal of Pratai is simple. Deploy “code” (disclaimer, from now on I
+will refer to code as functions), that will react to an event without
+worrying about anything else, the platform handles the execution. Simple right?&lt;/p&gt;
+
+&lt;p&gt;In order to achieve that, first, we need to deploy a function in a &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt; format
+for one of the languages that the platform supports,
+the first one is python but more will be added in the future, after this a
+docker image gets created with the custom
+function and the requirements. e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# new_module.py&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# yes you can install dependencies, just send a requirements.txt&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;local_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# you can create local functions&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# a main function should always be declared&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# and using a payload as a parameter&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When a function gets created it will remain as inactive, waiting to be executed
+whenever an event happens that the function is subscribed to, could be a webhook
+endpoint, which can be assigned at creation time, or a message in a queue but
+basically, every event will spawn a container that will execute the event and
+then disappear.&lt;/p&gt;
+
+&lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;/h3&gt;
+
+&lt;p&gt;Pratai is conformed of 2 major pieces, the Control Plane and the Nodes.&lt;/p&gt;
+
+&lt;h4 id=&quot;control-plane&quot;&gt;Control Plane&lt;/h4&gt;
+
+&lt;p&gt;An API gateway, a database cluster and a load balancer, and agent and a scheduler
+runs in the control plane.&lt;/p&gt;
+
+&lt;p&gt;For the first version a API gateway built in python using flask will be made,
+in the future I think Golang should be a better option for it.&lt;/p&gt;
+
+&lt;p&gt;An elasticsearch cluster will power the storage of events, function metadata
+and cluster information.&lt;/p&gt;
+
+&lt;p&gt;And a nginx load balancer will connect 3 instances to the API in a &lt;code class=&quot;highlighter-rouge&quot;&gt;least_connect&lt;/code&gt;
+manner.&lt;/p&gt;
+
+&lt;h4 id=&quot;pratai-nodes&quot;&gt;Pratai Nodes&lt;/h4&gt;
+
+&lt;p&gt;A Pratai node is composed by a driver and runtimes.&lt;/p&gt;
+
+&lt;p&gt;When a new node is created it will automatically connect to the cluster and it
+will start polling for events.&lt;/p&gt;
+
+&lt;p&gt;A driver is basically a container orchestrator like swarm, kubernetes, plain
+docker, etc. in this case we will use docker.&lt;/p&gt;
+
+&lt;p&gt;The runtimes are the languages supported by the platform, they are a base
+container image that contains an OS, a language and its dependencies, etc. that
+can be used by the functions the users submits. e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# seed/Dockerfile&lt;/span&gt;
+FROM ubuntu:14.04
+RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update
+RUN apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; git unzip wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python27/Dockerfile&lt;/span&gt;
+
+FROM pratai/seed:latest
+
+RUN apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python python-dev python-setuptools python-pip
+RUN pip install pip &lt;span class=&quot;nt&quot;&gt;--upgrade&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python27_template.txt&lt;/span&gt;
+FROM pratai/python27:latest
+RUN wget &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;zip_location&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+RUN unzip &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;zip_file&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+RUN pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+RUN mkdir /etc/pratai/
+RUN mkdir /var/log/pratai/
+RUN cp new_module.py /etc/pratai/
+RUN git clone &lt;span class=&quot;s2&quot;&gt;&quot;repo_with_runtimes&quot;&lt;/span&gt;
+CMD &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;python&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;/pratai-runtimes/runtimes/python27/server.py&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;distributed-queues&quot;&gt;Distributed Queues&lt;/h4&gt;
+
+&lt;p&gt;ZeroMQ is the choice for queuing and passing messages in pratai using the PUSH/PULL
+architecture we can create a pipelines of messages that can be distributed
+across multiple nodes.&lt;/p&gt;
+
+&lt;p&gt;We will have a producer and a collector running in the scheduler, and consumers
+running in the Pratai nodes, one consumer should be spawned per thread.&lt;/p&gt;
+
+&lt;h3 id=&quot;events&quot;&gt;Events&lt;/h3&gt;
+
+&lt;p&gt;A function can react to any event coming through webhooks or messages
+in a queue, even events that happen in a database can trigger a function, is
+important to notice that a response of a function is an event, so it can trigger
+so chaining functions to build pipelines of data processing is easy with Pratai.&lt;/p&gt;
+
+&lt;p&gt;There are 2 kinds of events, &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;wait_for_response&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;async&quot;&gt;Async&lt;/h4&gt;
+
+&lt;p&gt;This is the default event for pratai, it will take a request or a message and
+process it asynchronously, then, you can collect the logs or responses,
+by default the response gets stored in a collector queue, that can send this
+response as an input for other functions.&lt;/p&gt;
+
+&lt;p&gt;You can use the async event in the following cases:&lt;/p&gt;
+
+&lt;p&gt;1: Async + Webhook&lt;/p&gt;
+
+&lt;p&gt;This is the default behaviour, in which a function will be executed
+asynchronously when an HTTP POST requests hits its endpoint.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; async &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; webhook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2: Async + Message&lt;/p&gt;
+
+&lt;p&gt;A function created with this configuration will executed asynchronously when a
+message arrives in the event queues available for the platform.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; async &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; message &lt;span class=&quot;nt&quot;&gt;--subscribe_to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;event_id&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3: Async + Timer&lt;/p&gt;
+
+&lt;p&gt;A function created with this configuration will executed asynchronously
+every time a timer sends an event, the frequency of the events are set in minutes.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; async &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; timer &lt;span class=&quot;nt&quot;&gt;--frequency&lt;/span&gt; 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;wait-for-response&quot;&gt;Wait For Response&lt;/h4&gt;
+
+&lt;p&gt;This is a request that works like a typical web server, you send a request and
+you wait for a response and only works for webhooks events&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; wait_for_response &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; webhook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;components&quot;&gt;Components&lt;/h3&gt;
+
+&lt;h4 id=&quot;api-gateway&quot;&gt;API Gateway&lt;/h4&gt;
+
+&lt;p&gt;The API is the main interface for incoming webhook requests and for platform
+configuration.&lt;/p&gt;
+
+&lt;h4 id=&quot;agent&quot;&gt;Agent&lt;/h4&gt;
+
+&lt;p&gt;The Agent is the main interface for events in queues and cron jobs.&lt;/p&gt;
+
+&lt;h4 id=&quot;client&quot;&gt;client&lt;/h4&gt;
+
+&lt;p&gt;python-prataiclient is the component that allows the user to interact with the
+api from the command line interface, with it you can do stuff like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; music_tag &lt;span class=&quot;nt&quot;&gt;--file&lt;/span&gt; /path/to/zip &lt;span class=&quot;nt&quot;&gt;--description&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;extract metadata from music files&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--memory&lt;/span&gt; 128
+
+pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Because this is OpenStack you should pass credentials to interact with the
+platform&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_USERNAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;user
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;password
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_TENANT_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pratai_tenant
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PRATAI_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://192.168.33.9:9096
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_IDENTITY_API_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_AUTH_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://192.168.33.9:5000/v3
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PROJECT_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pratai_tenant
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PROJECT_DOMAIN_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Default
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_USER_DOMAIN_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;drivers&quot;&gt;Drivers&lt;/h4&gt;
+
+&lt;p&gt;A driver is a backend that orchestrate a container that contains the custom code.&lt;/p&gt;
+
+&lt;h4 id=&quot;runtimes&quot;&gt;Runtimes&lt;/h4&gt;
+
+&lt;p&gt;A runtime is a language that is supported by the platform, it contains the
+language and its dependencies.&lt;/p&gt;
+
+&lt;h4 id=&quot;scheduler&quot;&gt;Scheduler&lt;/h4&gt;
+
+&lt;p&gt;The scheduler primarily consists of a set of Python daemons, though it requires
+and integrates with a number of native system components for databases and
+messaging capabilities.&lt;/p&gt;
+
+&lt;p&gt;1; Scheduler&lt;/p&gt;
+
+&lt;p&gt;The API and the Agent push messages to this queue which will be pre-processed
+before being distributed among the pratai nodes.&lt;/p&gt;
+
+&lt;p&gt;2; Collector&lt;/p&gt;
+
+&lt;p&gt;When a function finish the function execution it will send the result and
+status here in order to be stored in the database afterwards.&lt;/p&gt;
+
+&lt;h3 id=&quot;security--secrets&quot;&gt;Security &amp;amp; Secrets&lt;/h3&gt;
+
+&lt;p&gt;The functions that interact with external services most often that not they
+require to use credentials to connect, for this, Barbican has been proposed to
+help with this scenario.&lt;/p&gt;
+
+&lt;p&gt;We definitely recommend using tokens instead of user/passwords when possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;community&quot;&gt;Community&lt;/h3&gt;
+
+&lt;p&gt;Join us at &lt;code class=&quot;highlighter-rouge&quot;&gt;#pratai&lt;/code&gt; irc channel in &lt;code class=&quot;highlighter-rouge&quot;&gt;freenode&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;repositories&quot;&gt;Repositories&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-docs&quot;&gt;memogarcia/pratai-docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-agent&quot;&gt;memogarcia/pratai-agent&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-api&quot;&gt;memogarcia/pratai-api&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-scheduler&quot;&gt;memogarcia/pratai-scheduler&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-runtimes&quot;&gt;memogarcia/pratai-runtimes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-drivers&quot;&gt;memogarcia/pratai-drivers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.reactivemanifesto.org&quot;&gt;The Reactive Manifesto&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dn600223.aspx&quot;&gt;Cloud Design Patterns&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Note This is a Work-In-Progress Document.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Python windows service</title>
+      
+      <link href="http://localhost:4000/2017/10/20/python-windows-service.html" rel="alternate" type="text/html" title="Python windows service" />
+      <published>2017-10-20T15:22:38+02:00</published>
+      <updated>2017-10-20T15:22:38+02:00</updated>
+      <id>http://localhost:4000/2017/10/20/python-windows-service</id>
+      <content type="html" xml:base="http://localhost:4000/2017/10/20/python-windows-service.html">&lt;p&gt;Create a windows service in python is quite easy.&lt;/p&gt;
+
+&lt;p&gt;first, install &lt;a href=&quot;https://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/&quot;&gt;pywin32&lt;/a&gt;
+and &lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=44266&quot;&gt;Microsoft Visual C++ Compiler for Python 2.7&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, use this boilerplate code to run your service.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;servicemanager&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32event&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32service&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32serviceutil&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PySvc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceFramework&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_svc_name_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YourService&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_svc_display_name_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Your Service&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_svc_description_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Your Service&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceFramework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# create an event to listen for stop requests on&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hWaitStop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CreateEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SvcDoRun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Run the windows service
+        &quot;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;# if the stop event hasn't been fired keep looping&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WAIT_OBJECT_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;# block for 5 seconds and listen for a stop event&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WaitForSingleObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hWaitStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SvcStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Stop the windows service and stop the scheduler instance
+        &quot;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# tell the SCM we're shutting down&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReportServiceStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;win32service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SERVICE_STOP_PENDING&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;# fire the stop event&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LogInfoMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stop event&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hWaitStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# do something here&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PrepareToHostSingle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PySvc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StartServiceCtrlDispatcher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleCommandLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PySvc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then install the service:&lt;/p&gt;
+
+&lt;p&gt;As a user:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python win_service.py &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$pc_name&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--password&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$plain_password&lt;/span&gt; install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As a background service:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python win_service.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Manipulate the service in python&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32serviceutil&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# start the service&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StartService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# stop the service&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StopService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# or in case the stop functionality gets blocked like in this case...&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+Stop the windows service by using sc queryex command, if we use
+  win32serviceutil.StoptService(self.service_name) it never gets stopped
+because freezer_scheduler.start() blocks the windows service and
+prevents any new signal to reach the service.
+&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sc queryex {0}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create_subprocess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'PID'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'taskkill /f /pid {0}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;utils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create_subprocess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# status of the service&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Return running status of Freezer Service
+by querying win32serviceutil.QueryServiceStatus()
+possible running status:
+    1 == stop
+    4 == running
+&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;QueryServiceStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0} is running normally&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0} is *NOT* running&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Create a windows service in python is quite easy.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+</feed>
