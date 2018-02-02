@@ -32,7 +32,6 @@ import os
 
 
 def list_files(path):
-    files = []
     for root, dirs, files in os.walk(".", topdown=False):
         for name in files:
             yield os.path.join(root, name)
@@ -40,7 +39,7 @@ def list_files(path):
 
 def consume_files():
     for file in list_files('/tmp'):
-        # do something with a single file
+        # do something with a single element
         print(file)
 ```
 

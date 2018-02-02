@@ -106,7 +106,6 @@
 
 
 <span class="k">def</span> <span class="nf">list_files</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s">"."</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
             <span class="k">yield</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
@@ -114,7 +113,7 @@
 
 <span class="k">def</span> <span class="nf">consume_files</span><span class="p">():</span>
     <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">list_files</span><span class="p">(</span><span class="s">'/tmp'</span><span class="p">):</span>
-        <span class="c"># do something with a single file</span>
+        <span class="c"># do something with a single element</span>
         <span class="k">print</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
 </code></pre></div></div>
 
