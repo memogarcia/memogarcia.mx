@@ -20,6 +20,7 @@
   <link rel="alternate" type="application/rss+xml" title="Memo Garcia" href="http://localhost:4000/feed.xml">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
   
   <meta name="twitter:card" content="summary">
@@ -128,9 +129,9 @@
 <span class="kn">import</span> <span class="nn">re</span>
 
 
-<span class="k">def</span> <span class="nf">find</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">filepat</span><span class="p">,</span> <span class="n">top</span><span class="p">):</span>
     <span class="s">'''
-    Find all filenames in a directory tree that match a shell wildcard pattern
+    Find all files in a directory tree that match a shell wildcard pattern
     '''</span>
     <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">dirlist</span><span class="p">,</span> <span class="n">filelist</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">top</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">fnmatch</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">filelist</span><span class="p">,</span> <span class="n">filepat</span><span class="p">):</span>
@@ -139,7 +140,7 @@
 
 <span class="k">def</span> <span class="nf">opener</span><span class="p">(</span><span class="n">filenames</span><span class="p">):</span>
     <span class="s">'''
-    Open a sequence of filenames one at a time producing a file object.
+    Open a sequence of files one at a time producing a file object.
     The file is closed immediately when proceeding to the next iteration.
     '''</span>
     <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>

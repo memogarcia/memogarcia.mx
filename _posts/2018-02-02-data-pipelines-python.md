@@ -55,9 +55,9 @@ import os
 import re
 
 
-def find():
+def find(filepat, top):
     '''
-    Find all filenames in a directory tree that match a shell wildcard pattern
+    Find all files in a directory tree that match a shell wildcard pattern
     '''
     for path, dirlist, filelist in os.walk(top):
         for name in fnmatch.filter(filelist, filepat):
@@ -66,7 +66,7 @@ def find():
 
 def opener(filenames):
     '''
-    Open a sequence of filenames one at a time producing a file object.
+    Open a sequence of files one at a time producing a file object.
     The file is closed immediately when proceeding to the next iteration.
     '''
     for filename in filenames:
