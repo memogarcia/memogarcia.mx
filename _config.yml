@@ -49,3 +49,6 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+
+comments: true
+disqus_shortname: memogarcia
