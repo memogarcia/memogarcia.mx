@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-04T14:38:42+01:00</updated>
+  <updated>2018-02-04T14:40:52+01:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -18,38 +18,6 @@
 
   
 
-  
-  
-    <entry>
-      
-      <title type="html">Manual openstack deployment with docker</title>
-      
-      <link href="http://localhost:4000/2018/02/02/deploying-openstack-postgres.html" rel="alternate" type="text/html" title="Manual openstack deployment with docker" />
-      <published>2018-02-02T14:22:38+01:00</published>
-      <updated>2018-02-02T14:22:38+01:00</updated>
-      <id>http://localhost:4000/2018/02/02/deploying-openstack-postgres</id>
-      <content type="html" xml:base="http://localhost:4000/2018/02/02/deploying-openstack-postgres.html">&lt;p&gt;Open source development is without a doubt the best&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      
-
-      
-
-      
-
-      
-        <summary type="html">Open source development is without a doubt the best</summary>
-      
-
-      
-      
-    </entry>
-  
   
   
     <entry>
