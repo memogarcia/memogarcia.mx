@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-04T17:49:20+01:00</updated>
+  <updated>2018-02-07T14:04:40+01:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -18,6 +18,67 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Deploying Keystone with Posgresql</title>
+      
+      <link href="http://localhost:4000/2018/02/07/keystone-postgres.html" rel="alternate" type="text/html" title="Deploying Keystone with Posgresql" />
+      <published>2018-02-07T12:12:38+01:00</published>
+      <updated>2018-02-07T12:12:38+01:00</updated>
+      <id>http://localhost:4000/2018/02/07/keystone-postgres</id>
+      <content type="html" xml:base="http://localhost:4000/2018/02/07/keystone-postgres.html">&lt;p&gt;OpenStack is becoming more and more flexible on how you can configure it. One very simple example is by switching from the default MySQL/MariaDB database to PostgreSQL.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/keystone/keystone.conf&lt;/code&gt; configure the database section:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;database]
+connection &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; postgresql://keystone:Paasw0rd@openstack_postgresql/keystone
+
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install the necessary packages:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pacman &lt;span class=&quot;nt&quot;&gt;-Sy&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--noconfirm&lt;/span&gt; postgresql python-psycopg2 python-sqlalchemy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create the database user for keystone:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PGPASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;PG_Paasw0rd
+
+psql &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; openstack_postgresql &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 5432 &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ON_ERROR_STOP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;admin&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOSQL&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+    CREATE USER keystone;
+    ALTER USER keystone WITH PASSWORD 'Paasw0rd';
+    CREATE DATABASE keystone;
+    GRANT ALL PRIVILEGES ON DATABASE keystone TO keystone;
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOSQL
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And then, business as usual.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">OpenStack is becoming more and more flexible on how you can configure it. One very simple example is by switching from the default MySQL/MariaDB database to PostgreSQL.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
