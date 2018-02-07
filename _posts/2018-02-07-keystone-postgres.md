@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deploying Keystone with Posgresql"
+title:  "Deploying Keystone with PosgreSQL"
 date:   2018-02-07 12:12:38 +0100
 categories:
 ---

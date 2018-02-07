@@ -5,11 +5,11 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-07T14:04:40+01:00</updated>
+  <updated>2018-02-07T15:38:10+01:00</updated>
   <id>http://localhost:4000//</id>
 
   
-    <title type="html">Memo Garcia</title>
+    <title type="html">Memo García</title>
   
 
   
@@ -22,9 +22,223 @@
   
     <entry>
       
-      <title type="html">Deploying Keystone with Posgresql</title>
+      <title type="html">Generating a CA</title>
       
-      <link href="http://localhost:4000/2018/02/07/keystone-postgres.html" rel="alternate" type="text/html" title="Deploying Keystone with Posgresql" />
+      <link href="http://localhost:4000/2018/02/07/becoming-ca.html" rel="alternate" type="text/html" title="Generating a CA" />
+      <published>2018-02-07T12:22:38+01:00</published>
+      <updated>2018-02-07T12:22:38+01:00</updated>
+      <id>http://localhost:4000/2018/02/07/becoming-ca</id>
+      <content type="html" xml:base="http://localhost:4000/2018/02/07/becoming-ca.html">&lt;p&gt;A Certificate Authority or CA is an entity that signs digital certificates.
+These digital certificates are used to validate the connection while using secure mechanisms.&lt;/p&gt;
+
+&lt;h2 id=&quot;root-ca&quot;&gt;root CA&lt;/h2&gt;
+
+&lt;p&gt;We will use a root CA to create intermediate CA’s which are trusted to sign certificates on its behalf.&lt;/p&gt;
+
+&lt;p&gt;First, prepare the environment.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir /root/ca &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+mkdir certs crl newcerts private
+chmod 700 private
+touch index.txt
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; serial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/d2d3a802f3593d81e177aef74c4e40f2&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /root/ca/openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create the root key &lt;code class=&quot;highlighter-rouge&quot;&gt;ca.key.pem&lt;/code&gt; and make sure to keep it secure.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl genrsa &lt;span class=&quot;nt&quot;&gt;-aes256&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; private/ca.key.pem 4096
+chmod 400 private/ca.key.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a root certificate &lt;code class=&quot;highlighter-rouge&quot;&gt;ca.cert.pem&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl req &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; openssl.cnf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-key&lt;/span&gt; private/ca.key.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-new&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x509&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-days&lt;/span&gt; 10957 &lt;span class=&quot;nt&quot;&gt;-sha256&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-extensions&lt;/span&gt; v3_ca &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; certs/ca.cert.pem
+chmod 444 certs/ca.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Verify the root certificate.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl x509 &lt;span class=&quot;nt&quot;&gt;-noout&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; certs/ca.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;intermediate-ca&quot;&gt;Intermediate CA&lt;/h2&gt;
+
+&lt;p&gt;It’s best practice to use intermediate CA’s instead of root CA’s to sign certificates, this practice allows a root CA to revoke a compromised intermediate CA and create a new one if necessary.&lt;/p&gt;
+
+&lt;p&gt;Prepare the environment.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir /root/ca/intermediate &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca/intermediate
+mkdir certs crl csr newcerts private
+chmod 700 private
+touch index.txt
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; serial
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /root/ca/intermediate/crlnumber
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/06c2e2a5b2727f3ce023cada31d6c668&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /root/ca/intermediate/openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create the intermediate key &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate.key.pem&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+openssl genrsa &lt;span class=&quot;nt&quot;&gt;-aes256&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/private/intermediate.key.pem 4096
+chmod 400 intermediate/private/intermediate.key.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With the intermediate key create an intermediate certificate request &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate.csr.pem&lt;/code&gt; for the root certificate to sign. &lt;strong&gt;Make sure that Common Name is different from your root CA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl req &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; intermediate/openssl.cnf &lt;span class=&quot;nt&quot;&gt;-new&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sha256&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-key&lt;/span&gt; intermediate/private/intermediate.key.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/csr/intermediate.csr.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The root CA will sign this certificate using &lt;code class=&quot;highlighter-rouge&quot;&gt;v3_intermediate_ca&lt;/code&gt; extension. &lt;strong&gt;Make sure is valid for less time than the root CA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl ca &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; openssl.cnf &lt;span class=&quot;nt&quot;&gt;-extensions&lt;/span&gt; v3_intermediate_ca &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-days&lt;/span&gt; 3650 &lt;span class=&quot;nt&quot;&gt;-notext&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-md&lt;/span&gt; sha256 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/csr/intermediate.csr.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/certs/intermediate.cert.pem
+chmod 444 intermediate/certs/intermediate.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;index.txt&lt;/code&gt; is the database file. &lt;strong&gt;Do NOT delete this file&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Veify the intermediate certificate.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl x509 &lt;span class=&quot;nt&quot;&gt;-noout&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/certs/intermediate.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Verify the intermediate CA against the root CA, the output should be &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl verify &lt;span class=&quot;nt&quot;&gt;-CAfile&lt;/span&gt; certs/ca.cert.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    intermediate/certs/intermediate.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After the verification is &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt;, chain the root CA and intermediate CA into a chain CA. &lt;strong&gt;This is only necessary if the root certificate is not installed on the client machines&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;intermediate/certs/intermediate.cert.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    certs/ca.cert.pem &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; intermediate/certs/ca-chain.cert.pem
+chmod 444 intermediate/certs/ca-chain.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sign-client-certificates&quot;&gt;Sign client certificates&lt;/h2&gt;
+
+&lt;p&gt;The intermediate certificate will be used to sign client certificates. &lt;strong&gt;Skip this step if you have a CSR already.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+openssl genrsa &lt;span class=&quot;nt&quot;&gt;-aes256&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/private/www.example.com.key.pem 2048
+chmod 400 intermediate/private/www.example.com.key.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using 2048 bits for encryption on the client certificates is faster for TLS handshakes and lighter on the CPU but is less secure than using 4096 bits. Use it at discretion.&lt;/p&gt;
+
+&lt;p&gt;Using the private key &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate/private/www.example.com.key.pem&lt;/code&gt;, create a CSR file. &lt;strong&gt;Skip this step if you have a CSR already.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl req &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; intermediate/openssl.cnf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-key&lt;/span&gt; intermediate/private/www.example.com.key.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-new&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sha256&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/csr/www.example.com.csr.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;signing-client-certificates&quot;&gt;Signing client certificates&lt;/h4&gt;
+
+&lt;p&gt;To create a certificate, use the intermediate CA to sign the CSR.&lt;/p&gt;
+
+&lt;p&gt;If the certificate is going to use for:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;servers, use &lt;code class=&quot;highlighter-rouge&quot;&gt;server_cert&lt;/code&gt; extension.&lt;/li&gt;
+  &lt;li&gt;authentication, use &lt;code class=&quot;highlighter-rouge&quot;&gt;usr_cert&lt;/code&gt; extension.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Usually, client certificates are valid for less time than the CA’s.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+openssl ca &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; intermediate/openssl.cnf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-extensions&lt;/span&gt; server_cert &lt;span class=&quot;nt&quot;&gt;-days&lt;/span&gt; 375 &lt;span class=&quot;nt&quot;&gt;-notext&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-md&lt;/span&gt; sha256 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/csr/www.example.com.csr.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/certs/www.example.com.cert.pem
+chmod 444 intermediate/certs/www.example.com.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;verification&quot;&gt;Verification&lt;/h4&gt;
+
+&lt;p&gt;Verify that &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate/index.txt&lt;/code&gt; contains a &lt;code class=&quot;highlighter-rouge&quot;&gt;CN&lt;/code&gt; for your domain.&lt;/p&gt;
+
+&lt;p&gt;Verify the certificate.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl x509 &lt;span class=&quot;nt&quot;&gt;-noout&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/certs/www.example.com.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Verify the CA certificate chain. the output should be &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl verify &lt;span class=&quot;nt&quot;&gt;-CAfile&lt;/span&gt; intermediate/certs/ca-chain.cert.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    intermediate/certs/www.example.com.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;distribute&quot;&gt;Distribute&lt;/h4&gt;
+
+&lt;p&gt;Distribute and/or deploy the following files:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ca-chain.cert.pem&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;www.example.com.key.pem&lt;/code&gt;  &lt;strong&gt;Only if you are signing the CSR&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;www.example.com.cert.pem&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sign certificates&lt;/li&gt;
+  &lt;li&gt;Cash in&lt;/li&gt;
+  &lt;li&gt;Sell out&lt;/li&gt;
+  &lt;li&gt;Bro down&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jamielinux.com/docs/openssl-certificate-authority/index.html&quot;&gt;OpenSSL Certificate Authority&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">A Certificate Authority or CA is an entity that signs digital certificates. These digital certificates are used to validate the connection while using secure mechanisms.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Deploying Keystone with PosgreSQL</title>
+      
+      <link href="http://localhost:4000/2018/02/07/keystone-postgres.html" rel="alternate" type="text/html" title="Deploying Keystone with PosgreSQL" />
       <published>2018-02-07T12:12:38+01:00</published>
       <updated>2018-02-07T12:12:38+01:00</updated>
       <id>http://localhost:4000/2018/02/07/keystone-postgres</id>
