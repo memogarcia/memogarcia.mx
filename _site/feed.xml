@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-07T15:54:11+01:00</updated>
+  <updated>2018-02-16T12:56:08+01:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -297,9 +297,9 @@ psql &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; openstack_postgresql &lt;s
   
     <entry>
       
-      <title type="html">Creating data pipelines with python</title>
+      <title type="html">Creating data pipelines with Python</title>
       
-      <link href="http://localhost:4000/2018/02/02/data-pipelines-python.html" rel="alternate" type="text/html" title="Creating data pipelines with python" />
+      <link href="http://localhost:4000/2018/02/02/data-pipelines-python.html" rel="alternate" type="text/html" title="Creating data pipelines with Python" />
       <published>2018-02-02T14:22:38+01:00</published>
       <updated>2018-02-02T14:22:38+01:00</updated>
       <id>http://localhost:4000/2018/02/02/data-pipelines-python</id>
@@ -339,7 +339,7 @@ psql &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; openstack_postgresql &lt;s
         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;With this example, we can start to consume data as soon as available with one restriction, once the data is consumed python will forget about it while consuming less memory it might be an issue if some of the data is not processed correctly.&lt;/p&gt;
+&lt;p&gt;With this example, we can start to consume data as soon as is available with one restriction, once the data is consumed python will &lt;code class=&quot;highlighter-rouge&quot;&gt;forget&lt;/code&gt; about it. while consuming less memory it might be an issue if some of the data is not processed correctly.&lt;/p&gt;
 
 &lt;p&gt;Here is a more complex example of data processing using generators where we find for a keyword is a list of files.&lt;/p&gt;
 
@@ -426,9 +426,9 @@ psql &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; openstack_postgresql &lt;s
   
     <entry>
       
-      <title type="html">Using python to glue everything</title>
+      <title type="html">Using Python to glue everything</title>
       
-      <link href="http://localhost:4000/2017/10/21/gluing-python.html" rel="alternate" type="text/html" title="Using python to glue everything" />
+      <link href="http://localhost:4000/2017/10/21/gluing-python.html" rel="alternate" type="text/html" title="Using Python to glue everything" />
       <published>2017-10-21T15:22:38+02:00</published>
       <updated>2017-10-21T15:22:38+02:00</updated>
       <id>http://localhost:4000/2017/10/21/gluing-python</id>
@@ -765,9 +765,9 @@ help with this scenario.&lt;/p&gt;
   
     <entry>
       
-      <title type="html">Python windows service</title>
+      <title type="html">Python Windows service</title>
       
-      <link href="http://localhost:4000/2017/10/20/python-windows-service.html" rel="alternate" type="text/html" title="Python windows service" />
+      <link href="http://localhost:4000/2017/10/20/python-windows-service.html" rel="alternate" type="text/html" title="Python Windows service" />
       <published>2017-10-20T15:22:38+02:00</published>
       <updated>2017-10-20T15:22:38+02:00</updated>
       <id>http://localhost:4000/2017/10/20/python-windows-service</id>

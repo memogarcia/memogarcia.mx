@@ -50,6 +50,6 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-comments: true
-disqus_shortname: memogarcia
-google_analytics: UA-113718590-1
+# comments: true
+# disqus_shortname: memogarcia
+# google_analytics: UA-113718590-1

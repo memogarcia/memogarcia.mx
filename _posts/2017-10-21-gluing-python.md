@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using python to glue everything"
+title:  "Using Python to glue everything"
 date:   2017-10-21 14:22:38 +0100
 categories:
 ---

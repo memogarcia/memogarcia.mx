@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Creating data pipelines with python"
+title:  "Creating data pipelines with Python"
 date:   2018-02-02 14:22:38 +0100
 categories:
 ---
@@ -43,7 +43,7 @@ def consume_files():
         print(file)
 ```
 
-With this example, we can start to consume data as soon as available with one restriction, once the data is consumed python will forget about it while consuming less memory it might be an issue if some of the data is not processed correctly.
+With this example, we can start to consume data as soon as is available with one restriction, once the data is consumed python will `forget` about it. while consuming less memory it might be an issue if some of the data is not processed correctly.
 
 Here is a more complex example of data processing using generators where we find for a keyword is a list of files.
 
