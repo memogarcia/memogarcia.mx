@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-19T15:31:05+01:00</updated>
+  <updated>2018-02-20T10:44:15+01:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -18,6 +18,152 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Deploying OpenStack on Containers</title>
+      
+      <link href="http://localhost:4000/2018/02/20/openstack-deployment.html" rel="alternate" type="text/html" title="Deploying OpenStack on Containers" />
+      <published>2018-02-20T08:20:38+01:00</published>
+      <updated>2018-02-20T08:20:38+01:00</updated>
+      <id>http://localhost:4000/2018/02/20/openstack-deployment</id>
+      <content type="html" xml:base="http://localhost:4000/2018/02/20/openstack-deployment.html">&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is a Work-In-Progress Document and the most up-to-date information is available at: &lt;a href=&quot;https://github.com/memogarcia/openstack-deployer&quot;&gt;github.com/memogarcia/openstack-deployer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Deploying OpenStack using containers allows an easy customization and flexibility on how to deploy
+the platform for development, testing and &lt;em&gt;production&lt;/em&gt; environments.&lt;/p&gt;
+
+&lt;p&gt;Current deployment: &lt;strong&gt;stable/queens&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;host-configuration&quot;&gt;Host configuration&lt;/h2&gt;
+
+&lt;p&gt;The default configuration for this environment is composed by 3 main components that need to run on the host:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/infra/docker/README.md&quot;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/infra/libvirtd/README.md&quot;&gt;Libvirtd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/infra/openvswitch/README.md&quot;&gt;OpenVSwitch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png&quot; alt=&quot;host_diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;network-topology&quot;&gt;Network topology&lt;/h2&gt;
+
+&lt;p&gt;This is the default network topology, 2 networks are used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;openstack-management-net: All openstack traffic goes through here&lt;/li&gt;
+  &lt;li&gt;openstack-provider-net: Instances get IPs in this network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png&quot; alt=&quot;simplified_network_diagram&quot; title=&quot;Simplified networks&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;infra-services&quot;&gt;Infra services&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fluentd: for logging&lt;/li&gt;
+  &lt;li&gt;Cadvisor: for container stats&lt;/li&gt;
+  &lt;li&gt;Elasticsearch: for log collection&lt;/li&gt;
+  &lt;li&gt;Kibana: for log visualization&lt;/li&gt;
+  &lt;li&gt;Portainer: for container management&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;third-party-services&quot;&gt;Third-party services&lt;/h2&gt;
+
+&lt;p&gt;Configure the third-party services needed for OpenStack to run.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/seed/README.md&quot;&gt;Seed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/mariadb/README.md&quot;&gt;MariaDB/MySQL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/postgresql/README.md&quot;&gt;PostgreSQL&lt;/a&gt; &lt;strong&gt;Optional Database&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/memcached/README.md&quot;&gt;Memcached&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/rabbitmq/README.md&quot;&gt;Rabbitmq&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/onos/README.md&quot;&gt;Onos&lt;/a&gt; &lt;strong&gt;Optional SDN&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/minio/README.md&quot;&gt;Minio&lt;/a&gt; &lt;strong&gt;Optional Object Storage&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;openstack-services&quot;&gt;OpenStack services&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/keystone/README.md&quot;&gt;Keystone&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/glance/README.md&quot;&gt;Glance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/neutron/README.md&quot;&gt;Neutron&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/nova/README.md&quot;&gt;Nova&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/nova-qemu/README.md&quot;&gt;Nova-Qemu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/cinder/README.md&quot;&gt;Cinder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/horizon/README.md&quot;&gt;Horizon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extending-openstack-services&quot;&gt;Extending OpenStack services&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/custom/api/README.md&quot;&gt;Custom API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/custom/backend/README.md&quot;&gt;Custom Backend&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deploying-openstack&quot;&gt;Deploying OpenStack&lt;/h2&gt;
+
+&lt;p&gt;The model is a yml file describing how your environment should look like. It defines the services to run, networks, ips, volumes, dependencies, etc.&lt;/p&gt;
+
+&lt;p&gt;Configure your runtime environment by modifying &lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/model.yml&quot;&gt;model.yml&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apply the configuration with config_processor, which will create the necessary scripts to run the environment.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ansible-playbook -i hosts/localhost config_processor.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Config processor will create a new branch &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt; where the runtime configuration will be ready for deployment.&lt;/p&gt;
+
+&lt;p&gt;Verify the branch is created correctly:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git branch
+# * deploy
+git log
+# Ready for deployment
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Deploy OpenStack&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./scripts/docker-network-create.sh
+./scripts/build.sh
+./scripts/start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;verify-installation&quot;&gt;Verify installation&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source osrc-v3
+openstack project list
+openstack image list
+openstack network list
+openstack server list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.openstack.org/install-guide/&quot;&gt;OpenStack installation Guide&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Note This is a Work-In-Progress Document and the most up-to-date information is available at: github.com/memogarcia/openstack-deployer</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
