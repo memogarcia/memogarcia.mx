@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-20T10:44:15+01:00</updated>
+  <updated>2018-02-20T10:53:30+01:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -47,7 +47,7 @@ the platform for development, testing and &lt;em&gt;production&lt;/em&gt; enviro
 
 &lt;p&gt;Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png&quot; alt=&quot;host_diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png?raw=true&quot; alt=&quot;host_diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;network-topology&quot;&gt;Network topology&lt;/h2&gt;
 
@@ -58,7 +58,7 @@ the platform for development, testing and &lt;em&gt;production&lt;/em&gt; enviro
   &lt;li&gt;openstack-provider-net: Instances get IPs in this network&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png&quot; alt=&quot;simplified_network_diagram&quot; title=&quot;Simplified networks&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png?raw=true&quot; alt=&quot;simplified_network_diagram&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;infra-services&quot;&gt;Infra services&lt;/h2&gt;
 
@@ -109,7 +109,7 @@ the platform for development, testing and &lt;em&gt;production&lt;/em&gt; enviro
 
 &lt;p&gt;Configure your runtime environment by modifying &lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/model.yml&quot;&gt;model.yml&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Apply the configuration with config_processor, which will create the necessary scripts to run the environment.&lt;/p&gt;
+&lt;p&gt;Apply the configuration with &lt;code class=&quot;highlighter-rouge&quot;&gt;config_processor&lt;/code&gt;, which will create the necessary scripts to run the environment.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ansible-playbook -i hosts/localhost config_processor.yml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;

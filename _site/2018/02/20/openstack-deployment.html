@@ -116,7 +116,7 @@ the platform for development, testing and <em>production</em> environments.</p>
 
 <p>Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.</p>
 
-<p><img src="https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png" alt="host_diagram" /></p>
+<p><img src="https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png?raw=true" alt="host_diagram" /></p>
 
 <h2 id="network-topology">Network topology</h2>
 
@@ -127,7 +127,7 @@ the platform for development, testing and <em>production</em> environments.</p>
   <li>openstack-provider-net: Instances get IPs in this network</li>
 </ul>
 
-<p><img src="https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png" alt="simplified_network_diagram" title="Simplified networks" /></p>
+<p><img src="https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png?raw=true" alt="simplified_network_diagram" /></p>
 
 <h2 id="infra-services">Infra services</h2>
 
@@ -178,7 +178,7 @@ the platform for development, testing and <em>production</em> environments.</p>
 
 <p>Configure your runtime environment by modifying <a href="https://github.com/memogarcia/openstack-deployer/blob/master/model.yml">model.yml</a>.</p>
 
-<p>Apply the configuration with config_processor, which will create the necessary scripts to run the environment.</p>
+<p>Apply the configuration with <code class="highlighter-rouge">config_processor</code>, which will create the necessary scripts to run the environment.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook -i hosts/localhost config_processor.yml
 </code></pre></div></div>

@@ -22,7 +22,7 @@ The default configuration for this environment is composed by 3 main components 
 
 Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.
 
-![host_diagram](https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png)
+![host_diagram](https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png?raw=true)
 
 ## Network topology
 
@@ -31,7 +31,7 @@ This is the default network topology, 2 networks are used:
 * openstack-management-net: All openstack traffic goes through here
 * openstack-provider-net: Instances get IPs in this network
 
-![simplified_network_diagram](https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png "Simplified networks")
+![simplified_network_diagram](https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png?raw=true)
 
 ## Infra services
 
@@ -74,7 +74,7 @@ The model is a yml file describing how your environment should look like. It def
 
 Configure your runtime environment by modifying [model.yml](https://github.com/memogarcia/openstack-deployer/blob/master/model.yml).
 
-Apply the configuration with config_processor, which will create the necessary scripts to run the environment.
+Apply the configuration with `config_processor`, which will create the necessary scripts to run the environment.
 
     ansible-playbook -i hosts/localhost config_processor.yml
 
