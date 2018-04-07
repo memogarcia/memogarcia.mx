@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-02-26T18:03:30+01:00</updated>
+  <updated>2018-04-07T12:11:47+02:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -18,6 +18,282 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Tips and Tricks for OpenLDAP</title>
+      
+      <link href="http://localhost:4000/2018/04/07/ldap.html" rel="alternate" type="text/html" title="Tips and Tricks for OpenLDAP" />
+      <published>2018-04-07T09:20:38+02:00</published>
+      <updated>2018-04-07T09:20:38+02:00</updated>
+      <id>http://localhost:4000/2018/04/07/ldap</id>
+      <content type="html" xml:base="http://localhost:4000/2018/04/07/ldap.html">&lt;ul&gt;
+  &lt;li&gt;Let someone else do the OpenLDAP configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rest of the tips are in case you couldn’t avoid it.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t combine static configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/openldap/slapd.conf&lt;/code&gt; and dynamic configuration using &lt;code class=&quot;highlighter-rouge&quot;&gt;ldif&lt;/code&gt; files&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When working with &lt;code class=&quot;highlighter-rouge&quot;&gt;saslauthd&lt;/code&gt; over &lt;code class=&quot;highlighter-rouge&quot;&gt;TLS&lt;/code&gt; make sure to add the following configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/openldap/ldap.conf&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  TLS_REQCERT never
+  # or
+  TLS_REQCERT demand
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Otherwise &lt;code class=&quot;highlighter-rouge&quot;&gt;saslauthd&lt;/code&gt; will terminate SSL connections silently.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make sure &lt;code class=&quot;highlighter-rouge&quot;&gt;saslauthd&lt;/code&gt; runs with the correct user by modifying &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system/saslauthd.service.d/user.conf&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [Service]
+  User=saslauth
+  Group=saslauth
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add ldap user to saslauth group:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    usermod -a -G saslauth ldap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Reload systemctl daemon and restart the service:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    systemctl daemon-reload
+    systemctl restart saslauthd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Debugging OpenLDAP server, by default it writes to &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/messages&lt;/code&gt; so it is easy to track with:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  journalctl -f -u slapd.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Debbuging OpenLDAP clients are easier, just add &lt;code class=&quot;highlighter-rouge&quot;&gt;-d N&lt;/code&gt; to your command:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ldapsearch ... -d 8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information about &lt;a href=&quot;https://www.ibm.com/support/knowledgecenter/en/SSVJJU_6.3.0/com.ibm.IBMDS.doc/pdguide32.htm&quot;&gt;debug values here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://linux.die.net/man/1/strace&quot;&gt;strace&lt;/a&gt; is your friend to debug socket connections.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  strace -e connect testsaslauthd -u user -p password! -r realm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://linux.die.net/man/8/lsof&quot;&gt;lsof&lt;/a&gt; is your friend to check open ports.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  lsof -i :389
+  lsof -i :636
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inject SSL certificates on the fly instead of statically:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: cn=config
+  changetype: modify
+  add: olcTLSCACertificateFile
+  olcTLSCACertificateFile: /opt/openldap/certs/ca.pem
+  -
+  replace: olcTLSCertificateFile
+  olcTLSCertificateFile: /opt/openldap/certs/server.crt
+  -
+  replace: olcTLSCertificateKeyFile
+  olcTLSCertificateKeyFile: /opt/openldap/certs/server.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add them on the fly:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/mod_ssl.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Querying OpenLDAP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Non-bind query:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapsearch -x uid=user -b dc=domain,dc=com -d 8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bind query:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapsearch -x -D &quot;cn=Manager,dc=domain,dc=com&quot; \
+       -w password! -b &quot;ou=Users,dc=domain,dc=com&quot; \
+       -s sub 'uid=user'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding new entries:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: dc=domain,dc=com
+  dc: domain
+  objectClass: top
+  objectClass: domain
+
+  dn: cn=Manager,dc=domain,dc=com
+  objectClass: organizationalRole
+  cn: Manager
+  description: LDAP Manager
+
+  dn: ou=Users,dc=domain,dc=com
+  objectClass: organizationalUnit
+  ou: Users
+
+  dn: ou=Groups,dc=domain,dc=com
+  objectClass: organizationalUnit
+  ou: Groups
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add them with &lt;code class=&quot;highlighter-rouge&quot;&gt;ldapadd&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapadd -x -w password! -D &quot;cn=Manager,dc=domain,dc=com&quot; -f /tmp/base.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modifying entries:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  replace: olcSuffix
+  olcSuffix: dc=domain,dc=com
+
+  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  replace: olcRootDN
+  olcRootDN: cn=Manager,dc=domain,dc=com
+
+  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  replace: olcRootPW
+  olcRootPW: {SHA}password
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modify them with &lt;code class=&quot;highlighter-rouge&quot;&gt;ldapmodify&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/change_password.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Increasing limit for OpenLDAP replication:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: olcDatabase={1}bdb,cn=config
+  changetype: modify
+  add: olcLimits
+  olcLimits: dn.exact=&quot;uid=rpuser,dc=domain,dc=com&quot; time.soft=unlimited time.hard=unlimited size.soft=unlimited size.hard=unlimited
+
+  dn: olcDatabase={2}bdb,cn=config
+  changetype: modify
+  add: olcLimits
+  olcLimits: dn.exact=&quot;uid=rpuser,dc=domain,dc=com&quot; time.soft=unlimited time.hard=unlimited size.soft=unlimited size.hard=unlimited
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modify the entry:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/change_replication_limits.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check replication status&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Run the following query against the master and the slaves:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapsearch -x -LLL -H ldaps://url:636  -s base -b 'dc=domain,dc=com' contextCSN dn: dc=domain,dc=com -D &quot;cn=Manager,dc=domain,dc=com&quot; -w password! dn: dc=domain,dc=com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The output should be the same:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # master
+    contextCSN: 20180405092456.474217Z#000000#000#000000
+    # slave
+    contextCSN: 20180405092456.474217Z#000000#000#000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add SSL certificates for replication:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  add: olcSyncRepl
+  olcSyncRepl: rid=001
+    provider=ldaps://url:636/
+    bindmethod=simple
+    binddn=&quot;uid=rpuser,dc=domain,dc=com&quot;
+    credentials=password!
+    searchbase=&quot;dc=domain,dc=com&quot;
+    scope=sub
+    schemachecking=on
+    type=refreshAndPersist
+    retry=&quot;30 5 300 3&quot;
+    interval=00:00:05:00
+    tls_cacert=/opt/openldap/certs/ca.pem
+    tls_reqcert=never
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add the configuration on the slaves:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/rp.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.itzgeek.com/how-tos/linux/centos-how-tos/step-step-openldap-server-configuration-centos-7-rhel-7.html&quot;&gt;OpenLDAP configuration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.server-world.info/en/note?os=CentOS_7&amp;amp;p=openldap&quot;&gt;OpenLDAP configuration 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.itzgeek.com/how-tos/linux/configure-openldap-master-slave-replication.html&quot;&gt;Master Slave configuration for OpenLDAP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Let someone else do the OpenLDAP configuration.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
