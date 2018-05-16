@@ -3,7 +3,7 @@
 main:
   - title: "GitHub"
     url: https://github.com/memogarcia
-  - title: "Gists"
-    url: https://gist.github.com/memogarcia
-  - title: "CV"
-    url: https://drive.google.com/file/d/1nNesMdP9fkTkA_TdudnO0aVKv7yyjIVZ/view?usp=sharing
+  # - title: "Gists"
+  #   url: https://gist.github.com/memogarcia
+  # - title: "CV"
+  #   url: https://drive.google.com/file/d/1nNesMdP9fkTkA_TdudnO0aVKv7yyjIVZ/view?usp=sharing

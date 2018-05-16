@@ -16,7 +16,7 @@
 title: Memo García
 email: root@memogarcia.mx
 description: >- # this means to ignore newlines until "baseurl:"
-  
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://memogarcia.mx" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -50,6 +50,6 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-comments: true
-disqus_shortname: memogarcia
-google_analytics: UA-113718590-1
+# comments: true
+# disqus_shortname: memogarcia
+# google_analytics: UA-113718590-1
