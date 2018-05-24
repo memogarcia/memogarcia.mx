@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-05-24T18:15:40+02:00</updated>
+  <updated>2018-05-24T18:22:54+02:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -40,11 +40,11 @@
 
 &lt;p&gt;Once you’ve identified them, you can approach them using another mental model called &lt;strong&gt;divide and conquer&lt;/strong&gt;. At this point, the topic can be described as a collection of ideas or facts that can be applied to other topics or domains by applying the &lt;strong&gt;knowledge transfer&lt;/strong&gt; model.&lt;/p&gt;
 
-&lt;p&gt;With these essentials ideas identify them, you can start understanding them individually by using one technique called &lt;strong&gt;Feynman technique&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;With these essentials ideas identified, you can start understanding them individually by using one technique called &lt;strong&gt;Feynman technique&lt;/strong&gt; which is described as follows:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Write the name of the concept at the top of a blank piece of paper.&lt;/li&gt;
-  &lt;li&gt;Write down an explanation of the concept on the page. Use plain English. Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don’t quite know.&lt;/li&gt;
+  &lt;li&gt;Write down an explanation of the concept on the page. Use plain English. Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don’t quite know. (Circle of competence)&lt;/li&gt;
   &lt;li&gt;Review what you have pinpointed you don’t know. Go back to the source material, re-read, and re-learn it. Repeat Step 2.&lt;/li&gt;
   &lt;li&gt;If you are using overly wordy or confusing language (or simply paraphrasing the source material) try again so you filter the content. Simplify your language, and where possible use a simple analogy.&lt;/li&gt;
 &lt;/ol&gt;
@@ -53,12 +53,12 @@
 
 &lt;ol&gt;
   &lt;li&gt;You understand&lt;/li&gt;
-  &lt;li&gt;Easy to reason to its fundamental parts&lt;/li&gt;
+  &lt;li&gt;Is easy to reason to its fundamental parts&lt;/li&gt;
   &lt;li&gt;You can apply to other domains (or not)&lt;/li&gt;
   &lt;li&gt;You can share and teach to others&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/topic2.png&quot; alt=&quot;topic1&quot; /&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;img src=&quot;/assets/img/topic2.png&quot; alt=&quot;topic2&quot; /&gt;&lt;/p&gt;</content>
 
       
       

@@ -17,18 +17,18 @@ By relying on the **first principle thinking** you can clarify complicated ideas
 
 Once you’ve identified them, you can approach them using another mental model called **divide and conquer**. At this point, the topic can be described as a collection of ideas or facts that can be applied to other topics or domains by applying the **knowledge transfer** model.
 
-With these essentials ideas identify them, you can start understanding them individually by using one technique called **Feynman technique**
+With these essentials ideas identified, you can start understanding them individually by using one technique called **Feynman technique** which is described as follows:
 
 1. Write the name of the concept at the top of a blank piece of paper.
-2. Write down an explanation of the concept on the page. Use plain English. Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don't quite know.
+2. Write down an explanation of the concept on the page. Use plain English. Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don't quite know. (Circle of competence)
 3. Review what you have pinpointed you don't know. Go back to the source material, re-read, and re-learn it. Repeat Step 2.
 4. If you are using overly wordy or confusing language (or simply paraphrasing the source material) try again so you filter the content. Simplify your language, and where possible use a simple analogy.
 
 By the end, you will have a graph of knowledge that:
 
 1. You understand
-2. Easy to reason to its fundamental parts
+2. Is easy to reason to its fundamental parts
 3. You can apply to other domains (or not)
 4. You can share and teach to others
 
-![topic1](/assets/img/topic2.png)
+![topic2](/assets/img/topic2.png)
