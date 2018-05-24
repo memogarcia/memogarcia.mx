@@ -81,15 +81,17 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <ul>
-  <li>Let someone else do the OpenLDAP configuration.</li>
-</ul>
+    <blockquote>
+  <p>Let someone else do the OpenLDAP configuration.</p>
+</blockquote>
 
-<p>The rest of the tips are in case you couldn’t avoid it.</p>
+<p>The rest of the tips are in case you couldn’t avoid it :).</p>
+
+<h3 id="configuring-openldap">Configuring OpenLDAP</h3>
 
 <ul>
   <li>
-    <p>Don’t combine static configuration in <code class="highlighter-rouge">/etc/openldap/slapd.conf</code> and dynamic configuration using <code class="highlighter-rouge">ldif</code> files</p>
+    <p>Don’t combine static configuration in <code class="highlighter-rouge">/etc/openldap/slapd.conf</code> and dynamic configuration using <code class="highlighter-rouge">ldif</code> files.</p>
   </li>
   <li>
     <p>When working with <code class="highlighter-rouge">saslauthd</code> over <code class="highlighter-rouge">TLS</code> make sure to add the following configuration in <code class="highlighter-rouge">/etc/openldap/ldap.conf</code>:</p>
@@ -179,8 +181,52 @@
 </code></pre></div></div>
 
 <ul>
-  <li>Querying OpenLDAP</li>
+  <li>
+    <p>Add replication configuration on the slaves:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  add: olcSyncRepl
+  olcSyncRepl: rid=001
+    provider=ldaps://url:636/
+    bindmethod=simple
+    binddn="uid=rpuser,dc=domain,dc=com"
+    credentials=password!
+    searchbase="dc=domain,dc=com"
+    scope=sub
+    schemachecking=on
+    type=refreshAndPersist
+    retry="30 5 300 3"
+    interval=00:00:05:00
+    tls_cacert=/opt/openldap/certs/ca.pem
+    tls_reqcert=never
+</code></pre></div>    </div>
+  </li>
 </ul>
+
+<p>Add the configuration on the slaves:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/rp.ldif
+</code></pre></div></div>
+
+<ul>
+  <li>Check replication status</li>
+</ul>
+
+<p>Run the following query against the master and the slaves:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ldapsearch -x -LLL -H ldaps://url:636  -s base -b 'dc=domain,dc=com' contextCSN dn: dc=domain,dc=com -D "cn=Manager,dc=domain,dc=com" -w password! dn: dc=domain,dc=com
+</code></pre></div></div>
+
+<p>The output should be the same:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # master
+    contextCSN: 20180405092456.474217Z#000000#000#000000
+    # slave
+    contextCSN: 20180405092456.474217Z#000000#000#000000
+</code></pre></div></div>
+
+<h3 id="querying-openldap">Querying OpenLDAP</h3>
 
 <p>Non-bind query:</p>
 
@@ -273,53 +319,7 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/change_replication_limits.ldif
 </code></pre></div></div>
 
-<ul>
-  <li>Check replication status</li>
-</ul>
-
-<p>Run the following query against the master and the slaves:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ldapsearch -x -LLL -H ldaps://url:636  -s base -b 'dc=domain,dc=com' contextCSN dn: dc=domain,dc=com -D "cn=Manager,dc=domain,dc=com" -w password! dn: dc=domain,dc=com
-</code></pre></div></div>
-
-<p>The output should be the same:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # master
-    contextCSN: 20180405092456.474217Z#000000#000#000000
-    # slave
-    contextCSN: 20180405092456.474217Z#000000#000#000000
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>Add SSL certificates for replication:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  dn: olcDatabase={2}hdb,cn=config
-  changetype: modify
-  add: olcSyncRepl
-  olcSyncRepl: rid=001
-    provider=ldaps://url:636/
-    bindmethod=simple
-    binddn="uid=rpuser,dc=domain,dc=com"
-    credentials=password!
-    searchbase="dc=domain,dc=com"
-    scope=sub
-    schemachecking=on
-    type=refreshAndPersist
-    retry="30 5 300 3"
-    interval=00:00:05:00
-    tls_cacert=/opt/openldap/certs/ca.pem
-    tls_reqcert=never
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<p>Add the configuration on the slaves:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/rp.ldif
-</code></pre></div></div>
-
-<h2 id="references">References</h2>
+<h4 id="references">References</h4>
 
 <ul>
   <li><a href="https://www.itzgeek.com/how-tos/linux/centos-how-tos/step-step-openldap-server-configuration-centos-7-rhel-7.html">OpenLDAP configuration</a></li>
