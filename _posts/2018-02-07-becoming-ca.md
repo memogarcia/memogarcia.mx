@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Generating a CA"
+title:  "Becoming a certificate authority for SSL"
 date:   2018-02-07 12:22:38 +0100
 categories:
 ---
@@ -22,7 +22,7 @@ touch index.txt
 echo 1000 > serial
 ```
 
-Then download the template for `/root/ca/openssl.cnf` from [this gist](https://gist.github.com/memogarcia/d2d3a802f3593d81e177aef74c4e40f2) and edit it.
+Then download the template for `/root/ca/openssl.cnf` from [this gist](https://gist.github.com/memogarcia/2ba4b4fee8a588a7448297bc8cc4e0d9) and edit it.
 
 ```bash
 vi /root/ca/openssl.cnf
@@ -66,7 +66,7 @@ echo 1000 > serial
 echo 1000 > /root/ca/intermediate/crlnumber
 ```
 
-Then download the template for `/root/ca/intermediate/openssl.cnf` from [this gist](https://gist.github.com/memogarcia/06c2e2a5b2727f3ce023cada31d6c668) and edit it.
+Then download the template for `/root/ca/intermediate/openssl.cnf` from [this gist](https://gist.github.com/memogarcia/4c82f92bb4daf7ebc22517df24ce7a61) and edit it.
 
 ```bash
 vi /root/ca/intermediate/openssl.cnf

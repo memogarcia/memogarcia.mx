@@ -9,7 +9,7 @@
   
   
   
-  <title>Generating a CA</title>
+  <title>Becoming a certificate authority for SSL</title>
   <meta name="description" content="A Certificate Authority or CA is an entity that signs digital certificates. These digital certificates are used to validate the connection while using secure mechanisms.">
   
 
@@ -25,7 +25,7 @@
   
   <meta name="twitter:card" content="summary">
   
-  <meta name="twitter:title" content="Generating a CA">
+  <meta name="twitter:title" content="Becoming a certificate authority for SSL">
   <meta name="twitter:description" content="A Certificate Authority or CA is an entity that signs digital certificates. These digital certificates are used to validate the connection while using secure mechanisms.">
   
   
@@ -75,7 +75,7 @@
 
   <header class="post-header">
     
-      <h1 class="post-title" itemprop="name headline">Generating a CA</h1>
+      <h1 class="post-title" itemprop="name headline">Becoming a certificate authority for SSL</h1>
     
     <p class="post-meta"><time datetime="2018-02-07T12:22:38+01:00" itemprop="datePublished">Feb 7, 2018</time></p>
   </header>
@@ -97,7 +97,7 @@ touch index.txt
 <span class="nb">echo </span>1000 <span class="o">&gt;</span> serial
 </code></pre></div></div>
 
-<p>Then download the template for <code class="highlighter-rouge">/root/ca/openssl.cnf</code> from <a href="https://gist.github.com/memogarcia/d2d3a802f3593d81e177aef74c4e40f2">this gist</a> and edit it.</p>
+<p>Then download the template for <code class="highlighter-rouge">/root/ca/openssl.cnf</code> from <a href="https://gist.github.com/memogarcia/2ba4b4fee8a588a7448297bc8cc4e0d9">this gist</a> and edit it.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /root/ca/openssl.cnf
 </code></pre></div></div>
@@ -136,7 +136,7 @@ touch index.txt
 <span class="nb">echo </span>1000 <span class="o">&gt;</span> /root/ca/intermediate/crlnumber
 </code></pre></div></div>
 
-<p>Then download the template for <code class="highlighter-rouge">/root/ca/intermediate/openssl.cnf</code> from <a href="https://gist.github.com/memogarcia/06c2e2a5b2727f3ce023cada31d6c668">this gist</a> and edit it.</p>
+<p>Then download the template for <code class="highlighter-rouge">/root/ca/intermediate/openssl.cnf</code> from <a href="https://gist.github.com/memogarcia/4c82f92bb4daf7ebc22517df24ce7a61">this gist</a> and edit it.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /root/ca/intermediate/openssl.cnf
 </code></pre></div></div>

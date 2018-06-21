@@ -5,7 +5,7 @@
   
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-05-24T18:22:54+02:00</updated>
+  <updated>2018-06-21T15:46:30+02:00</updated>
   <id>http://localhost:4000//</id>
 
   
@@ -506,9 +506,9 @@ openstack server list
   
     <entry>
       
-      <title type="html">Generating a CA</title>
+      <title type="html">Becoming a certificate authority for SSL</title>
       
-      <link href="http://localhost:4000/2018/02/07/becoming-ca.html" rel="alternate" type="text/html" title="Generating a CA" />
+      <link href="http://localhost:4000/2018/02/07/becoming-ca.html" rel="alternate" type="text/html" title="Becoming a certificate authority for SSL" />
       <published>2018-02-07T12:22:38+01:00</published>
       <updated>2018-02-07T12:22:38+01:00</updated>
       <id>http://localhost:4000/2018/02/07/becoming-ca</id>
@@ -528,7 +528,7 @@ touch index.txt
 &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; serial
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/d2d3a802f3593d81e177aef74c4e40f2&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
+&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/2ba4b4fee8a588a7448297bc8cc4e0d9&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /root/ca/openssl.cnf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -567,7 +567,7 @@ touch index.txt
 &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /root/ca/intermediate/crlnumber
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/06c2e2a5b2727f3ce023cada31d6c668&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
+&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/4c82f92bb4daf7ebc22517df24ce7a61&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /root/ca/intermediate/openssl.cnf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
