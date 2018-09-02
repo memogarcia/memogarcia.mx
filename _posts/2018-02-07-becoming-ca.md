@@ -25,7 +25,7 @@ echo 1000 > serial
 Then download the template for `/root/ca/openssl.cnf` from [this gist](https://gist.github.com/memogarcia/2ba4b4fee8a588a7448297bc8cc4e0d9) and edit it.
 
 ```bash
-vi /root/ca/openssl.cnf
+vim /root/ca/openssl.cnf
 ```
 
 Create the root key `ca.key.pem` and make sure to keep it secure.
@@ -69,7 +69,7 @@ echo 1000 > /root/ca/intermediate/crlnumber
 Then download the template for `/root/ca/intermediate/openssl.cnf` from [this gist](https://gist.github.com/memogarcia/4c82f92bb4daf7ebc22517df24ce7a61) and edit it.
 
 ```bash
-vi /root/ca/intermediate/openssl.cnf
+vim /root/ca/intermediate/openssl.cnf
 ```
 
 Create the intermediate key `intermediate.key.pem`.
@@ -186,9 +186,9 @@ openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \
 
 Distribute and/or deploy the following files:
 
-* `ca-chain.cert.pem`
-* `www.example.com.key.pem`  **Only if you are signing the CSR**
-* `www.example.com.cert.pem`
+* `/root/ca/intermediate/certs/ca-chain.cert.pem`
+* `/root/ca/intermediate/private/www.example.com.key.pem`  **Only if you are signing the CSR**
+* `/root/ca/intermediate/certs/www.example.com.cert.pem`
 
 ## Next steps
 
