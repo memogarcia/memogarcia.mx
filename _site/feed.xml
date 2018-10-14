@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-14T10:35:05+02:00</updated><id>http://localhost:4000/</id><title type="html">Your Site Title</title><subtitle>Your Site Description
-</subtitle><author><name>Your Name</name></author><entry><title type="html">Welcome</title><link href="http://localhost:4000/2018/07/01/welcome.html" rel="alternate" type="text/html" title="Welcome" /><published>2018-07-01T00:00:00+02:00</published><updated>2018-07-01T00:00:00+02:00</updated><id>http://localhost:4000/2018/07/01/welcome</id><content type="html" xml:base="http://localhost:4000/2018/07/01/welcome.html">&lt;p&gt;If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-14T10:43:58+02:00</updated><id>http://localhost:4000/</id><title type="html">Memo Garcia</title><subtitle></subtitle><author><name>Your Name</name></author><entry><title type="html">Welcome</title><link href="http://localhost:4000/2018/07/01/welcome.html" rel="alternate" type="text/html" title="Welcome" /><published>2018-07-01T00:00:00+02:00</published><updated>2018-07-01T00:00:00+02:00</updated><id>http://localhost:4000/2018/07/01/welcome</id><content type="html" xml:base="http://localhost:4000/2018/07/01/welcome.html">&lt;p&gt;If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:&lt;/p&gt;
 
 &lt;p&gt;You may want to &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration&quot;&gt;config the site&lt;/a&gt; or &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts&quot;&gt;writing a post&lt;/a&gt; next. Please feel free to &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/issues&quot;&gt;create an issue&lt;/a&gt; or &lt;a href=&quot;mailto:kitian616@outlook.com&quot;&gt;send me email&lt;/a&gt; if you have any questions.&lt;/p&gt;
 
@@ -9,4 +8,1080 @@
 
 &lt;p&gt;If you like TeXt, don’t forget to give me a star. :star2:&lt;/p&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=kitian616&amp;amp;repo=jekyll-TeXt-theme&amp;amp;type=star&amp;amp;count=true&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170px&quot; height=&quot;20px&quot;&gt;&lt;/iframe&gt;</content><author><name>Your Name</name></author><category term="TeXt" /><summary type="html">If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost: You may want to config the site or writing a post next. Please feel free to create an issue or send me email if you have any questions.</summary></entry></feed>
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=kitian616&amp;amp;repo=jekyll-TeXt-theme&amp;amp;type=star&amp;amp;count=true&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170px&quot; height=&quot;20px&quot;&gt;&lt;/iframe&gt;</content><author><name>Your Name</name></author><category term="TeXt" /><summary type="html">If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost: You may want to config the site or writing a post next. Please feel free to create an issue or send me email if you have any questions.</summary></entry><entry><title type="html">Concurrent Learning</title><link href="http://localhost:4000/2018/05/04/concurrent-learning.html" rel="alternate" type="text/html" title="Concurrent Learning" /><published>2018-05-04T09:20:38+02:00</published><updated>2018-05-04T09:20:38+02:00</updated><id>http://localhost:4000/2018/05/04/concurrent-learning</id><content type="html" xml:base="http://localhost:4000/2018/05/04/concurrent-learning.html">&lt;p&gt;Concurrent learning is a model of studying that relies on several approaches to learning faster and deeper on several topics.&lt;/p&gt;
+
+&lt;p&gt;One way of visualizing this is by separating domains into interconnected graphs making it easier to connect fundamental topics and ideas that can be leveraged across multiple domains.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to use it&lt;/h2&gt;
+
+&lt;p&gt;By relying on the &lt;strong&gt;first principle thinking&lt;/strong&gt; you can clarify complicated ideas or problems by separating them into its most fundamental parts and start reasoning from there, what remains are the bare essentials that can be tackled individually and reduce them to absurdity. It helps a lot to visualize them as a graph of knowledge.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/topic1.png&quot; alt=&quot;topic1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you’ve identified them, you can approach them using another mental model called &lt;strong&gt;divide and conquer&lt;/strong&gt;. At this point, the topic can be described as a collection of ideas or facts that can be applied to other topics or domains by applying the &lt;strong&gt;knowledge transfer&lt;/strong&gt; model.&lt;/p&gt;
+
+&lt;p&gt;With these essentials ideas identified, you can start understanding them individually by using one technique called &lt;strong&gt;Feynman technique&lt;/strong&gt; which is described as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write the name of the concept at the top of a blank piece of paper.&lt;/li&gt;
+  &lt;li&gt;Write down an explanation of the concept on the page. Use plain English (or any language). Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don’t quite understand. (Circle of competence)&lt;/li&gt;
+  &lt;li&gt;Review what you have pinpointed you don’t know. Go back to the source material, re-read, and re-learn it. Repeat Step 2.&lt;/li&gt;
+  &lt;li&gt;If you are using overly wordy or confusing language (or simply paraphrasing the source material) try again so you filter the content. Simplify your language, and where possible use a simple analogy.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By the end, you will have a graph of knowledge that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You understand,&lt;/li&gt;
+  &lt;li&gt;Is easy to reason to its fundamental parts,&lt;/li&gt;
+  &lt;li&gt;You can apply to other domains (or not),&lt;/li&gt;
+  &lt;li&gt;You can share and teach to others.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/topic2.png&quot; alt=&quot;topic2&quot; /&gt;&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">Concurrent learning is a model of studying that relies on several approaches to learning faster and deeper on several topics. One way of visualizing this is by separating domains into interconnected graphs making it easier to connect fundamental topics and ideas that can be leveraged across multiple domains. How to use it By relying on the first principle thinking you can clarify complicated ideas or problems by separating them into its most fundamental parts and start reasoning from there, what remains are the bare essentials that can be tackled individually and reduce them to absurdity. It helps a lot to visualize them as a graph of knowledge. Once you’ve identified them, you can approach them using another mental model called divide and conquer. At this point, the topic can be described as a collection of ideas or facts that can be applied to other topics or domains by applying the knowledge transfer model. With these essentials ideas identified, you can start understanding them individually by using one technique called Feynman technique which is described as follows: Write the name of the concept at the top of a blank piece of paper. Write down an explanation of the concept on the page. Use plain English (or any language). Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don’t quite understand. (Circle of competence) Review what you have pinpointed you don’t know. Go back to the source material, re-read, and re-learn it. Repeat Step 2. If you are using overly wordy or confusing language (or simply paraphrasing the source material) try again so you filter the content. Simplify your language, and where possible use a simple analogy. By the end, you will have a graph of knowledge that: You understand, Is easy to reason to its fundamental parts, You can apply to other domains (or not), You can share and teach to others.</summary></entry><entry><title type="html">Tips and Tricks for OpenLDAP</title><link href="http://localhost:4000/2018/04/07/ldap.html" rel="alternate" type="text/html" title="Tips and Tricks for OpenLDAP" /><published>2018-04-07T09:20:38+02:00</published><updated>2018-04-07T09:20:38+02:00</updated><id>http://localhost:4000/2018/04/07/ldap</id><content type="html" xml:base="http://localhost:4000/2018/04/07/ldap.html">&lt;blockquote&gt;
+  &lt;p&gt;Let someone else do the OpenLDAP configuration.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The rest of the tips are in case you couldn’t avoid it :).&lt;/p&gt;
+
+&lt;h3 id=&quot;configuring-openldap&quot;&gt;Configuring OpenLDAP&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t combine static configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/openldap/slapd.conf&lt;/code&gt; and dynamic configuration using &lt;code class=&quot;highlighter-rouge&quot;&gt;ldif&lt;/code&gt; files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When working with &lt;code class=&quot;highlighter-rouge&quot;&gt;saslauthd&lt;/code&gt; over &lt;code class=&quot;highlighter-rouge&quot;&gt;TLS&lt;/code&gt; make sure to add the following configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/openldap/ldap.conf&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  TLS_REQCERT never
+  # or
+  TLS_REQCERT demand
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Otherwise &lt;code class=&quot;highlighter-rouge&quot;&gt;saslauthd&lt;/code&gt; will terminate SSL connections silently.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make sure &lt;code class=&quot;highlighter-rouge&quot;&gt;saslauthd&lt;/code&gt; runs with the correct user by modifying &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system/saslauthd.service.d/user.conf&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [Service]
+  User=saslauth
+  Group=saslauth
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add ldap user to saslauth group:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    usermod -a -G saslauth ldap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Reload systemctl daemon and restart the service:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    systemctl daemon-reload
+    systemctl restart saslauthd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Debugging OpenLDAP server, by default it writes to &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/messages&lt;/code&gt; so it is easy to track with:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  journalctl -f -u slapd.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Debbuging OpenLDAP clients are easier, just add &lt;code class=&quot;highlighter-rouge&quot;&gt;-d N&lt;/code&gt; to your command:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ldapsearch ... -d 8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information about &lt;a href=&quot;https://www.ibm.com/support/knowledgecenter/en/SSVJJU_6.3.0/com.ibm.IBMDS.doc/pdguide32.htm&quot;&gt;debug values here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://linux.die.net/man/1/strace&quot;&gt;strace&lt;/a&gt; is your friend to debug socket connections.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  strace -e connect testsaslauthd -u user -p password! -r realm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://linux.die.net/man/8/lsof&quot;&gt;lsof&lt;/a&gt; is your friend to check open ports.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  lsof -i :389
+  lsof -i :636
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inject SSL certificates on the fly instead of statically:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: cn=config
+  changetype: modify
+  add: olcTLSCACertificateFile
+  olcTLSCACertificateFile: /opt/openldap/certs/ca.pem
+  -
+  replace: olcTLSCertificateFile
+  olcTLSCertificateFile: /opt/openldap/certs/server.crt
+  -
+  replace: olcTLSCertificateKeyFile
+  olcTLSCertificateKeyFile: /opt/openldap/certs/server.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add them on the fly:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/mod_ssl.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add replication configuration on the slaves:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  add: olcSyncRepl
+  olcSyncRepl: rid=001
+    provider=ldaps://url:636/
+    bindmethod=simple
+    binddn=&quot;uid=rpuser,dc=domain,dc=com&quot;
+    credentials=password!
+    searchbase=&quot;dc=domain,dc=com&quot;
+    scope=sub
+    schemachecking=on
+    type=refreshAndPersist
+    retry=&quot;30 5 300 3&quot;
+    interval=00:00:05:00
+    tls_cacert=/opt/openldap/certs/ca.pem
+    tls_reqcert=never
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add the configuration on the slaves:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/rp.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check replication status&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Run the following query against the master and the slaves:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapsearch -x -LLL -H ldaps://url:636  -s base -b 'dc=domain,dc=com' contextCSN dn: dc=domain,dc=com -D &quot;cn=Manager,dc=domain,dc=com&quot; -w password! dn: dc=domain,dc=com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The output should be the same:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # master
+    contextCSN: 20180405092456.474217Z#000000#000#000000
+    # slave
+    contextCSN: 20180405092456.474217Z#000000#000#000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;querying-openldap&quot;&gt;Querying OpenLDAP&lt;/h3&gt;
+
+&lt;p&gt;Non-bind query:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapsearch -x uid=user -b dc=domain,dc=com -d 8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bind query:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapsearch -x -D &quot;cn=Manager,dc=domain,dc=com&quot; \
+       -w password! -b &quot;ou=Users,dc=domain,dc=com&quot; \
+       -s sub 'uid=user'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding new entries:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: dc=domain,dc=com
+  dc: domain
+  objectClass: top
+  objectClass: domain
+
+  dn: cn=Manager,dc=domain,dc=com
+  objectClass: organizationalRole
+  cn: Manager
+  description: LDAP Manager
+
+  dn: ou=Users,dc=domain,dc=com
+  objectClass: organizationalUnit
+  ou: Users
+
+  dn: ou=Groups,dc=domain,dc=com
+  objectClass: organizationalUnit
+  ou: Groups
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Add them with &lt;code class=&quot;highlighter-rouge&quot;&gt;ldapadd&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapadd -x -w password! -D &quot;cn=Manager,dc=domain,dc=com&quot; -f /tmp/base.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modifying entries:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  replace: olcSuffix
+  olcSuffix: dc=domain,dc=com
+
+  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  replace: olcRootDN
+  olcRootDN: cn=Manager,dc=domain,dc=com
+
+  dn: olcDatabase={2}hdb,cn=config
+  changetype: modify
+  replace: olcRootPW
+  olcRootPW: {SHA}password
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modify them with &lt;code class=&quot;highlighter-rouge&quot;&gt;ldapmodify&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/change_password.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Increasing limit for OpenLDAP replication:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dn: olcDatabase={1}bdb,cn=config
+  changetype: modify
+  add: olcLimits
+  olcLimits: dn.exact=&quot;uid=rpuser,dc=domain,dc=com&quot; time.soft=unlimited time.hard=unlimited size.soft=unlimited size.hard=unlimited
+
+  dn: olcDatabase={2}bdb,cn=config
+  changetype: modify
+  add: olcLimits
+  olcLimits: dn.exact=&quot;uid=rpuser,dc=domain,dc=com&quot; time.soft=unlimited time.hard=unlimited size.soft=unlimited size.hard=unlimited
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modify the entry:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ldapmodify -Y EXTERNAL  -H ldapi:/// -f /tmp/change_replication_limits.ldif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.itzgeek.com/how-tos/linux/centos-how-tos/step-step-openldap-server-configuration-centos-7-rhel-7.html&quot;&gt;OpenLDAP configuration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.server-world.info/en/note?os=CentOS_7&amp;amp;p=openldap&quot;&gt;OpenLDAP configuration 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.itzgeek.com/how-tos/linux/configure-openldap-master-slave-replication.html&quot;&gt;Master Slave configuration for OpenLDAP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Your Name</name></author><summary type="html">Let someone else do the OpenLDAP configuration. The rest of the tips are in case you couldn’t avoid it :). Configuring OpenLDAP Don’t combine static configuration in /etc/openldap/slapd.conf and dynamic configuration using ldif files. When working with saslauthd over TLS make sure to add the following configuration in /etc/openldap/ldap.conf: TLS_REQCERT never # or TLS_REQCERT demand Otherwise saslauthd will terminate SSL connections silently. Make sure saslauthd runs with the correct user by modifying /etc/systemd/system/saslauthd.service.d/user.conf: [Service] User=saslauth Group=saslauth Add ldap user to saslauth group: usermod -a -G saslauth ldap Reload systemctl daemon and restart the service: systemctl daemon-reload systemctl restart saslauthd Debugging OpenLDAP server, by default it writes to /var/log/messages so it is easy to track with: journalctl -f -u slapd.service Debbuging OpenLDAP clients are easier, just add -d N to your command: ldapsearch ... -d 8 More information about debug values here. strace is your friend to debug socket connections. strace -e connect testsaslauthd -u user -p password! -r realm lsof is your friend to check open ports. lsof -i :389 lsof -i :636 Inject SSL certificates on the fly instead of statically: dn: cn=config changetype: modify add: olcTLSCACertificateFile olcTLSCACertificateFile: /opt/openldap/certs/ca.pem - replace: olcTLSCertificateFile olcTLSCertificateFile: /opt/openldap/certs/server.crt - replace: olcTLSCertificateKeyFile olcTLSCertificateKeyFile: /opt/openldap/certs/server.key Add them on the fly: ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/mod_ssl.ldif Add replication configuration on the slaves: dn: olcDatabase={2}hdb,cn=config changetype: modify add: olcSyncRepl olcSyncRepl: rid=001 provider=ldaps://url:636/ bindmethod=simple binddn=&quot;uid=rpuser,dc=domain,dc=com&quot; credentials=password! searchbase=&quot;dc=domain,dc=com&quot; scope=sub schemachecking=on type=refreshAndPersist retry=&quot;30 5 300 3&quot; interval=00:00:05:00 tls_cacert=/opt/openldap/certs/ca.pem tls_reqcert=never Add the configuration on the slaves: ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/rp.ldif Check replication status Run the following query against the master and the slaves: ldapsearch -x -LLL -H ldaps://url:636 -s base -b 'dc=domain,dc=com' contextCSN dn: dc=domain,dc=com -D &quot;cn=Manager,dc=domain,dc=com&quot; -w password! dn: dc=domain,dc=com The output should be the same: # master contextCSN: 20180405092456.474217Z#000000#000#000000 # slave contextCSN: 20180405092456.474217Z#000000#000#000000 Querying OpenLDAP Non-bind query: ldapsearch -x uid=user -b dc=domain,dc=com -d 8 Bind query: ldapsearch -x -D &quot;cn=Manager,dc=domain,dc=com&quot; \ -w password! -b &quot;ou=Users,dc=domain,dc=com&quot; \ -s sub 'uid=user' Adding new entries: dn: dc=domain,dc=com dc: domain objectClass: top objectClass: domain dn: cn=Manager,dc=domain,dc=com objectClass: organizationalRole cn: Manager description: LDAP Manager dn: ou=Users,dc=domain,dc=com objectClass: organizationalUnit ou: Users dn: ou=Groups,dc=domain,dc=com objectClass: organizationalUnit ou: Groups Add them with ldapadd: ldapadd -x -w password! -D &quot;cn=Manager,dc=domain,dc=com&quot; -f /tmp/base.ldif Modifying entries: dn: olcDatabase={2}hdb,cn=config changetype: modify replace: olcSuffix olcSuffix: dc=domain,dc=com dn: olcDatabase={2}hdb,cn=config changetype: modify replace: olcRootDN olcRootDN: cn=Manager,dc=domain,dc=com dn: olcDatabase={2}hdb,cn=config changetype: modify replace: olcRootPW olcRootPW: {SHA}password Modify them with ldapmodify: ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/change_password.ldif Increasing limit for OpenLDAP replication: dn: olcDatabase={1}bdb,cn=config changetype: modify add: olcLimits olcLimits: dn.exact=&quot;uid=rpuser,dc=domain,dc=com&quot; time.soft=unlimited time.hard=unlimited size.soft=unlimited size.hard=unlimited dn: olcDatabase={2}bdb,cn=config changetype: modify add: olcLimits olcLimits: dn.exact=&quot;uid=rpuser,dc=domain,dc=com&quot; time.soft=unlimited time.hard=unlimited size.soft=unlimited size.hard=unlimited Modify the entry: ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/change_replication_limits.ldif References OpenLDAP configuration OpenLDAP configuration 2 Master Slave configuration for OpenLDAP</summary></entry><entry><title type="html">Deploying OpenStack on Containers</title><link href="http://localhost:4000/2018/02/20/openstack-deployment.html" rel="alternate" type="text/html" title="Deploying OpenStack on Containers" /><published>2018-02-20T08:20:38+01:00</published><updated>2018-02-20T08:20:38+01:00</updated><id>http://localhost:4000/2018/02/20/openstack-deployment</id><content type="html" xml:base="http://localhost:4000/2018/02/20/openstack-deployment.html">&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is a Work-In-Progress Document and the most up-to-date information is available at: &lt;a href=&quot;https://github.com/memogarcia/openstack-deployer&quot;&gt;github.com/memogarcia/openstack-deployer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Deploying OpenStack using containers allows an easy customization and flexibility on how to deploy
+the platform for development, testing and &lt;em&gt;production&lt;/em&gt; environments.&lt;/p&gt;
+
+&lt;p&gt;Current deployment: &lt;strong&gt;stable/queens&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;host-configuration&quot;&gt;Host configuration&lt;/h2&gt;
+
+&lt;p&gt;The default configuration for this environment is composed by 3 main components that need to run on the host:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/infra/docker/README.md&quot;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/infra/libvirtd/README.md&quot;&gt;Libvirtd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/infra/openvswitch/README.md&quot;&gt;OpenVSwitch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/host.png?raw=true&quot; alt=&quot;host_diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;network-topology&quot;&gt;Network topology&lt;/h2&gt;
+
+&lt;p&gt;This is the default network topology, 2 networks are used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;openstack-management-net: All openstack traffic goes through here&lt;/li&gt;
+  &lt;li&gt;openstack-provider-net: Instances get IPs in this network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/services/infra/docker/simplified_networks.png?raw=true&quot; alt=&quot;simplified_network_diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;infra-services&quot;&gt;Infra services&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fluentd: for logging&lt;/li&gt;
+  &lt;li&gt;Cadvisor: for container stats&lt;/li&gt;
+  &lt;li&gt;Elasticsearch: for log collection&lt;/li&gt;
+  &lt;li&gt;Kibana: for log visualization&lt;/li&gt;
+  &lt;li&gt;Portainer: for container management&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;third-party-services&quot;&gt;Third-party services&lt;/h2&gt;
+
+&lt;p&gt;Configure the third-party services needed for OpenStack to run.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/seed/README.md&quot;&gt;Seed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/mariadb/README.md&quot;&gt;MariaDB/MySQL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/postgresql/README.md&quot;&gt;PostgreSQL&lt;/a&gt; &lt;strong&gt;Optional Database&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/memcached/README.md&quot;&gt;Memcached&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/rabbitmq/README.md&quot;&gt;Rabbitmq&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/onos/README.md&quot;&gt;Onos&lt;/a&gt; &lt;strong&gt;Optional SDN&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/third-party/minio/README.md&quot;&gt;Minio&lt;/a&gt; &lt;strong&gt;Optional Object Storage&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;openstack-services&quot;&gt;OpenStack services&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/keystone/README.md&quot;&gt;Keystone&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/glance/README.md&quot;&gt;Glance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/neutron/README.md&quot;&gt;Neutron&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/nova/README.md&quot;&gt;Nova&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/nova-qemu/README.md&quot;&gt;Nova-Qemu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/cinder/README.md&quot;&gt;Cinder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/openstack/horizon/README.md&quot;&gt;Horizon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extending-openstack-services&quot;&gt;Extending OpenStack services&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/custom/api/README.md&quot;&gt;Custom API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/tree/master/services/custom/backend/README.md&quot;&gt;Custom Backend&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deploying-openstack&quot;&gt;Deploying OpenStack&lt;/h2&gt;
+
+&lt;p&gt;The model is a yml file describing how your environment should look like. It defines the services to run, networks, ips, volumes, dependencies, etc.&lt;/p&gt;
+
+&lt;p&gt;Configure your runtime environment by modifying &lt;a href=&quot;https://github.com/memogarcia/openstack-deployer/blob/master/model.yml&quot;&gt;model.yml&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apply the configuration with &lt;code class=&quot;highlighter-rouge&quot;&gt;config_processor&lt;/code&gt;, which will create the necessary scripts to run the environment.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ansible-playbook -i hosts/localhost config_processor.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Config processor will create a new branch &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt; where the runtime configuration will be ready for deployment.&lt;/p&gt;
+
+&lt;p&gt;Verify the branch is created correctly:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git branch
+# * deploy
+git log
+# Ready for deployment
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Deploy OpenStack&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./scripts/docker-network-create.sh
+./scripts/build.sh
+./scripts/start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;verify-installation&quot;&gt;Verify installation&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source osrc-v3
+openstack project list
+openstack image list
+openstack network list
+openstack server list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.openstack.org/install-guide/&quot;&gt;OpenStack installation Guide&lt;/a&gt;&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">Note This is a Work-In-Progress Document and the most up-to-date information is available at: github.com/memogarcia/openstack-deployer Deploying OpenStack using containers allows an easy customization and flexibility on how to deploy the platform for development, testing and production environments. Current deployment: stable/queens Host configuration The default configuration for this environment is composed by 3 main components that need to run on the host: Docker Libvirtd OpenVSwitch Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage. Network topology This is the default network topology, 2 networks are used: openstack-management-net: All openstack traffic goes through here openstack-provider-net: Instances get IPs in this network Infra services Fluentd: for logging Cadvisor: for container stats Elasticsearch: for log collection Kibana: for log visualization Portainer: for container management Third-party services Configure the third-party services needed for OpenStack to run. Seed MariaDB/MySQL PostgreSQL Optional Database Memcached Rabbitmq Onos Optional SDN Minio Optional Object Storage OpenStack services Keystone Glance Neutron Nova Nova-Qemu Cinder Horizon Extending OpenStack services Custom API Custom Backend Deploying OpenStack The model is a yml file describing how your environment should look like. It defines the services to run, networks, ips, volumes, dependencies, etc. Configure your runtime environment by modifying model.yml. Apply the configuration with config_processor, which will create the necessary scripts to run the environment. ansible-playbook -i hosts/localhost config_processor.yml Config processor will create a new branch deploy where the runtime configuration will be ready for deployment. Verify the branch is created correctly: git branch # * deploy git log # Ready for deployment Deploy OpenStack ./scripts/docker-network-create.sh ./scripts/build.sh ./scripts/start.sh Verify installation source osrc-v3 openstack project list openstack image list openstack network list openstack server list References OpenStack installation Guide</summary></entry><entry><title type="html">Becoming a certificate authority for SSL</title><link href="http://localhost:4000/2018/02/07/becoming-ca.html" rel="alternate" type="text/html" title="Becoming a certificate authority for SSL" /><published>2018-02-07T12:22:38+01:00</published><updated>2018-02-07T12:22:38+01:00</updated><id>http://localhost:4000/2018/02/07/becoming-ca</id><content type="html" xml:base="http://localhost:4000/2018/02/07/becoming-ca.html">&lt;p&gt;A Certificate Authority or CA is an entity that signs digital certificates.
+These digital certificates are used to validate the connection while using secure mechanisms.&lt;/p&gt;
+
+&lt;h2 id=&quot;root-ca&quot;&gt;root CA&lt;/h2&gt;
+
+&lt;p&gt;We will use a root CA to create intermediate CA’s which are trusted to sign certificates on its behalf.&lt;/p&gt;
+
+&lt;p&gt;First, prepare the environment.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir /root/ca &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+mkdir certs crl newcerts private
+chmod 700 private
+touch index.txt
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; serial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/2ba4b4fee8a588a7448297bc8cc4e0d9&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim /root/ca/openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create the root key &lt;code class=&quot;highlighter-rouge&quot;&gt;ca.key.pem&lt;/code&gt; and make sure to keep it secure.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl genrsa &lt;span class=&quot;nt&quot;&gt;-aes256&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; private/ca.key.pem 4096
+chmod 400 private/ca.key.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a root certificate &lt;code class=&quot;highlighter-rouge&quot;&gt;ca.cert.pem&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl req &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; openssl.cnf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-key&lt;/span&gt; private/ca.key.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-new&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x509&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-days&lt;/span&gt; 10957 &lt;span class=&quot;nt&quot;&gt;-sha256&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-extensions&lt;/span&gt; v3_ca &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; certs/ca.cert.pem
+chmod 444 certs/ca.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Verify the root certificate.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl x509 &lt;span class=&quot;nt&quot;&gt;-noout&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; certs/ca.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;intermediate-ca&quot;&gt;Intermediate CA&lt;/h2&gt;
+
+&lt;p&gt;It’s best practice to use intermediate CA’s instead of root CA’s to sign certificates, this practice allows a root CA to revoke a compromised intermediate CA and create a new one if necessary.&lt;/p&gt;
+
+&lt;p&gt;Prepare the environment.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir /root/ca/intermediate &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca/intermediate
+mkdir certs crl csr newcerts private
+chmod 700 private
+touch index.txt
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; serial
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1000 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /root/ca/intermediate/crlnumber
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then download the template for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/openssl.cnf&lt;/code&gt; from &lt;a href=&quot;https://gist.github.com/memogarcia/4c82f92bb4daf7ebc22517df24ce7a61&quot;&gt;this gist&lt;/a&gt; and edit it.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim /root/ca/intermediate/openssl.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create the intermediate key &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate.key.pem&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+openssl genrsa &lt;span class=&quot;nt&quot;&gt;-aes256&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/private/intermediate.key.pem 4096
+chmod 400 intermediate/private/intermediate.key.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With the intermediate key create an intermediate certificate request &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate.csr.pem&lt;/code&gt; for the root certificate to sign. &lt;strong&gt;Make sure that Common Name is different from your root CA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl req &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; intermediate/openssl.cnf &lt;span class=&quot;nt&quot;&gt;-new&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sha256&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-key&lt;/span&gt; intermediate/private/intermediate.key.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/csr/intermediate.csr.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The root CA will sign this certificate using &lt;code class=&quot;highlighter-rouge&quot;&gt;v3_intermediate_ca&lt;/code&gt; extension. &lt;strong&gt;Make sure is valid for less time than the root CA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl ca &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; openssl.cnf &lt;span class=&quot;nt&quot;&gt;-extensions&lt;/span&gt; v3_intermediate_ca &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-days&lt;/span&gt; 3650 &lt;span class=&quot;nt&quot;&gt;-notext&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-md&lt;/span&gt; sha256 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/csr/intermediate.csr.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/certs/intermediate.cert.pem
+chmod 444 intermediate/certs/intermediate.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;index.txt&lt;/code&gt; is the database file. &lt;strong&gt;Do NOT delete this file&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Veify the intermediate certificate.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl x509 &lt;span class=&quot;nt&quot;&gt;-noout&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/certs/intermediate.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Verify the intermediate CA against the root CA, the output should be &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl verify &lt;span class=&quot;nt&quot;&gt;-CAfile&lt;/span&gt; certs/ca.cert.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    intermediate/certs/intermediate.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After the verification is &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt;, chain the root CA and intermediate CA into a chain CA. &lt;strong&gt;This is only necessary if the root certificate is not installed on the client machines&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;intermediate/certs/intermediate.cert.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    certs/ca.cert.pem &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; intermediate/certs/ca-chain.cert.pem
+chmod 444 intermediate/certs/ca-chain.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sign-client-certificates&quot;&gt;Sign client certificates&lt;/h2&gt;
+
+&lt;p&gt;The intermediate certificate will be used to sign client certificates. &lt;strong&gt;Skip this step if you have a CSR already.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+openssl genrsa &lt;span class=&quot;nt&quot;&gt;-aes256&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/private/www.example.com.key.pem 2048
+chmod 400 intermediate/private/www.example.com.key.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using 2048 bits for encryption on the client certificates is faster for TLS handshakes and lighter on the CPU but is less secure than using 4096 bits. Use it at discretion.&lt;/p&gt;
+
+&lt;p&gt;Using the private key &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate/private/www.example.com.key.pem&lt;/code&gt;, create a CSR file. &lt;strong&gt;Skip this step if you have a CSR already.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl req &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; intermediate/openssl.cnf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-key&lt;/span&gt; intermediate/private/www.example.com.key.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-new&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sha256&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/csr/www.example.com.csr.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;signing-client-certificates&quot;&gt;Signing client certificates&lt;/h4&gt;
+
+&lt;p&gt;To create a certificate, use the intermediate CA to sign the CSR.&lt;/p&gt;
+
+&lt;p&gt;If the certificate is going to use for:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;servers, use &lt;code class=&quot;highlighter-rouge&quot;&gt;server_cert&lt;/code&gt; extension.&lt;/li&gt;
+  &lt;li&gt;authentication, use &lt;code class=&quot;highlighter-rouge&quot;&gt;usr_cert&lt;/code&gt; extension.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Usually, client certificates are valid for less time than the CA’s.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /root/ca
+openssl ca &lt;span class=&quot;nt&quot;&gt;-config&lt;/span&gt; intermediate/openssl.cnf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-extensions&lt;/span&gt; server_cert &lt;span class=&quot;nt&quot;&gt;-days&lt;/span&gt; 375 &lt;span class=&quot;nt&quot;&gt;-notext&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-md&lt;/span&gt; sha256 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/csr/www.example.com.csr.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-out&lt;/span&gt; intermediate/certs/www.example.com.cert.pem
+chmod 444 intermediate/certs/www.example.com.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;verification&quot;&gt;Verification&lt;/h4&gt;
+
+&lt;p&gt;Verify that &lt;code class=&quot;highlighter-rouge&quot;&gt;intermediate/index.txt&lt;/code&gt; contains a &lt;code class=&quot;highlighter-rouge&quot;&gt;CN&lt;/code&gt; for your domain.&lt;/p&gt;
+
+&lt;p&gt;Verify the certificate.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl x509 &lt;span class=&quot;nt&quot;&gt;-noout&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-text&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-in&lt;/span&gt; intermediate/certs/www.example.com.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Verify the CA certificate chain. the output should be &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl verify &lt;span class=&quot;nt&quot;&gt;-CAfile&lt;/span&gt; intermediate/certs/ca-chain.cert.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    intermediate/certs/www.example.com.cert.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;distribute&quot;&gt;Distribute&lt;/h4&gt;
+
+&lt;p&gt;Distribute and/or deploy the following files:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/certs/ca-chain.cert.pem&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/private/www.example.com.key.pem&lt;/code&gt;  &lt;strong&gt;Only if you are signing the CSR&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/root/ca/intermediate/certs/www.example.com.cert.pem&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sign certificates&lt;/li&gt;
+  &lt;li&gt;Cash in&lt;/li&gt;
+  &lt;li&gt;Sell out&lt;/li&gt;
+  &lt;li&gt;Bro down&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jamielinux.com/docs/openssl-certificate-authority/index.html&quot;&gt;OpenSSL Certificate Authority&lt;/a&gt;&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">A Certificate Authority or CA is an entity that signs digital certificates. These digital certificates are used to validate the connection while using secure mechanisms. root CA We will use a root CA to create intermediate CA’s which are trusted to sign certificates on its behalf. First, prepare the environment. mkdir /root/ca &amp;amp;&amp;amp; cd /root/ca mkdir certs crl newcerts private chmod 700 private touch index.txt echo 1000 &amp;gt; serial Then download the template for /root/ca/openssl.cnf from this gist and edit it. vim /root/ca/openssl.cnf Create the root key ca.key.pem and make sure to keep it secure. openssl genrsa -aes256 -out private/ca.key.pem 4096 chmod 400 private/ca.key.pem Create a root certificate ca.cert.pem. openssl req -config openssl.cnf \ -key private/ca.key.pem \ -new -x509 -days 10957 -sha256 -extensions v3_ca \ -out certs/ca.cert.pem chmod 444 certs/ca.cert.pem Verify the root certificate. openssl x509 -noout -text -in certs/ca.cert.pem Intermediate CA It’s best practice to use intermediate CA’s instead of root CA’s to sign certificates, this practice allows a root CA to revoke a compromised intermediate CA and create a new one if necessary. Prepare the environment. mkdir /root/ca/intermediate &amp;amp;&amp;amp; cd /root/ca/intermediate mkdir certs crl csr newcerts private chmod 700 private touch index.txt echo 1000 &amp;gt; serial echo 1000 &amp;gt; /root/ca/intermediate/crlnumber Then download the template for /root/ca/intermediate/openssl.cnf from this gist and edit it. vim /root/ca/intermediate/openssl.cnf Create the intermediate key intermediate.key.pem. cd /root/ca openssl genrsa -aes256 \ -out intermediate/private/intermediate.key.pem 4096 chmod 400 intermediate/private/intermediate.key.pem With the intermediate key create an intermediate certificate request intermediate.csr.pem for the root certificate to sign. Make sure that Common Name is different from your root CA openssl req -config intermediate/openssl.cnf -new -sha256 \ -key intermediate/private/intermediate.key.pem \ -out intermediate/csr/intermediate.csr.pem The root CA will sign this certificate using v3_intermediate_ca extension. Make sure is valid for less time than the root CA openssl ca -config openssl.cnf -extensions v3_intermediate_ca \ -days 3650 -notext -md sha256 \ -in intermediate/csr/intermediate.csr.pem \ -out intermediate/certs/intermediate.cert.pem chmod 444 intermediate/certs/intermediate.cert.pem index.txt is the database file. Do NOT delete this file Veify the intermediate certificate. openssl x509 -noout -text \ -in intermediate/certs/intermediate.cert.pem Verify the intermediate CA against the root CA, the output should be OK. openssl verify -CAfile certs/ca.cert.pem \ intermediate/certs/intermediate.cert.pem After the verification is OK, chain the root CA and intermediate CA into a chain CA. This is only necessary if the root certificate is not installed on the client machines cat intermediate/certs/intermediate.cert.pem \ certs/ca.cert.pem &amp;gt; intermediate/certs/ca-chain.cert.pem chmod 444 intermediate/certs/ca-chain.cert.pem Sign client certificates The intermediate certificate will be used to sign client certificates. Skip this step if you have a CSR already. cd /root/ca openssl genrsa -aes256 \ -out intermediate/private/www.example.com.key.pem 2048 chmod 400 intermediate/private/www.example.com.key.pem Using 2048 bits for encryption on the client certificates is faster for TLS handshakes and lighter on the CPU but is less secure than using 4096 bits. Use it at discretion. Using the private key intermediate/private/www.example.com.key.pem, create a CSR file. Skip this step if you have a CSR already. openssl req -config intermediate/openssl.cnf \ -key intermediate/private/www.example.com.key.pem \ -new -sha256 -out intermediate/csr/www.example.com.csr.pem Signing client certificates To create a certificate, use the intermediate CA to sign the CSR. If the certificate is going to use for: servers, use server_cert extension. authentication, use usr_cert extension. Usually, client certificates are valid for less time than the CA’s. cd /root/ca openssl ca -config intermediate/openssl.cnf \ -extensions server_cert -days 375 -notext -md sha256 \ -in intermediate/csr/www.example.com.csr.pem \ -out intermediate/certs/www.example.com.cert.pem chmod 444 intermediate/certs/www.example.com.cert.pem Verification Verify that intermediate/index.txt contains a CN for your domain. Verify the certificate. openssl x509 -noout -text \ -in intermediate/certs/www.example.com.cert.pem Verify the CA certificate chain. the output should be OK. openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \ intermediate/certs/www.example.com.cert.pem Distribute Distribute and/or deploy the following files: /root/ca/intermediate/certs/ca-chain.cert.pem /root/ca/intermediate/private/www.example.com.key.pem Only if you are signing the CSR /root/ca/intermediate/certs/www.example.com.cert.pem Next steps Sign certificates Cash in Sell out Bro down References OpenSSL Certificate Authority</summary></entry><entry><title type="html">Deploying Keystone with PosgreSQL</title><link href="http://localhost:4000/2018/02/07/keystone-postgres.html" rel="alternate" type="text/html" title="Deploying Keystone with PosgreSQL" /><published>2018-02-07T12:12:38+01:00</published><updated>2018-02-07T12:12:38+01:00</updated><id>http://localhost:4000/2018/02/07/keystone-postgres</id><content type="html" xml:base="http://localhost:4000/2018/02/07/keystone-postgres.html">&lt;p&gt;OpenStack is becoming more and more flexible on how you can configure it. One very simple example is by switching from the default MySQL/MariaDB database to PostgreSQL.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/keystone/keystone.conf&lt;/code&gt; configure the database section:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;database]
+connection &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; postgresql://keystone:Paasw0rd@openstack_postgresql/keystone
+
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install the necessary packages:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pacman &lt;span class=&quot;nt&quot;&gt;-Sy&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--noconfirm&lt;/span&gt; postgresql python-psycopg2 python-sqlalchemy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create the database user for keystone:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PGPASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;PG_Paasw0rd
+
+psql &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; openstack_postgresql &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 5432 &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ON_ERROR_STOP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;admin&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOSQL&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+    CREATE USER keystone;
+    ALTER USER keystone WITH PASSWORD 'Paasw0rd';
+    CREATE DATABASE keystone;
+    GRANT ALL PRIVILEGES ON DATABASE keystone TO keystone;
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOSQL
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And then, business as usual.&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">OpenStack is becoming more and more flexible on how you can configure it. One very simple example is by switching from the default MySQL/MariaDB database to PostgreSQL. In /etc/keystone/keystone.conf configure the database section: ... [database] connection = postgresql://keystone:Paasw0rd@openstack_postgresql/keystone ... Install the necessary packages: pacman -Sy --noconfirm postgresql python-psycopg2 python-sqlalchemy Create the database user for keystone: export PGPASSWORD=PG_Paasw0rd psql -h openstack_postgresql -p 5432 -v ON_ERROR_STOP=1 --username &quot;admin&quot; &amp;lt;&amp;lt;-EOSQL CREATE USER keystone; ALTER USER keystone WITH PASSWORD 'Paasw0rd'; CREATE DATABASE keystone; GRANT ALL PRIVILEGES ON DATABASE keystone TO keystone; EOSQL And then, business as usual.</summary></entry><entry><title type="html">Creating data pipelines with Python</title><link href="http://localhost:4000/2018/02/02/data-pipelines-python.html" rel="alternate" type="text/html" title="Creating data pipelines with Python" /><published>2018-02-02T14:22:38+01:00</published><updated>2018-02-02T14:22:38+01:00</updated><id>http://localhost:4000/2018/02/02/data-pipelines-python</id><content type="html" xml:base="http://localhost:4000/2018/02/02/data-pipelines-python.html">&lt;p&gt;While continuing exploring python’s simplicity we came across with &lt;code class=&quot;highlighter-rouge&quot;&gt;generators&lt;/code&gt;, python’s way to process data “on the fly”.&lt;/p&gt;
+
+&lt;p&gt;The conventional way of processing data in python is by using &lt;code class=&quot;highlighter-rouge&quot;&gt;iterators&lt;/code&gt;, python objects that can be iterated, a list, a string, etc. The downsize of iterators is that it has to hold its elements in memory and thus, is restricted by the physical amount of memory in your system.&lt;/p&gt;
+
+&lt;p&gt;This is an iterator example that returns a list of files.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;list_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;walk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;topdown&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice 2 behaviors here: To consume the list of files you have to wait until the functions returns and the list of files is being held in memory.&lt;/p&gt;
+
+&lt;p&gt;This is where generators come handy, it allows python to work with data in chunks of data rather than with the whole and gives you the ability to develop data pipelines where your data can be processed as is being read.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;list_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;walk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;topdown&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;consume_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/tmp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# do something with a single element&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With this example, we can start to consume data as soon as is available with one restriction, once the data is consumed python will &lt;code class=&quot;highlighter-rouge&quot;&gt;forget&lt;/code&gt; about it. while consuming less memory it might be an issue if some of the data is not processed correctly.&lt;/p&gt;
+
+&lt;p&gt;Here is a more complex example of data processing using generators where we find for a keyword is a list of files.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bz2&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fnmatch&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gzip&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filepat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''
+    Find all files in a directory tree that match a shell wildcard pattern
+    '''&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filelist&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;walk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fnmatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filelist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filepat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;opener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filenames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''
+    Open a sequence of files one at a time producing a file object.
+    The file is closed immediately when proceeding to the next iteration.
+    '''&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filenames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'.gz'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gzip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'.bz2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bz2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;concatenate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''
+    Chain a sequence of iterators together into a single sequence.
+    '''&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;grep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'''
+    Look for a regex pattern in a sequence of lines
+    '''&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lognames&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'*.log*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/var/log/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lognames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concatenate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pylines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'(?i)python'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pylines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Your Name</name></author><summary type="html">While continuing exploring python’s simplicity we came across with generators, python’s way to process data “on the fly”. The conventional way of processing data in python is by using iterators, python objects that can be iterated, a list, a string, etc. The downsize of iterators is that it has to hold its elements in memory and thus, is restricted by the physical amount of memory in your system. This is an iterator example that returns a list of files. import os def list_files(path): files = [] for root, dirs, files in os.walk(&quot;.&quot;, topdown=False): for name in files: files.append(os.path.join(root, name)) return files Notice 2 behaviors here: To consume the list of files you have to wait until the functions returns and the list of files is being held in memory. This is where generators come handy, it allows python to work with data in chunks of data rather than with the whole and gives you the ability to develop data pipelines where your data can be processed as is being read. import os def list_files(path): for root, dirs, files in os.walk(&quot;.&quot;, topdown=False): for name in files: yield os.path.join(root, name) def consume_files(): for file in list_files('/tmp'): # do something with a single element print(file) With this example, we can start to consume data as soon as is available with one restriction, once the data is consumed python will forget about it. while consuming less memory it might be an issue if some of the data is not processed correctly. Here is a more complex example of data processing using generators where we find for a keyword is a list of files. import bz2 import fnmatch import gzip import os import re def find(filepat, top): ''' Find all files in a directory tree that match a shell wildcard pattern ''' for path, dirlist, filelist in os.walk(top): for name in fnmatch.filter(filelist, filepat): yield os.path.join(path,name) def opener(filenames): ''' Open a sequence of files one at a time producing a file object. The file is closed immediately when proceeding to the next iteration. ''' for filename in filenames: if filename.endswith('.gz'): f = gzip.open(filename, 'rt') elif filename.endswith('.bz2'): f = bz2.open(filename, 'rt') else: f = open(filename, 'rt') yield f f.close() def concatenate(iterators): ''' Chain a sequence of iterators together into a single sequence. ''' for it in iterators: yield from it def grep(pattern, lines): ''' Look for a regex pattern in a sequence of lines ''' pat = re.compile(pattern) for line in lines: if pat.search(line): yield line if __name__ == '__main__': lognames = find('*.log*', '/var/log/') files = opener(lognames) lines = concatenate(files) pylines = grep('(?i)python', lines) for line in pylines: print(line)</summary></entry><entry><title type="html">Using Python to glue everything</title><link href="http://localhost:4000/2017/10/21/gluing-python.html" rel="alternate" type="text/html" title="Using Python to glue everything" /><published>2017-10-21T15:22:38+02:00</published><updated>2017-10-21T15:22:38+02:00</updated><id>http://localhost:4000/2017/10/21/gluing-python</id><content type="html" xml:base="http://localhost:4000/2017/10/21/gluing-python.html">&lt;p&gt;Bash is powerful but so is Python. And sometimes you need the best of both.&lt;/p&gt;
+
+&lt;p&gt;In order to do that, Python allows you to pipe in and out data from stdin which is quite powerful and elegant.&lt;/p&gt;
+
+&lt;p&gt;This is a very basic example but it demostrates the capabilities you can get by combining both.&lt;/p&gt;
+
+&lt;p&gt;First, create a &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; script that will read data from stdin.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python3&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fileinput&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileinput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Save it as &lt;code class=&quot;highlighter-rouge&quot;&gt;piping.py&lt;/code&gt; and give it execution permissions.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod +x piping.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;By using fileinput you get for “free” the following functionality:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; | ./piping.py | wc &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Your Name</name></author><summary type="html">Bash is powerful but so is Python. And sometimes you need the best of both. In order to do that, Python allows you to pipe in and out data from stdin which is quite powerful and elegant. This is a very basic example but it demostrates the capabilities you can get by combining both. First, create a python script that will read data from stdin. #!/usr/bin/env python3 import fileinput with fileinput.input() as f_input: for line in f_input: print(line, end='') Save it as piping.py and give it execution permissions. chmod +x piping.py By using fileinput you get for “free” the following functionality: ls | ./piping.py | wc -l</summary></entry><entry><title type="html">Pratai, event driven platform for OpenStack</title><link href="http://localhost:4000/2017/10/21/pratai.html" rel="alternate" type="text/html" title="Pratai, event driven platform for OpenStack" /><published>2017-10-21T15:21:38+02:00</published><updated>2017-10-21T15:21:38+02:00</updated><id>http://localhost:4000/2017/10/21/pratai</id><content type="html" xml:base="http://localhost:4000/2017/10/21/pratai.html">&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is a Work-In-Progress Document.&lt;/p&gt;
+
+&lt;p&gt;Read the docs at &lt;a href=&quot;https://github.com/memogarcia/pratai-docs&quot;&gt;memogarcia/pratai-docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+
+&lt;p&gt;Pratai provides an incredibly flexible and resilient platform to migrate
+workloads to the cloud that respond to events without having to manage any
+server or network.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How it works&lt;/h3&gt;
+
+&lt;p&gt;The goal of Pratai is simple. Deploy “code” (disclaimer, from now on I
+will refer to code as functions), that will react to an event without
+worrying about anything else, the platform handles the execution. Simple right?&lt;/p&gt;
+
+&lt;p&gt;In order to achieve that, first, we need to deploy a function in a &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt; format
+for one of the languages that the platform supports,
+the first one is python but more will be added in the future, after this a
+docker image gets created with the custom
+function and the requirements. e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# new_module.py&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# yes you can install dependencies, just send a requirements.txt&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;local_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# you can create local functions&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# a main function should always be declared&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# and using a payload as a parameter&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When a function gets created it will remain as inactive, waiting to be executed
+whenever an event happens that the function is subscribed to, could be a webhook
+endpoint, which can be assigned at creation time, or a message in a queue but
+basically, every event will spawn a container that will execute the event and
+then disappear.&lt;/p&gt;
+
+&lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;/h3&gt;
+
+&lt;p&gt;Pratai is conformed of 2 major pieces, the Control Plane and the Nodes.&lt;/p&gt;
+
+&lt;h4 id=&quot;control-plane&quot;&gt;Control Plane&lt;/h4&gt;
+
+&lt;p&gt;An API gateway, a database cluster and a load balancer, and agent and a scheduler
+runs in the control plane.&lt;/p&gt;
+
+&lt;p&gt;For the first version a API gateway built in python using flask will be made,
+in the future I think Golang should be a better option for it.&lt;/p&gt;
+
+&lt;p&gt;An elasticsearch cluster will power the storage of events, function metadata
+and cluster information.&lt;/p&gt;
+
+&lt;p&gt;And a nginx load balancer will connect 3 instances to the API in a &lt;code class=&quot;highlighter-rouge&quot;&gt;least_connect&lt;/code&gt;
+manner.&lt;/p&gt;
+
+&lt;h4 id=&quot;pratai-nodes&quot;&gt;Pratai Nodes&lt;/h4&gt;
+
+&lt;p&gt;A Pratai node is composed by a driver and runtimes.&lt;/p&gt;
+
+&lt;p&gt;When a new node is created it will automatically connect to the cluster and it
+will start polling for events.&lt;/p&gt;
+
+&lt;p&gt;A driver is basically a container orchestrator like swarm, kubernetes, plain
+docker, etc. in this case we will use docker.&lt;/p&gt;
+
+&lt;p&gt;The runtimes are the languages supported by the platform, they are a base
+container image that contains an OS, a language and its dependencies, etc. that
+can be used by the functions the users submits. e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# seed/Dockerfile&lt;/span&gt;
+FROM ubuntu:14.04
+RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update
+RUN apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; git unzip wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python27/Dockerfile&lt;/span&gt;
+
+FROM pratai/seed:latest
+
+RUN apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python python-dev python-setuptools python-pip
+RUN pip install pip &lt;span class=&quot;nt&quot;&gt;--upgrade&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# python27_template.txt&lt;/span&gt;
+FROM pratai/python27:latest
+RUN wget &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;zip_location&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+RUN unzip &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;zip_file&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+RUN pip install &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+RUN mkdir /etc/pratai/
+RUN mkdir /var/log/pratai/
+RUN cp new_module.py /etc/pratai/
+RUN git clone &lt;span class=&quot;s2&quot;&gt;&quot;repo_with_runtimes&quot;&lt;/span&gt;
+CMD &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;python&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;/pratai-runtimes/runtimes/python27/server.py&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;distributed-queues&quot;&gt;Distributed Queues&lt;/h4&gt;
+
+&lt;p&gt;ZeroMQ is the choice for queuing and passing messages in pratai using the PUSH/PULL
+architecture we can create a pipelines of messages that can be distributed
+across multiple nodes.&lt;/p&gt;
+
+&lt;p&gt;We will have a producer and a collector running in the scheduler, and consumers
+running in the Pratai nodes, one consumer should be spawned per thread.&lt;/p&gt;
+
+&lt;h3 id=&quot;events&quot;&gt;Events&lt;/h3&gt;
+
+&lt;p&gt;A function can react to any event coming through webhooks or messages
+in a queue, even events that happen in a database can trigger a function, is
+important to notice that a response of a function is an event, so it can trigger
+so chaining functions to build pipelines of data processing is easy with Pratai.&lt;/p&gt;
+
+&lt;p&gt;There are 2 kinds of events, &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;wait_for_response&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;async&quot;&gt;Async&lt;/h4&gt;
+
+&lt;p&gt;This is the default event for pratai, it will take a request or a message and
+process it asynchronously, then, you can collect the logs or responses,
+by default the response gets stored in a collector queue, that can send this
+response as an input for other functions.&lt;/p&gt;
+
+&lt;p&gt;You can use the async event in the following cases:&lt;/p&gt;
+
+&lt;p&gt;1: Async + Webhook&lt;/p&gt;
+
+&lt;p&gt;This is the default behaviour, in which a function will be executed
+asynchronously when an HTTP POST requests hits its endpoint.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; async &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; webhook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2: Async + Message&lt;/p&gt;
+
+&lt;p&gt;A function created with this configuration will executed asynchronously when a
+message arrives in the event queues available for the platform.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; async &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; message &lt;span class=&quot;nt&quot;&gt;--subscribe_to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;event_id&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3: Async + Timer&lt;/p&gt;
+
+&lt;p&gt;A function created with this configuration will executed asynchronously
+every time a timer sends an event, the frequency of the events are set in minutes.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; async &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; timer &lt;span class=&quot;nt&quot;&gt;--frequency&lt;/span&gt; 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;wait-for-response&quot;&gt;Wait For Response&lt;/h4&gt;
+
+&lt;p&gt;This is a request that works like a typical web server, you send a request and
+you wait for a response and only works for webhooks events&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; wait_for_response &lt;span class=&quot;nt&quot;&gt;--event&lt;/span&gt; webhook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;components&quot;&gt;Components&lt;/h3&gt;
+
+&lt;h4 id=&quot;api-gateway&quot;&gt;API Gateway&lt;/h4&gt;
+
+&lt;p&gt;The API is the main interface for incoming webhook requests and for platform
+configuration.&lt;/p&gt;
+
+&lt;h4 id=&quot;agent&quot;&gt;Agent&lt;/h4&gt;
+
+&lt;p&gt;The Agent is the main interface for events in queues and cron jobs.&lt;/p&gt;
+
+&lt;h4 id=&quot;client&quot;&gt;client&lt;/h4&gt;
+
+&lt;p&gt;python-prataiclient is the component that allows the user to interact with the
+api from the command line interface, with it you can do stuff like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; music_tag &lt;span class=&quot;nt&quot;&gt;--file&lt;/span&gt; /path/to/zip &lt;span class=&quot;nt&quot;&gt;--description&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;extract metadata from music files&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--memory&lt;/span&gt; 128
+
+pratai &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Because this is OpenStack you should pass credentials to interact with the
+platform&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_USERNAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;user
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;password
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_TENANT_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pratai_tenant
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PRATAI_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://192.168.33.9:9096
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_IDENTITY_API_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_AUTH_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://192.168.33.9:5000/v3
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PROJECT_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pratai_tenant
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_PROJECT_DOMAIN_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Default
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OS_USER_DOMAIN_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;drivers&quot;&gt;Drivers&lt;/h4&gt;
+
+&lt;p&gt;A driver is a backend that orchestrate a container that contains the custom code.&lt;/p&gt;
+
+&lt;h4 id=&quot;runtimes&quot;&gt;Runtimes&lt;/h4&gt;
+
+&lt;p&gt;A runtime is a language that is supported by the platform, it contains the
+language and its dependencies.&lt;/p&gt;
+
+&lt;h4 id=&quot;scheduler&quot;&gt;Scheduler&lt;/h4&gt;
+
+&lt;p&gt;The scheduler primarily consists of a set of Python daemons, though it requires
+and integrates with a number of native system components for databases and
+messaging capabilities.&lt;/p&gt;
+
+&lt;p&gt;1; Scheduler&lt;/p&gt;
+
+&lt;p&gt;The API and the Agent push messages to this queue which will be pre-processed
+before being distributed among the pratai nodes.&lt;/p&gt;
+
+&lt;p&gt;2; Collector&lt;/p&gt;
+
+&lt;p&gt;When a function finish the function execution it will send the result and
+status here in order to be stored in the database afterwards.&lt;/p&gt;
+
+&lt;h3 id=&quot;security--secrets&quot;&gt;Security &amp;amp; Secrets&lt;/h3&gt;
+
+&lt;p&gt;The functions that interact with external services most often that not they
+require to use credentials to connect, for this, Barbican has been proposed to
+help with this scenario.&lt;/p&gt;
+
+&lt;p&gt;We definitely recommend using tokens instead of user/passwords when possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;community&quot;&gt;Community&lt;/h3&gt;
+
+&lt;p&gt;Join us at &lt;code class=&quot;highlighter-rouge&quot;&gt;#pratai&lt;/code&gt; irc channel in &lt;code class=&quot;highlighter-rouge&quot;&gt;freenode&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;repositories&quot;&gt;Repositories&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-docs&quot;&gt;memogarcia/pratai-docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-agent&quot;&gt;memogarcia/pratai-agent&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-api&quot;&gt;memogarcia/pratai-api&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-scheduler&quot;&gt;memogarcia/pratai-scheduler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-runtimes&quot;&gt;memogarcia/pratai-runtimes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/memogarcia/pratai-drivers&quot;&gt;memogarcia/pratai-drivers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.reactivemanifesto.org&quot;&gt;The Reactive Manifesto&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/dn600223.aspx&quot;&gt;Cloud Design Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Your Name</name></author><summary type="html">Note This is a Work-In-Progress Document. Read the docs at memogarcia/pratai-docs Abstract Pratai provides an incredibly flexible and resilient platform to migrate workloads to the cloud that respond to events without having to manage any server or network. How it works The goal of Pratai is simple. Deploy “code” (disclaimer, from now on I will refer to code as functions), that will react to an event without worrying about anything else, the platform handles the execution. Simple right? In order to achieve that, first, we need to deploy a function in a zip format for one of the languages that the platform supports, the first one is python but more will be added in the future, after this a docker image gets created with the custom function and the requirements. e.g. # new_module.py import numpy # yes you can install dependencies, just send a requirements.txt def local_function(payload): # you can create local functions return payload def main(payload=None): # a main function should always be declared # and using a payload as a parameter return local_function(payload) When a function gets created it will remain as inactive, waiting to be executed whenever an event happens that the function is subscribed to, could be a webhook endpoint, which can be assigned at creation time, or a message in a queue but basically, every event will spawn a container that will execute the event and then disappear. Architecture Pratai is conformed of 2 major pieces, the Control Plane and the Nodes. Control Plane An API gateway, a database cluster and a load balancer, and agent and a scheduler runs in the control plane. For the first version a API gateway built in python using flask will be made, in the future I think Golang should be a better option for it. An elasticsearch cluster will power the storage of events, function metadata and cluster information. And a nginx load balancer will connect 3 instances to the API in a least_connect manner. Pratai Nodes A Pratai node is composed by a driver and runtimes. When a new node is created it will automatically connect to the cluster and it will start polling for events. A driver is basically a container orchestrator like swarm, kubernetes, plain docker, etc. in this case we will use docker. The runtimes are the languages supported by the platform, they are a base container image that contains an OS, a language and its dependencies, etc. that can be used by the functions the users submits. e.g. # seed/Dockerfile FROM ubuntu:14.04 RUN apt-get -y update RUN apt-get install -y git unzip wget # python27/Dockerfile FROM pratai/seed:latest RUN apt-get install -y python python-dev python-setuptools python-pip RUN pip install pip --upgrade # python27_template.txt FROM pratai/python27:latest RUN wget {zip_location} RUN unzip {zip_file} RUN pip install -r requirements.txt RUN mkdir /etc/pratai/ RUN mkdir /var/log/pratai/ RUN cp new_module.py /etc/pratai/ RUN git clone &quot;repo_with_runtimes&quot; CMD [&quot;python&quot;, &quot;/pratai-runtimes/runtimes/python27/server.py&quot;] Distributed Queues ZeroMQ is the choice for queuing and passing messages in pratai using the PUSH/PULL architecture we can create a pipelines of messages that can be distributed across multiple nodes. We will have a producer and a collector running in the scheduler, and consumers running in the Pratai nodes, one consumer should be spawned per thread. Events A function can react to any event coming through webhooks or messages in a queue, even events that happen in a database can trigger a function, is important to notice that a response of a function is an event, so it can trigger so chaining functions to build pipelines of data processing is easy with Pratai. There are 2 kinds of events, async and wait_for_response Async This is the default event for pratai, it will take a request or a message and process it asynchronously, then, you can collect the logs or responses, by default the response gets stored in a collector queue, that can send this response as an input for other functions. You can use the async event in the following cases: 1: Async + Webhook This is the default behaviour, in which a function will be executed asynchronously when an HTTP POST requests hits its endpoint. pratai function-create {name} --type async --event webhook 2: Async + Message A function created with this configuration will executed asynchronously when a message arrives in the event queues available for the platform. pratai function-create {name} --type async --event message --subscribe_to {event_id} 3: Async + Timer A function created with this configuration will executed asynchronously every time a timer sends an event, the frequency of the events are set in minutes. pratai function-create {name} --type async --event timer --frequency 5 Wait For Response This is a request that works like a typical web server, you send a request and you wait for a response and only works for webhooks events pratai function-create {name} --type wait_for_response --event webhook Components API Gateway The API is the main interface for incoming webhook requests and for platform configuration. Agent The Agent is the main interface for events in queues and cron jobs. client python-prataiclient is the component that allows the user to interact with the api from the command line interface, with it you can do stuff like this: pratai function-create music_tag --file /path/to/zip --description \ &quot;extract metadata from music files&quot; --memory 128 pratai function-list Because this is OpenStack you should pass credentials to interact with the platform export OS_USERNAME=user export OS_PASSWORD=password export OS_TENANT_NAME=pratai_tenant export OS_PRATAI_URL=http://192.168.33.9:9096 export OS_IDENTITY_API_VERSION=3 export OS_AUTH_URL=http://192.168.33.9:5000/v3 export OS_PROJECT_NAME=pratai_tenant export OS_PROJECT_DOMAIN_NAME=Default export OS_USER_DOMAIN_NAME=Default Drivers A driver is a backend that orchestrate a container that contains the custom code. Runtimes A runtime is a language that is supported by the platform, it contains the language and its dependencies. Scheduler The scheduler primarily consists of a set of Python daemons, though it requires and integrates with a number of native system components for databases and messaging capabilities. 1; Scheduler The API and the Agent push messages to this queue which will be pre-processed before being distributed among the pratai nodes. 2; Collector When a function finish the function execution it will send the result and status here in order to be stored in the database afterwards. Security &amp;amp; Secrets The functions that interact with external services most often that not they require to use credentials to connect, for this, Barbican has been proposed to help with this scenario. We definitely recommend using tokens instead of user/passwords when possible. Community Join us at #pratai irc channel in freenode Repositories memogarcia/pratai-docs memogarcia/pratai-agent memogarcia/pratai-api memogarcia/pratai-scheduler memogarcia/pratai-runtimes memogarcia/pratai-drivers References The Reactive Manifesto Cloud Design Patterns</summary></entry><entry><title type="html">Python Windows service</title><link href="http://localhost:4000/2017/10/20/python-windows-service.html" rel="alternate" type="text/html" title="Python Windows service" /><published>2017-10-20T15:22:38+02:00</published><updated>2017-10-20T15:22:38+02:00</updated><id>http://localhost:4000/2017/10/20/python-windows-service</id><content type="html" xml:base="http://localhost:4000/2017/10/20/python-windows-service.html">&lt;p&gt;Create a windows service in python is quite easy.&lt;/p&gt;
+
+&lt;p&gt;first, install &lt;a href=&quot;https://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/&quot;&gt;pywin32&lt;/a&gt;
+and &lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=44266&quot;&gt;Microsoft Visual C++ Compiler for Python 2.7&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, use this boilerplate code to run your service.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;servicemanager&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32event&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32service&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32serviceutil&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PySvc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceFramework&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_svc_name_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YourService&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_svc_display_name_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Your Service&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;_svc_description_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Your Service&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ServiceFramework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# create an event to listen for stop requests on&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hWaitStop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CreateEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SvcDoRun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Run the windows service
+        &quot;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;# if the stop event hasn't been fired keep looping&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WAIT_OBJECT_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;# block for 5 seconds and listen for a stop event&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WaitForSingleObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hWaitStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SvcStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Stop the windows service and stop the scheduler instance
+        &quot;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# tell the SCM we're shutting down&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReportServiceStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;win32service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SERVICE_STOP_PENDING&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;# fire the stop event&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LogInfoMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stop event&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;win32event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hWaitStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# do something here&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PrepareToHostSingle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PySvc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;servicemanager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StartServiceCtrlDispatcher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HandleCommandLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PySvc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then install the service:&lt;/p&gt;
+
+&lt;p&gt;As a user:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python win_service.py &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$pc_name&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--password&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$plain_password&lt;/span&gt; install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As a background service:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python win_service.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Manipulate the service in python&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32serviceutil&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# start the service&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StartService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# stop the service&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StopService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# or in case the stop functionality gets blocked like in this case...&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+Stop the windows service by using sc queryex command, if we use
+  win32serviceutil.StoptService(self.service_name) it never gets stopped
+because freezer_scheduler.start() blocks the windows service and
+prevents any new signal to reach the service.
+&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sc queryex {0}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create_subprocess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'PID'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'taskkill /f /pid {0}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;utils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create_subprocess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# status of the service&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Return running status of Freezer Service
+by querying win32serviceutil.QueryServiceStatus()
+possible running status:
+    1 == stop
+    4 == running
+&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;win32serviceutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;QueryServiceStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0} is running normally&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0} is *NOT* running&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Your Name</name></author><summary type="html">Create a windows service in python is quite easy. first, install pywin32 and Microsoft Visual C++ Compiler for Python 2.7 Then, use this boilerplate code to run your service. import servicemanager import win32event import win32service import win32serviceutil class PySvc(win32serviceutil.ServiceFramework): _svc_name_ = &quot;YourService&quot; _svc_display_name_ = &quot;Your Service&quot; _svc_description_ = &quot;Your Service&quot; def __init__(self, args): win32serviceutil.ServiceFramework.__init__(self, args) # create an event to listen for stop requests on self.hWaitStop = win32event.CreateEvent(None, 0, 0, None) def SvcDoRun(self): &quot;&quot;&quot;Run the windows service &quot;&quot;&quot; rc = None self.main() # if the stop event hasn't been fired keep looping while rc != win32event.WAIT_OBJECT_0: # block for 5 seconds and listen for a stop event rc = win32event.WaitForSingleObject(self.hWaitStop, 5000) def SvcStop(self): &quot;&quot;&quot;Stop the windows service and stop the scheduler instance &quot;&quot;&quot; # tell the SCM we're shutting down self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING) # fire the stop event servicemanager.LogInfoMsg(&quot;stop event&quot;) win32event.SetEvent(self.hWaitStop) def main(self): # do something here pass if __name__ == '__main__': if len(sys.argv) == 1: servicemanager.Initialize() servicemanager.PrepareToHostSingle(PySvc) servicemanager.StartServiceCtrlDispatcher() else: win32serviceutil.HandleCommandLine(PySvc) Then install the service: As a user: python win_service.py --username $pc_name --password $plain_password install As a background service: python win_service.py install Manipulate the service in python import win32serviceutil # start the service win32serviceutil.StartService(&quot;service_name&quot;) # stop the service win32serviceutil.StopService(&quot;service_name&quot;) # or in case the stop functionality gets blocked like in this case... &quot;&quot;&quot; Stop the windows service by using sc queryex command, if we use win32serviceutil.StoptService(self.service_name) it never gets stopped because freezer_scheduler.start() blocks the windows service and prevents any new signal to reach the service. &quot;&quot;&quot; query = 'sc queryex {0}'.format(&quot;service_name&quot;) out = utils.create_subprocess(query)[0] pid = None for line in out.split('\n'): if 'PID' in line: pid = line.split(':')[1].strip() command = 'taskkill /f /pid {0}'.format(pid) utils.create_subprocess(command) # status of the service &quot;&quot;&quot;Return running status of Freezer Service by querying win32serviceutil.QueryServiceStatus() possible running status: 1 == stop 4 == running &quot;&quot;&quot; if win32serviceutil.QueryServiceStatus(&quot;service_name&quot;)[1] == 4: print(&quot;{0} is running normally&quot;.format(&quot;service_name&quot;)) else: print(&quot;{0} is *NOT* running&quot;.format(&quot;service_name&quot;))</summary></entry></feed>
