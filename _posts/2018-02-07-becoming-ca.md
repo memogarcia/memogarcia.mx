@@ -6,7 +6,7 @@ date:   2018-02-07 12:22:38 +0100
 A Certificate Authority or CA is an entity that signs digital certificates.
 These digital certificates are used to validate the connection while using secure mechanisms.
 
-## root CA
+## Generating a root CA
 
 We will use a root CA to create intermediate CA's which are trusted to sign certificates on its behalf.
 
@@ -49,7 +49,7 @@ Verify the root certificate.
 openssl x509 -noout -text -in certs/ca.cert.pem
 ```
 
-## Intermediate CA
+## Generating an intermediate CA
 
 It's best practice to use intermediate CA's instead of root CA's to sign certificates, this practice allows a root CA to revoke a compromised intermediate CA and create a new one if necessary.
 
@@ -121,7 +121,7 @@ cat intermediate/certs/intermediate.cert.pem \
 chmod 444 intermediate/certs/ca-chain.cert.pem
 ```
 
-## Sign client certificates
+## Client certificates
 
 The intermediate certificate will be used to sign client certificates. **Skip this step if you have a CSR already.**
 
@@ -142,7 +142,7 @@ openssl req -config intermediate/openssl.cnf \
     -new -sha256 -out intermediate/csr/www.example.com.csr.pem
 ```
 
-#### Signing client certificates
+### Signing client certificates
 
 To create a certificate, use the intermediate CA to sign the CSR.
 
@@ -162,7 +162,7 @@ openssl ca -config intermediate/openssl.cnf \
 chmod 444 intermediate/certs/www.example.com.cert.pem
 ```
 
-#### Verification
+### Verification
 
 Verify that `intermediate/index.txt` contains a `CN` for your domain.
 
@@ -180,7 +180,7 @@ openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \
     intermediate/certs/www.example.com.cert.pem
 ```
 
-#### Distribute
+### Distribution
 
 Distribute and/or deploy the following files:
 
