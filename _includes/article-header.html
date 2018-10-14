@@ -11,7 +11,7 @@
   {%- include snippets/assign.html
     target=site.data.variables.default.page.show_edit_on_github
     source0=layout.show_edit_on_github source1=include.article.show_edit_on_github -%}
-  {%- assign _show_edit_on_github = __return -%}
+  {%- assign _show_edit_on_github = false -%}
 
   {%- if _show_title or _show_edit_on_github -%}
     <div class="article__header">
