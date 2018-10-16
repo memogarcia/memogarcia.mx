@@ -277,7 +277,7 @@
   <div class="article__content" itemprop="articleBody"><p>A Certificate Authority or CA is an entity that signs digital certificates.
 These digital certificates are used to validate the connection while using secure mechanisms.</p>
 
-<h2 id="root-ca">root CA</h2>
+<h2 id="generating-a-root-ca">Generating a root CA</h2>
 
 <p>We will use a root CA to create intermediate CA’s which are trusted to sign certificates on its behalf.</p>
 
@@ -315,7 +315,7 @@ chmod 444 certs/ca.cert.pem
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl x509 <span class="nt">-noout</span> <span class="nt">-text</span> <span class="nt">-in</span> certs/ca.cert.pem
 </code></pre></div></div>
 
-<h2 id="intermediate-ca">Intermediate CA</h2>
+<h2 id="generating-an-intermediate-ca">Generating an intermediate CA</h2>
 
 <p>It’s best practice to use intermediate CA’s instead of root CA’s to sign certificates, this practice allows a root CA to revoke a compromised intermediate CA and create a new one if necessary.</p>
 
@@ -379,7 +379,7 @@ chmod 444 intermediate/certs/intermediate.cert.pem
 chmod 444 intermediate/certs/ca-chain.cert.pem
 </code></pre></div></div>
 
-<h2 id="sign-client-certificates">Sign client certificates</h2>
+<h2 id="client-certificates">Client certificates</h2>
 
 <p>The intermediate certificate will be used to sign client certificates. <strong>Skip this step if you have a CSR already.</strong></p>
 
@@ -398,7 +398,7 @@ chmod 400 intermediate/private/www.example.com.key.pem
     <span class="nt">-new</span> <span class="nt">-sha256</span> <span class="nt">-out</span> intermediate/csr/www.example.com.csr.pem
 </code></pre></div></div>
 
-<h4 id="signing-client-certificates">Signing client certificates</h4>
+<h3 id="signing-client-certificates">Signing client certificates</h3>
 
 <p>To create a certificate, use the intermediate CA to sign the CSR.</p>
 
@@ -419,7 +419,7 @@ openssl ca <span class="nt">-config</span> intermediate/openssl.cnf <span class=
 chmod 444 intermediate/certs/www.example.com.cert.pem
 </code></pre></div></div>
 
-<h4 id="verification">Verification</h4>
+<h3 id="verification">Verification</h3>
 
 <p>Verify that <code class="highlighter-rouge">intermediate/index.txt</code> contains a <code class="highlighter-rouge">CN</code> for your domain.</p>
 
@@ -435,7 +435,7 @@ chmod 444 intermediate/certs/www.example.com.cert.pem
     intermediate/certs/www.example.com.cert.pem
 </code></pre></div></div>
 
-<h4 id="distribute">Distribute</h4>
+<h3 id="distribution">Distribution</h3>
 
 <p>Distribute and/or deploy the following files:</p>
 
@@ -461,7 +461,7 @@ chmod 444 intermediate/certs/www.example.com.cert.pem
 
   <footer class="article__footer"><meta itemprop="dateModified" content="2018-02-07T12:22:38+01:00"><!-- this will show at every article content's bottom --><div class="article__license"></div></footer>
 
-  <!--<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2018/02/07/keystone-postgres.html">Deploying Keystone with PosgreSQL</a></div><div class="next"><span>NEXT</span><a href="/2018/02/20/openstack-deployment.html">Deploying OpenStack on Containers</a></div></div>-->
+  <!--<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2018/02/07/keystone-postgres.html">Deploying Keystone using PosgreSQL</a></div><div class="next"><span>NEXT</span><a href="/2018/02/20/openstack-deployment.html">Deploying OpenStack on Containers</a></div></div>-->
 
 </div>
 

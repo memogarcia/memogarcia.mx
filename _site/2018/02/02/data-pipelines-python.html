@@ -291,9 +291,9 @@
     <span class="k">return</span> <span class="n">files</span>
 </code></pre></div></div>
 
-<p>Notice 2 behaviors here: To consume the list of files you have to wait until the functions returns and the list of files is being held in memory.</p>
+<p>Notice 2 behaviours here: To consume the list of files you have to wait until the functions returns and the list of files is available in memory.</p>
 
-<p>This is where generators come handy, it allows python to work with data in chunks of data rather than with the whole and gives you the ability to develop data pipelines where your data can be processed as is being read.</p>
+<p>This is where generators come handy, and it allows python to work with data in chunks of data rather than with the whole and gives you the ability to develop data pipelines where your data can be processed as is being read.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
 
@@ -310,7 +310,7 @@
         <span class="k">print</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>With this example, we can start to consume data as soon as is available with one restriction, once the data is consumed python will <code class="highlighter-rouge">forget</code> about it. while consuming less memory it might be an issue if some of the data is not processed correctly.</p>
+<p>With this example, we can start to consume data as soon as the first chuck is available with one restriction, once the data is consumed python will <code class="highlighter-rouge">forget</code> about it. While consuming less memory, it might be an issue if some of the data is not processed correctly.</p>
 
 <p>Here is a more complex example of data processing using generators where we find for a keyword is a list of files.</p>
 
@@ -376,7 +376,7 @@
 
   <footer class="article__footer"><meta itemprop="dateModified" content="2018-02-02T14:22:38+01:00"><!-- this will show at every article content's bottom --><div class="article__license"></div></footer>
 
-  <!--<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2017/10/21/gluing-python.html">Using Python to glue everything</a></div><div class="next"><span>NEXT</span><a href="/2018/02/07/keystone-postgres.html">Deploying Keystone with PosgreSQL</a></div></div>-->
+  <!--<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2017/10/21/gluing-python.html">Using Python to glue everything</a></div><div class="next"><span>NEXT</span><a href="/2018/02/07/keystone-postgres.html">Deploying Keystone using PosgreSQL</a></div></div>-->
 
 </div>
 
