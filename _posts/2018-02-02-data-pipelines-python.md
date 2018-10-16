@@ -21,9 +21,9 @@ def list_files(path):
     return files
 ```
 
-Notice 2 behaviors here: To consume the list of files you have to wait until the functions returns and the list of files is being held in memory.
+Notice 2 behaviours here: To consume the list of files you have to wait until the functions returns and the list of files is available in memory.
 
-This is where generators come handy, it allows python to work with data in chunks of data rather than with the whole and gives you the ability to develop data pipelines where your data can be processed as is being read.
+This is where generators come handy, and it allows python to work with data in chunks of data rather than with the whole and gives you the ability to develop data pipelines where your data can be processed as is being read.
 
 ```python
 import os
@@ -41,7 +41,7 @@ def consume_files():
         print(file)
 ```
 
-With this example, we can start to consume data as soon as is available with one restriction, once the data is consumed python will `forget` about it. while consuming less memory it might be an issue if some of the data is not processed correctly.
+With this example, we can start to consume data as soon as the first chuck is available with one restriction, once the data is consumed python will `forget` about it. While consuming less memory, it might be an issue if some of the data is not processed correctly.
 
 Here is a more complex example of data processing using generators where we find for a keyword is a list of files.
 

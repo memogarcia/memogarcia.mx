@@ -5,9 +5,9 @@ date:   2017-10-21 14:22:38 +0100
 
 Bash is powerful but so is Python. And sometimes you need the best of both.
 
-In order to do that, Python allows you to pipe in and out data from stdin which is quite powerful and elegant.
+To do that, Python allows you to pipe in and out data from stdin which is quite powerful and elegant.
 
-This is a very basic example but it demostrates the capabilities you can get by combining both.
+This is a very basic example, but it demonstrates the capabilities you can get by combining both.
 
 First, create a `python` script that will read data from stdin.
 

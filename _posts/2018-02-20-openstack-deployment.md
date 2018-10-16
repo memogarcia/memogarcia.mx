@@ -5,8 +5,7 @@ date:   2018-02-20 08:20:38 +0100
 
 **Note** This is a Work-In-Progress Document and the most up-to-date information is available at: [github.com/memogarcia/openstack-deployer](https://github.com/memogarcia/openstack-deployer)
 
-Deploying OpenStack using containers allows an easy customization and flexibility on how to deploy
-the platform for development, testing and _production_ environments.
+Deploying OpenStack using containers allows easy customisation and flexibility on how to deploy the platform for development, testing and _production_ environments.
 
 Current deployment: **stable/queens**
 
