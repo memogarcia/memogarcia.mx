@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>memogarcia.mx - Pratai, event driven platform for OpenStack</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        <a href="/about">About </a>
+    
+</nav>
+
+  <!--  -->
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Pratai, event driven platform for OpenStack</h1>
+        <h2 class="headline">October 21, 2017</h2>
+    </header>
+    <section id="post-body">
+        <p><strong>Note</strong> This is a Work-In-Progress Document.</p>
+
+<p>Read the docs at <a href="https://github.com/memogarcia/pratai-docs">memogarcia/pratai-docs</a></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Pratai provides an incredibly flexible and resilient platform to migrate
+workloads to the cloud that respond to events without having to manage any
+server or network.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>The goal of Pratai is simple. Deploy “code” (disclaimer, from now on I
+will refer to code as functions), that will react to an event without
+worrying about anything else, the platform handles the execution. Simple right?</p>
+
+<p>In order to achieve that, first, we need to deploy a function in a <code class="highlighter-rouge">zip</code> format
+for one of the languages that the platform supports,
+the first one is python but more will be added in the future, after this a
+docker image gets created with the custom
+function and the requirements. e.g.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># new_module.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span>  <span class="c"># yes you can install dependencies, just send a requirements.txt</span>
+
+
+<span class="k">def</span> <span class="nf">local_function</span><span class="p">(</span><span class="n">payload</span><span class="p">):</span>
+    <span class="c"># you can create local functions</span>
+    <span class="k">return</span> <span class="n">payload</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">payload</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="c"># a main function should always be declared</span>
+    <span class="c"># and using a payload as a parameter</span>
+    <span class="k">return</span> <span class="n">local_function</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>When a function gets created it will remain as inactive, waiting to be executed
+whenever an event happens that the function is subscribed to, could be a webhook
+endpoint, which can be assigned at creation time, or a message in a queue but
+basically, every event will spawn a container that will execute the event and
+then disappear.</p>
+
+<h3 id="architecture">Architecture</h3>
+
+<p>Pratai is conformed of 2 major pieces, the Control Plane and the Nodes.</p>
+
+<h4 id="control-plane">Control Plane</h4>
+
+<p>An API gateway, a database cluster and a load balancer, and agent and a scheduler
+runs in the control plane.</p>
+
+<p>For the first version a API gateway built in python using flask will be made,
+in the future I think Golang should be a better option for it.</p>
+
+<p>An elasticsearch cluster will power the storage of events, function metadata
+and cluster information.</p>
+
+<p>And a nginx load balancer will connect 3 instances to the API in a <code class="highlighter-rouge">least_connect</code>
+manner.</p>
+
+<h4 id="pratai-nodes">Pratai Nodes</h4>
+
+<p>A Pratai node is composed by a driver and runtimes.</p>
+
+<p>When a new node is created it will automatically connect to the cluster and it
+will start polling for events.</p>
+
+<p>A driver is basically a container orchestrator like swarm, kubernetes, plain
+docker, etc. in this case we will use docker.</p>
+
+<p>The runtimes are the languages supported by the platform, they are a base
+container image that contains an OS, a language and its dependencies, etc. that
+can be used by the functions the users submits. e.g.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># seed/Dockerfile</span>
+FROM ubuntu:14.04
+RUN apt-get <span class="nt">-y</span> update
+RUN apt-get install <span class="nt">-y</span> git unzip wget
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># python27/Dockerfile</span>
+
+FROM pratai/seed:latest
+
+RUN apt-get install <span class="nt">-y</span> python python-dev python-setuptools python-pip
+RUN pip install pip <span class="nt">--upgrade</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># python27_template.txt</span>
+FROM pratai/python27:latest
+RUN wget <span class="o">{</span>zip_location<span class="o">}</span>
+RUN unzip <span class="o">{</span>zip_file<span class="o">}</span>
+RUN pip install <span class="nt">-r</span> requirements.txt
+RUN mkdir /etc/pratai/
+RUN mkdir /var/log/pratai/
+RUN cp new_module.py /etc/pratai/
+RUN git clone <span class="s2">"repo_with_runtimes"</span>
+CMD <span class="o">[</span><span class="s2">"python"</span>, <span class="s2">"/pratai-runtimes/runtimes/python27/server.py"</span><span class="o">]</span>
+</code></pre></div></div>
+
+<h4 id="distributed-queues">Distributed Queues</h4>
+
+<p>ZeroMQ is the choice for queuing and passing messages in pratai using the PUSH/PULL
+architecture we can create a pipelines of messages that can be distributed
+across multiple nodes.</p>
+
+<p>We will have a producer and a collector running in the scheduler, and consumers
+running in the Pratai nodes, one consumer should be spawned per thread.</p>
+
+<h3 id="events">Events</h3>
+
+<p>A function can react to any event coming through webhooks or messages
+in a queue, even events that happen in a database can trigger a function, is
+important to notice that a response of a function is an event, so it can trigger
+so chaining functions to build pipelines of data processing is easy with Pratai.</p>
+
+<p>There are 2 kinds of events, <code class="highlighter-rouge">async</code> and <code class="highlighter-rouge">wait_for_response</code></p>
+
+<h4 id="async">Async</h4>
+
+<p>This is the default event for pratai, it will take a request or a message and
+process it asynchronously, then, you can collect the logs or responses,
+by default the response gets stored in a collector queue, that can send this
+response as an input for other functions.</p>
+
+<p>You can use the async event in the following cases:</p>
+
+<p>1: Async + Webhook</p>
+
+<p>This is the default behaviour, in which a function will be executed
+asynchronously when an HTTP POST requests hits its endpoint.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">--type</span> async <span class="nt">--event</span> webhook
+</code></pre></div></div>
+
+<p>2: Async + Message</p>
+
+<p>A function created with this configuration will executed asynchronously when a
+message arrives in the event queues available for the platform.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">--type</span> async <span class="nt">--event</span> message <span class="nt">--subscribe_to</span> <span class="o">{</span>event_id<span class="o">}</span>
+</code></pre></div></div>
+
+<p>3: Async + Timer</p>
+
+<p>A function created with this configuration will executed asynchronously
+every time a timer sends an event, the frequency of the events are set in minutes.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">--type</span> async <span class="nt">--event</span> timer <span class="nt">--frequency</span> 5
+</code></pre></div></div>
+
+<h4 id="wait-for-response">Wait For Response</h4>
+
+<p>This is a request that works like a typical web server, you send a request and
+you wait for a response and only works for webhooks events</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> <span class="o">{</span>name<span class="o">}</span> <span class="nt">--type</span> wait_for_response <span class="nt">--event</span> webhook
+</code></pre></div></div>
+
+<h3 id="components">Components</h3>
+
+<h4 id="api-gateway">API Gateway</h4>
+
+<p>The API is the main interface for incoming webhook requests and for platform
+configuration.</p>
+
+<h4 id="agent">Agent</h4>
+
+<p>The Agent is the main interface for events in queues and cron jobs.</p>
+
+<h4 id="client">client</h4>
+
+<p>python-prataiclient is the component that allows the user to interact with the
+api from the command line interface, with it you can do stuff like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratai <span class="k">function</span><span class="nt">-create</span> music_tag <span class="nt">--file</span> /path/to/zip <span class="nt">--description</span> <span class="se">\</span>
+    <span class="s2">"extract metadata from music files"</span> <span class="nt">--memory</span> 128
+
+pratai <span class="k">function</span><span class="nt">-list</span>
+</code></pre></div></div>
+
+<p>Because this is OpenStack you should pass credentials to interact with the
+platform</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">OS_USERNAME</span><span class="o">=</span>user
+<span class="nb">export </span><span class="nv">OS_PASSWORD</span><span class="o">=</span>password
+<span class="nb">export </span><span class="nv">OS_TENANT_NAME</span><span class="o">=</span>pratai_tenant
+<span class="nb">export </span><span class="nv">OS_PRATAI_URL</span><span class="o">=</span>http://192.168.33.9:9096
+<span class="nb">export </span><span class="nv">OS_IDENTITY_API_VERSION</span><span class="o">=</span>3
+<span class="nb">export </span><span class="nv">OS_AUTH_URL</span><span class="o">=</span>http://192.168.33.9:5000/v3
+<span class="nb">export </span><span class="nv">OS_PROJECT_NAME</span><span class="o">=</span>pratai_tenant
+<span class="nb">export </span><span class="nv">OS_PROJECT_DOMAIN_NAME</span><span class="o">=</span>Default
+<span class="nb">export </span><span class="nv">OS_USER_DOMAIN_NAME</span><span class="o">=</span>Default
+</code></pre></div></div>
+
+<h4 id="drivers">Drivers</h4>
+
+<p>A driver is a backend that orchestrate a container that contains the custom code.</p>
+
+<h4 id="runtimes">Runtimes</h4>
+
+<p>A runtime is a language that is supported by the platform, it contains the
+language and its dependencies.</p>
+
+<h4 id="scheduler">Scheduler</h4>
+
+<p>The scheduler primarily consists of a set of Python daemons, though it requires
+and integrates with a number of native system components for databases and
+messaging capabilities.</p>
+
+<p>1; Scheduler</p>
+
+<p>The API and the Agent push messages to this queue which will be pre-processed
+before being distributed among the pratai nodes.</p>
+
+<p>2; Collector</p>
+
+<p>When a function finish the function execution it will send the result and
+status here in order to be stored in the database afterwards.</p>
+
+<h3 id="security--secrets">Security &amp; Secrets</h3>
+
+<p>The functions that interact with external services most often that not they
+require to use credentials to connect, for this, Barbican has been proposed to
+help with this scenario.</p>
+
+<p>We definitely recommend using tokens instead of user/passwords when possible.</p>
+
+<h3 id="community">Community</h3>
+
+<p>Join us at <code class="highlighter-rouge">#pratai</code> irc channel in <code class="highlighter-rouge">freenode</code></p>
+
+<h3 id="repositories">Repositories</h3>
+
+<ul>
+  <li><a href="https://github.com/memogarcia/pratai-docs">memogarcia/pratai-docs</a></li>
+  <li><a href="https://github.com/memogarcia/pratai-agent">memogarcia/pratai-agent</a></li>
+  <li><a href="https://github.com/memogarcia/pratai-api">memogarcia/pratai-api</a></li>
+  <li><a href="https://github.com/memogarcia/pratai-scheduler">memogarcia/pratai-scheduler</a></li>
+  <li><a href="https://github.com/memogarcia/pratai-runtimes">memogarcia/pratai-runtimes</a></li>
+  <li><a href="https://github.com/memogarcia/pratai-drivers">memogarcia/pratai-drivers</a></li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="http://www.reactivemanifesto.org">The Reactive Manifesto</a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/dn600223.aspx">Cloud Design Patterns</a></li>
+</ul>
+
+    </section>
+</article>
+<!-- <footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Memo Garcia</span>
+            <span>My Personal Notes</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        
+    </section>
+</footer> -->
+
+<!-- Disqus comments -->
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+
