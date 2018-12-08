@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>memogarcia.mx - Netbox Configuration</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        <a href="/about">About </a>
+    
+</nav>
+
+  <!--  -->
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Netbox Configuration</h1>
+        <h2 class="headline">December 8, 2018</h2>
+    </header>
+    <section id="post-body">
+        <h2 id="vm-configuration">VM configuration</h2>
+
+<p>Our current Netbox setup on BDMZ is deployed with the following configuration:</p>
+
+<ul>
+  <li>10.117.222.110</li>
+  <li>2 vCpus</li>
+  <li>4 GB RAM</li>
+  <li>50 GB data disk</li>
+  <li>RHEL 7.5</li>
+</ul>
+
+<h2 id="python-configuration">Python configuration</h2>
+
+<h3 id="installing-python36-from-red-hat-software-collections">Installing python3.6 from Red Hat software collections</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y --nogpgcheck rh-python36 rh-python36-scldevel python36-setuptools
+sudo yum install -y --nogpgcheck python36-devel openldap-devel
+sudo scl enable rh-python36 bash
+</code></pre></div></div>
+
+<h3 id="creating-a-python36-virtualenv">Creating a python3.6 virtualenv</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3.6 -m venv /opt/netbox/.netbox_venv
+source /opt/netbox/.netbox_venv/bin/activate
+</code></pre></div></div>
+
+<h3 id="configure-pip-to-use-artifactskpnorg">Configure pip to use artifacts.kpn.org</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.pip/pip.conf
+</code></pre></div></div>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[<span class="n">global</span>]
+<span class="n">index</span>-<span class="n">url</span> = &lt;<span class="n">https</span>://<span class="n">artifacts</span>.<span class="n">kpn</span>.<span class="n">org</span>:<span class="m">65000</span>/<span class="n">api</span>/<span class="n">pypi</span>/<span class="n">pypi</span>/<span class="n">simple</span>&gt;
+<span class="n">cert</span> = /<span class="n">etc</span>/<span class="n">pki</span>/<span class="n">ca</span>-<span class="n">trust</span>/<span class="n">source</span>/<span class="n">anchors</span>/<span class="n">kpn_private_root_ca</span>.<span class="n">crt</span>
+
+[<span class="n">search</span>]
+<span class="n">index</span>-<span class="n">url</span> = &lt;<span class="n">https</span>://<span class="n">artifacts</span>.<span class="n">kpn</span>.<span class="n">org</span>/<span class="n">api</span>/<span class="n">pypi</span>/<span class="n">pypi</span>&gt;
+</code></pre></div></div>
+
+<h2 id="database-configuration">Database configuration</h2>
+
+<h3 id="installing-postgres96-from-red-hat-software-collections">Installing postgres9.6 from Red Hat software collections</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y --nogpgcheck rh-postgresql96-postgresql rh-postgresql96-postgresql-server rh-postgresql96-postgresql-devel rh-postgresql96-postgresql-syspaths rh-python36-python-psycopg2
+sudo scl enable rh-postgresql96 bash
+sudo postgresql-setup --initdb
+sudo systemctl start rh-postgresql96-postgresql
+</code></pre></div></div>
+
+<h3 id="creating-netboxs-database-and-user">Creating netbox’s database and user</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo -u postgres psql
+&gt; CREATE USER netbox WITH PASSWORD 'redacted';
+&gt; CREATE DATABASE netbox;
+&gt; GRANT ALL PRIVILEGES ON DATABASE netbox TO netbox;
+&gt; \q
+</code></pre></div></div>
+
+<h3 id="database-backup">Database backup</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /data/netbox_backup
+sudo chown -R postgres:postgres /data/netbox_backup
+sudo -u postgres pg_dump netbox &gt; /tmp/"$( date '+%Y-%m-%d_%H-%M' )_postgres.db"
+sudo mv /tmp/"$( date '+%Y-%m-%d_%H-%M' )_postgres.db" /data/netbox_backup/"$( date '+%Y-%m-%d_%H-%M' )_postgres.db"
+rm /tmp/"$( date '+%Y-%m-%d_%H-%M' )_postgres.db"
+</code></pre></div></div>
+
+<h3 id="database-restore">Database restore</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo -u postgres -f /data/netbox_backup/"$( date '+%Y-%m-%d_%H-%M' )_postgres.db"
+</code></pre></div></div>
+
+<p>TODO: ship the backup to an external location</p>
+
+<h2 id="netbox-source-code">Netbox source code</h2>
+
+<p>Netbox is deployed with the version <a href="https://github.com/digitalocean/netbox/releases/tag/v2.4.8">v2.4.8 - 2018-11-20</a> on <code class="highlighter-rouge">/opt/netbox/</code></p>
+
+<h2 id="netbox-bootstraping">Netbox bootstraping</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install -r /opt/netbox/netbox/netbox-2.4.8/netbox/requirements.txt
+</code></pre></div></div>
+
+<p>and the following extra python dependencies are required:</p>
+
+<ul>
+  <li>django-rq</li>
+  <li>django-auth-ldap</li>
+  <li>python-slugify</li>
+  <li>tqdm</li>
+  <li>xlrd</li>
+  <li>dnspython</li>
+  <li>pynetbox</li>
+  <li>gunicorn</li>
+  <li>flask</li>
+</ul>
+
+<p>and redis server:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y --nogpgcheck redis
+</code></pre></div></div>
+
+<p>then:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /opt/netbox/netbox-2.4.8/netbox/netbox/configuration.py
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#########################</span>
+<span class="c">#                       #</span>
+<span class="c">#   Required settings   #</span>
+<span class="c">#                       #</span>
+<span class="c">#########################</span>
+
+<span class="c"># This is a list of valid fully-qualified domain names (FQDNs) for the NetBox server. NetBox will not permit write</span>
+<span class="c"># access to the server via any other hostnames. The first FQDN in the list will be treated as the preferred name.</span>
+<span class="c">#</span>
+<span class="c"># Example: ALLOWED_HOSTS = ['netbox.example.com', 'netbox.internal.local']</span>
+<span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s">"*"</span><span class="p">]</span>
+
+<span class="c"># PostgreSQL database configuration.</span>
+<span class="n">DATABASE</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s">'NAME'</span><span class="p">:</span> <span class="s">'netbox'</span><span class="p">,</span>         <span class="c"># Database name</span>
+<span class="s">'USER'</span><span class="p">:</span> <span class="s">'netbox'</span><span class="p">,</span>               <span class="c"># PostgreSQL username</span>
+<span class="s">'PASSWORD'</span><span class="p">:</span> <span class="s">'redacted'</span><span class="p">,</span>           <span class="c"># PostgreSQL password</span>
+<span class="s">'HOST'</span><span class="p">:</span> <span class="s">'localhost'</span><span class="p">,</span>      <span class="c"># Database server</span>
+<span class="s">'PORT'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>               <span class="c"># Database port (leave blank for default)</span>
+<span class="p">}</span>
+
+<span class="c"># This key is used for secure generation of random numbers and strings. It must never be exposed outside of this file.</span>
+<span class="c"># For optimal security, SECRET_KEY should be at least 50 characters in length and contain a mix of letters, numbers, and</span>
+<span class="c"># symbols. NetBox will not run without this defined. For more information, see</span>
+<span class="c"># &lt;https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-SECRET_KEY&gt;</span>
+<span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s">'redacted'</span>
+
+
+<span class="c">#########################</span>
+<span class="c">#                       #</span>
+<span class="c">#   Optional settings   #</span>
+<span class="c">#                       #</span>
+<span class="c">#########################</span>
+
+<span class="c"># Specify one or more name and email address tuples representing NetBox administrators. These people will be notified of</span>
+<span class="c"># application errors (assuming correct email settings are provided).</span>
+<span class="n">ADMINS</span> <span class="o">=</span> <span class="p">[</span>
+<span class="c"># ['John Doe', '[jdoe@example.com](mailto:jdoe@example.com)'],</span>
+<span class="p">]</span>
+
+<span class="c"># Optionally display a persistent banner at the top and/or bottom of every page. HTML is allowed. To display the same</span>
+<span class="c"># content in both banners, define BANNER_TOP and set BANNER_BOTTOM = BANNER_TOP.</span>
+<span class="n">BANNER_TOP</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">BANNER_BOTTOM</span> <span class="o">=</span> <span class="s">''</span>
+
+<span class="c"># Text to include on the login page above the login form. HTML is allowed.</span>
+<span class="n">BANNER_LOGIN</span> <span class="o">=</span> <span class="s">''</span>
+
+<span class="c"># Base URL path if accessing NetBox within a directory. For example, if installed at &lt;http://example.com/netbox/&gt;, set:</span>
+<span class="c"># BASE_PATH = 'netbox/'</span>
+<span class="n">BASE_PATH</span> <span class="o">=</span> <span class="s">''</span>
+
+<span class="c"># Maximum number of days to retain logged changes. Set to 0 to retain changes indefinitely. (Default: 90)</span>
+<span class="n">CHANGELOG_RETENTION</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="c"># API Cross-Origin Resource Sharing (CORS) settings. If CORS_ORIGIN_ALLOW_ALL is set to True, all origins will be</span>
+<span class="c"># allowed. Otherwise, define a list of allowed origins using either CORS_ORIGIN_WHITELIST or</span>
+<span class="c"># CORS_ORIGIN_REGEX_WHITELIST. For more information, see &lt;https://github.com/ottoyiu/django-cors-headers&gt;</span>
+<span class="n">CORS_ORIGIN_ALLOW_ALL</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">CORS_ORIGIN_WHITELIST</span> <span class="o">=</span> <span class="p">[</span>
+<span class="c"># 'hostname.example.com',</span>
+<span class="p">]</span>
+<span class="n">CORS_ORIGIN_REGEX_WHITELIST</span> <span class="o">=</span> <span class="p">[</span>
+<span class="c"># r'^(https?://)?(\w+\.)?example\.com$',</span>
+<span class="p">]</span>
+
+<span class="c"># Set to True to enable server debugging. WARNING: Debugging introduces a substantial performance penalty and may reveal</span>
+<span class="c"># sensitive information about your installation. Only enable debugging while performing testing. Never enable debugging</span>
+<span class="c"># on a production system.</span>
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c"># Email settings</span>
+<span class="n">EMAIL</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s">'SERVER'</span><span class="p">:</span> <span class="s">'localhost'</span><span class="p">,</span>
+<span class="s">'PORT'</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+<span class="s">'USERNAME'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
+<span class="s">'PASSWORD'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
+<span class="s">'TIMEOUT'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c"># seconds</span>
+<span class="s">'FROM_EMAIL'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c"># Enforcement of unique IP space can be toggled on a per-VRF basis. To enforce unique IP space within the global table</span>
+<span class="c"># (all prefixes and IP addresses not assigned to a VRF), set ENFORCE_GLOBAL_UNIQUE to True.</span>
+<span class="n">ENFORCE_GLOBAL_UNIQUE</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c"># Enable custom logging. Please see the Django documentation for detailed guidance on configuring custom logs:</span>
+<span class="c">#   &lt;https://docs.djangoproject.com/en/1.11/topics/logging/&gt;</span>
+<span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="c"># Setting this to True will permit only authenticated users to access any part of NetBox. By default, anonymous users</span>
+<span class="c"># are permitted to access most data in NetBox (excluding secrets) but not make any changes.</span>
+<span class="n">LOGIN_REQUIRED</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c"># Setting this to True will display a "maintenance mode" banner at the top of every page.</span>
+<span class="n">MAINTENANCE_MODE</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c"># An API consumer can request an arbitrary number of objects =by appending the "limit" parameter to the URL (e.g.</span>
+<span class="c"># "?limit=1000"). This setting defines the maximum limit. Setting it to 0 or None will allow an API consumer to request</span>
+<span class="c"># all objects by specifying "?limit=0".</span>
+<span class="n">MAX_PAGE_SIZE</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="c"># The file path where uploaded media such as image attachments are stored. A trailing slash is not needed. Note that</span>
+<span class="c"># the default value of this setting is derived from the installed location.</span>
+<span class="c"># MEDIA_ROOT = '/opt/netbox/netbox/media'</span>
+
+<span class="c"># Credentials that NetBox will uses to authenticate to devices when connecting via NAPALM.</span>
+<span class="n">NAPALM_USERNAME</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">NAPALM_PASSWORD</span> <span class="o">=</span> <span class="s">''</span>
+
+<span class="c"># NAPALM timeout (in seconds). (Default: 30)</span>
+<span class="n">NAPALM_TIMEOUT</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c"># NAPALM optional arguments (see &lt;http://napalm.readthedocs.io/en/latest/support/#optional-arguments&gt;). Arguments must</span>
+<span class="c"># be provided as a dictionary.</span>
+<span class="n">NAPALM_ARGS</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c"># Determine how many objects to display per page within a list. (Default: 50)</span>
+<span class="n">PAGINATE_COUNT</span> <span class="o">=</span> <span class="mi">255</span>
+
+<span class="c"># When determining the primary IP address for a device, IPv6 is preferred over IPv4 by default. Set this to True to</span>
+<span class="c"># prefer IPv4 instead.</span>
+<span class="n">PREFER_IPV4</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c"># The Webhook event backend is disabled by default. Set this to True to enable it. Note that this requires a Redis</span>
+<span class="c"># database be configured and accessible by NetBox (see `REDIS` below).</span>
+<span class="n">WEBHOOKS_ENABLED</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c"># Redis database settings (optional). A Redis database is required only if the webhooks backend is enabled.</span>
+<span class="n">REDIS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s">'HOST'</span><span class="p">:</span> <span class="s">'localhost'</span><span class="p">,</span>
+<span class="s">'PORT'</span><span class="p">:</span> <span class="mi">6379</span><span class="p">,</span>
+<span class="s">'PASSWORD'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
+<span class="s">'DATABASE'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="s">'DEFAULT_TIMEOUT'</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c"># The file path where custom reports will be stored. A trailing slash is not needed. Note that the default value of</span>
+<span class="c"># this setting is derived from the installed location.</span>
+<span class="c"># REPORTS_ROOT = '/opt/netbox/netbox/reports'</span>
+
+<span class="c"># Time zone (default: UTC)</span>
+<span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s">'UTC'</span>
+
+<span class="c"># Date/time formatting. See the following link for supported formats:</span>
+<span class="c"># &lt;https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date&gt;</span>
+<span class="n">DATE_FORMAT</span> <span class="o">=</span> <span class="s">'N j, Y'</span>
+<span class="n">SHORT_DATE_FORMAT</span> <span class="o">=</span> <span class="s">'Y-m-d'</span>
+<span class="n">TIME_FORMAT</span> <span class="o">=</span> <span class="s">'g:i a'</span>
+<span class="n">SHORT_TIME_FORMAT</span> <span class="o">=</span> <span class="s">'H:i:s'</span>
+<span class="n">DATETIME_FORMAT</span> <span class="o">=</span> <span class="s">'N j, Y g:i a'</span>
+<span class="n">SHORT_DATETIME_FORMAT</span> <span class="o">=</span> <span class="s">'Y-m-d H:i'</span>
+</code></pre></div></div>
+
+<p>then, apply the django database configuration:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /opt/netbox/netbox-2.4.8/netbox
+python manage.py migrate
+</code></pre></div></div>
+
+<p>create the super user account:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python manage.py createsuperuser
+&gt; Username: root
+&gt; Email address: [guillermo.ramirezgarcia@kpn.com](mailto:guillermo.ramirezgarcia@kpn.com)
+&gt; Password:
+&gt; Password (again):
+&gt; Superuser created successfully.
+</code></pre></div></div>
+
+<p>and, load static files:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python manage.py collectstatic --no-input
+</code></pre></div></div>
+
+<h2 id="web-server-configuration">Web server configuration</h2>
+
+<h3 id="configure-nginx">Configure nginx</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y --nogpgcheck nginx
+
+vim /etc/nginx/conf.d/netbox.conf
+</code></pre></div></div>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">server</span> {
+<span class="n">listen</span> <span class="m">80</span>;
+
+<span class="n">server_name</span> <span class="n">netbox</span>.<span class="n">kpn</span>.<span class="n">com</span>;
+
+<span class="n">client_max_body_size</span> <span class="m">25</span><span class="n">m</span>;
+
+<span class="n">location</span> /<span class="n">static</span>/ {
+<span class="n">alias</span> /<span class="n">opt</span>/<span class="n">netbox</span>/<span class="n">netbox</span>/<span class="n">static</span>/;
+}
+
+<span class="n">location</span> / {
+<span class="n">proxy_pass</span> &lt;<span class="n">http</span>://<span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8001</span>&gt;;
+<span class="n">proxy_set_header</span> <span class="n">X</span>-<span class="n">Forwarded</span>-<span class="n">Host</span> $<span class="n">server_name</span>;
+<span class="n">proxy_set_header</span> <span class="n">X</span>-<span class="n">Real</span>-<span class="n">IP</span> $<span class="n">remote_addr</span>;
+<span class="n">proxy_set_header</span> <span class="n">X</span>-<span class="n">Forwarded</span>-<span class="n">Proto</span> $<span class="n">scheme</span>;
+<span class="n">add_header</span> <span class="n">P3P</span> <span class="s1">'CP="ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV"'</span>;
+}
+}
+</code></pre></div></div>
+
+<h3 id="configure-gunicorn">Configure gunicorn</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /opt/netbox/netbox-2.4.8/netbox/gunicorn_config.py
+</code></pre></div></div>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">command</span> = <span class="s1">'/opt/netbox/.netbox_venv/bin/gunicorn'</span>
+<span class="n">pythonpath</span> = <span class="s1">'/opt/netbox/netbox-2.4.8/netbox'</span>
+<span class="n">bind</span> = <span class="s1">'127.0.0.1:8001'</span>
+<span class="n">workers</span> = <span class="m">2</span>
+<span class="n">user</span> = <span class="s1">'nginx'</span>
+</code></pre></div></div>
+
+<h2 id="supervisor-configuration">Supervisor configuration</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y --nogpgcheck supervisor
+vim /etc/supervisord.d/netbox.ini
+</code></pre></div></div>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[<span class="n">program</span>:<span class="n">netbox</span>]
+<span class="n">command</span> = /<span class="n">opt</span>/<span class="n">netbox</span>/.<span class="n">netbox_venv</span>/<span class="n">bin</span>/<span class="n">gunicorn</span> -<span class="n">c</span> /<span class="n">opt</span>/<span class="n">netbox</span>/<span class="n">netbox</span>-<span class="m">2</span>.<span class="m">4</span>.<span class="m">8</span>/<span class="n">netbox</span>/<span class="n">gunicorn_config</span>.<span class="n">py</span> <span class="n">netbox</span>.<span class="n">wsgi</span>
+<span class="n">directory</span> = /<span class="n">opt</span>/<span class="n">netbox</span>/<span class="n">netbox</span>-<span class="m">2</span>.<span class="m">4</span>.<span class="m">8</span>/<span class="n">netbox</span>
+<span class="n">user</span> = <span class="n">nginx</span>
+
+[<span class="n">program</span>:<span class="n">netbox</span>-<span class="n">rqworker</span>]
+<span class="n">command</span> = /<span class="n">opt</span>/<span class="n">netbox</span>/.<span class="n">netbox_venv</span>/<span class="n">bin</span>/<span class="n">python</span> /<span class="n">opt</span>/<span class="n">netbox</span>/<span class="n">netbox</span>-<span class="m">2</span>.<span class="m">4</span>.<span class="m">8</span>/<span class="n">netbox</span>/<span class="n">manage</span>.<span class="n">py</span> <span class="n">rqworker</span>
+<span class="n">user</span> = <span class="n">nginx</span>
+</code></pre></div></div>
+
+<h2 id="openldap-configuration">OpenLDAP configuration</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y --nogpgcheck openldap-devel
+vim /opt/netbox/netbox-2.4.8/netbox/ldap_config.py
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ldap</span>
+
+<span class="kn">from</span> <span class="nn">django_auth_ldap.config</span> <span class="kn">import</span> <span class="n">LDAPSearch</span><span class="p">,</span> <span class="n">GroupOfNamesType</span>
+
+
+<span class="c"># Server URI</span>
+<span class="n">AUTH_LDAP_SERVER_URI</span> <span class="o">=</span> <span class="s">"&lt;ldaps://10.117.222.105&gt;"</span>
+
+<span class="c"># The following may be needed if you are binding to Active Directory.</span>
+<span class="n">AUTH_LDAP_CONNECTION_OPTIONS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">ldap</span><span class="o">.</span><span class="n">OPT_REFERRALS</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+
+<span class="c"># Set the DN and password for the NetBox service account.</span>
+<span class="n">AUTH_LDAP_BIND_DN</span> <span class="o">=</span> <span class="s">"uid=netbox,ou=serviceAccounts,dc=acc,dc=gvp=dc=org"</span>
+<span class="n">AUTH_LDAP_BIND_PASSWORD</span> <span class="o">=</span> <span class="s">"redacted"</span>
+
+<span class="c"># Include this setting if you want to ignore certificate errors. This might be needed to accept a self-signed cert.</span>
+<span class="c"># Note that this is a NetBox-specific setting which sets:</span>
+<span class="c">#     ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER)</span>
+<span class="n">LDAP_IGNORE_CERT_ERRORS</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+<span class="c"># TODO</span>
+
+<span class="c"># This search matches users with the sAMAccountName equal to the provided username. This is required if the user's</span>
+<span class="c"># username is not in their DN (Active Directory).</span>
+<span class="c"># AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=acc,dc=gvp,dc=kpn,dc=org",</span>
+<span class="c">#                                     ldap.SCOPE_SUBTREE,</span>
+<span class="c">#                                     "(sAMAccountName=%(user)s)")</span>
+
+<span class="c"># If a user's DN is producible from their username, we don't need to search.</span>
+<span class="n">AUTH_LDAP_USER_DN_TEMPLATE</span> <span class="o">=</span> <span class="s">"uid=</span><span class="si">%(user)</span><span class="s">s,ou=Users,dc=acc,dc=gvp,dc=kpn,dc=org"</span>
+
+<span class="c"># You can map user attributes to Django attributes as so.</span>
+<span class="n">AUTH_LDAP_USER_ATTR_MAP</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s">"first_name"</span><span class="p">:</span> <span class="s">"givenName"</span><span class="p">,</span>
+<span class="s">"last_name"</span><span class="p">:</span> <span class="s">"sn"</span><span class="p">,</span>
+<span class="s">"email"</span><span class="p">:</span> <span class="s">"mail"</span>
+<span class="p">}</span>
+
+<span class="c"># This search ought to return all groups to which the user belongs. django_auth_ldap uses this to determine group</span>
+<span class="c"># hierarchy.</span>
+<span class="n">AUTH_LDAP_GROUP_SEARCH</span> <span class="o">=</span> <span class="n">LDAPSearch</span><span class="p">(</span><span class="s">"ou=Groups,dc=acc,dc=gvp,dc=kpn,dc=org"</span><span class="p">,</span> <span class="n">ldap</span><span class="o">.</span><span class="n">SCOPE_SUBTREE</span><span class="p">,</span>
+<span class="s">"(objectClass=group)"</span><span class="p">)</span>
+<span class="n">AUTH_LDAP_GROUP_TYPE</span> <span class="o">=</span> <span class="n">GroupOfNamesType</span><span class="p">()</span>
+
+<span class="c"># Define a group required to login.</span>
+<span class="n">AUTH_LDAP_REQUIRE_GROUP</span> <span class="o">=</span> <span class="s">"cn=netbox_users,ou=Groups,dc=acc,dc=gvp,dc=kpn,dc=org"</span>
+
+<span class="c"># Define special user types using groups. Exercise great caution when assigning superuser status.</span>
+<span class="c"># AUTH_LDAP_USER_FLAGS_BY_GROUP = {</span>
+<span class="c">#     "is_active": "cn=active,ou=groups,dc=example,dc=com",</span>
+<span class="c">#     "is_staff": "cn=staff,ou=groups,dc=example,dc=com",</span>
+<span class="c">#     "is_superuser": "cn=superuser,ou=groups,dc=example,dc=com"</span>
+<span class="c"># }</span>
+
+<span class="c"># For more granular permissions, we can map LDAP groups to Django groups.</span>
+<span class="n">AUTH_LDAP_FIND_GROUP_PERMS</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c"># Cache groups for one hour to reduce LDAP traffic</span>
+<span class="n">AUTH_LDAP_CACHE_GROUPS</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">AUTH_LDAP_GROUP_CACHE_TIMEOUT</span> <span class="o">=</span> <span class="mi">3600</span>
+</code></pre></div></div>
+
+<h2 id="ssl-configuration">SSL Configuration</h2>
+
+<p>TODO: get or create SSL certificates and update nginx</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://netbox.readthedocs.io/en/latest/">Netbox installation guide</a></li>
+  <li><a href="https://www.postgresql.org/docs/9.6/backup.html">Postgres backup and restore</a></li>
+</ul>
+
+    </section>
+</article>
+<!-- <footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Memo Garcia</span>
+            <span>My Personal Notes</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        
+    </section>
+</footer> -->
+
+<!-- Disqus comments -->
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+

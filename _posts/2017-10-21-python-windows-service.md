@@ -1,6 +1,6 @@
 ---
 title:  "Python Windows service"
-date:   2017-10-20 14:22:38 +0100
+date:   2017-10-20 14:22:38
 ---
 
 Create a windows service in python is quite easy.
