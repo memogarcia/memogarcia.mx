@@ -23,16 +23,16 @@ At this point, you can apply them to other subjects or areas using the [knowledg
 
 With these essential ideas identified, you can start understanding them individually using one technique called [Feynman technique](https://curiosity.com/topics/learn-anything-in-four-steps-with-the-feynman-technique-curiosity/) which is described as follows:
 
-1. Write the name of the concept at the top of a blank piece of paper.
-2. Write down an explanation of the concept on the page. Use plain English (or any language). Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don't quite understand. (Circle of competence)
-3. Review what you have pinpointed you don't know. Go back to the source material, re-read, and re-learn it. Repeat Step 2.
-4. If you are using overly wordy or confusing language (or simply paraphrasing the source material) try again so you filter the content. Simplify your language, and where possible use a simple analogy.
+    1. Write the name of the concept at the top of a blank piece of paper.
+    2. Write down an explanation of the concept on the page. Use plain English (or any language). Pretend you are teaching it to someone else (e.g a new student). This should highlight what you understand, but more importantly, pinpoint what you don't quite understand. (Circle of competence)
+    3. Review what you have pinpointed you don't know. Go back to the source material, re-read, and re-learn it. Repeat Step 2.
+    4. If you are using overly wordy or confusing language (or simply paraphrasing the source material) try again so you filter the content. Simplify your language, and where possible use a simple analogy.
 
 At the end, you will have a graph of knowledge that:
 
-1. You understand,
-2. Is easy to reason to its fundamental parts,
-3. You can apply to other domains,
-4. You can share and teach to others.
+    1. You understand,
+    2. Is easy to reason to its fundamental parts,
+    3. You can apply to other domains,
+    4. You can share and teach to others.
 
 ![topic2](/assets/img/topic2.png)
