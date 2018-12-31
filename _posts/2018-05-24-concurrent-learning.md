@@ -1,6 +1,7 @@
 ---
 title:  "Concurrent Learning"
 date:   2018-05-04 08:20:38 +0100
+description: "Mental models to learn faster"
 ---
 
 Concurrent learning is a studying model that relies on several techniques to learn and understand several subjects at once.

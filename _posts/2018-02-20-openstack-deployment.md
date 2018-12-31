@@ -1,6 +1,7 @@
 ---
-title:  "Deploying OpenStack on Containers"
+title:  "Deploying OpenStack on Docker"
 date:   2018-02-20 08:20:38 +0100
+description: "Deploy openstack on docker"
 ---
 
 **Note** This is a Work-In-Progress Document and the most up-to-date information is available at: [github.com/memogarcia/openstack-deployer](https://github.com/memogarcia/openstack-deployer)

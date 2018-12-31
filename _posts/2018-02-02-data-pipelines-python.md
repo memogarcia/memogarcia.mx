@@ -1,6 +1,7 @@
 ---
 title:  "Creating data pipelines with Python"
 date:   2018-02-02 14:22:38 +0100
+description: "High performance data pipelines with python"
 ---
 
 While continuing exploring python's simplicity we came across with `generators`, python's way to process data "on the fly".

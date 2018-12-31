@@ -1,9 +1,12 @@
 ---
 title:  "Python Windows service"
 date:   2017-10-20 14:22:38
+description: "Manipulate Windows processes with python"
 ---
 
-Create a windows service in python is quite easy.
+Creating a windows service in python is quite easy.
+
+NOTE: This is only tested for python 2.7
 
 first, install [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/)
 and [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com/en-us/download/details.aspx?id=44266)
@@ -23,7 +26,7 @@ class PySvc(win32serviceutil.ServiceFramework):
 
     def __init__(self, args):
         win32serviceutil.ServiceFramework.__init__(self, args)
-        # create an event to listen for stop requests on
+        # create an event to listen for stop requests
         self.hWaitStop = win32event.CreateEvent(None, 0, 0, None)
 
     def SvcDoRun(self):

@@ -1,6 +1,7 @@
 ---
 title:  "Using Python to glue everything"
 date:   2017-10-21 14:22:38 +0100
+description: "Using python to connect linux processes"
 ---
 
 Bash is powerful but so is Python. And sometimes you need the best of both.

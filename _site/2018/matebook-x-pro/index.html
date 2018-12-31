@@ -32,7 +32,7 @@
         <h2 class="headline">December 16, 2018</h2>
     </header>
     <section id="post-body">
-        <p>This laptop has very decent <a href="https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/">specs</a></p>
+        <p>This laptop has very decent <a href="https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/">specs</a>:</p>
 
 <ul>
   <li><a href="https://ark.intel.com/products/122589/Intel-Core-i7-8550U-Processor-8M-Cache-up-to-4-00-GHz">8th Generation Intel® Core™ i7-8550U processor</a></li>
@@ -47,8 +47,8 @@
 <h3 id="things-i-dont-like-about-the-laptop">Things I don’t like about the laptop</h3>
 
 <ul>
-  <li>Palm rejection, specially this one, maybe this is linux</li>
-  <li>Sound, it only outputs sound to two speakers under linux</li>
+  <li>Palm rejection, especially this one, maybe this is Linux</li>
+  <li>Sound, it only outputs sound to two speakers under Linux</li>
   <li>BIOS configuration is too limited (but this is Huawei’s fault)</li>
 </ul>
 
@@ -75,7 +75,7 @@ sudo apt update
 prime-select query
 </code></pre></div></div>
 
-<p>For high performance graphics, use:</p>
+<p>For high-performance graphics, use:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prime-select nvidia
 # logout :(
@@ -104,7 +104,7 @@ glxinfo | grep OpenGL
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ubuntu-unity-desktop
 </code></pre></div></div>
 
-<p>I started using unity instead of gnome for better DPI scalling per monitoring, but then I move to my beloved i3wm</p>
+<p>I started using unity instead of gnome for better DPI scaling per monitoring, but then I move to my beloved i3wm</p>
 
 <h4 id="i3wm">i3wm</h4>
 
@@ -131,7 +131,7 @@ bindsym $mod+l exec i3lock -c 000000
 exec --no-startup-id /usr/bin/feh --randomize --bg-scale /path/wallpaper/* -Z
 </code></pre></div></div>
 
-<p>And them, just reload the configuration:</p>
+<p>And them, reload the configuration:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i3-msg reload
 i3-msg restart
@@ -156,7 +156,7 @@ bindsym XF86KbdBrightnessUp exec light -A 5
 bindsym XF86KbdBrightnessDown exec light -A 5
 </code></pre></div></div>
 
-<p>For volume control I’m using <a href="http://manpages.ubuntu.com/manpages/precise/man1/pactl.1.html">pactl</a></p>
+<p>For volume control, I’m using <a href="http://manpages.ubuntu.com/manpages/precise/man1/pactl.1.html">pactl</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Volume controls
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
@@ -175,14 +175,14 @@ sudo tlp start
 
 <h3 id="disk-io">Disk I/O</h3>
 
-<p>Following the <a href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/">graphical method</a> on this webpage, I get the following speeds for my 512 GB NVMe PCIe SSD:</p>
+<p>Following the <a href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/">graphical method</a> steps on this webpage, I get the following speeds for my 512 GB NVMe PCIe SSD:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Average Read Rate: 1.4 GB/s (1000 samples)
 Average Write Read: 271.5 MB/s (1000 samples)
 Average Access Time: 0.11 msec (1000 samples)
 </code></pre></div></div>
 
-<p>Maybe I’m testing it wrong but it seems to me the write speeds are quite low.</p>
+<p>Maybe I’m testing it wrong, but it seems to me the write speeds are quite low.</p>
 
 <h4 id="troubleshooting">Troubleshooting</h4>
 
@@ -198,12 +198,14 @@ Average Access Time: 0.11 msec (1000 samples)
 
 <h3 id="references">references</h3>
 
-<p><a href="https://github.com/ValveSoftware/steam-for-linux/issues/5707">https://github.com/ValveSoftware/steam-for-linux/issues/5707</a>
-<a href="https://wiki.ubuntu.com/UEFI/SecureBoot/Signing">https://wiki.ubuntu.com/UEFI/SecureBoot/Signing</a>
-<a href="https://codeyarns.com/2013/02/07/how-to-fix-nvidia-driver-failure-on-ubuntu/">https://codeyarns.com/2013/02/07/how-to-fix-nvidia-driver-failure-on-ubuntu/</a>
-<a href="https://github.com/Syllo/nvtop">https://github.com/Syllo/nvtop</a>
-<a href="https://askubuntu.com/questions/112705/how-do-i-make-powertop-changes-permanent">https://askubuntu.com/questions/112705/how-do-i-make-powertop-changes-permanent</a>
-<a href="https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html">https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html</a></p>
+<ul>
+  <li><a href="https://github.com/ValveSoftware/steam-for-linux/issues/5707">https://github.com/ValveSoftware/steam-for-linux/issues/5707</a></li>
+  <li><a href="https://wiki.ubuntu.com/UEFI/SecureBoot/Signing">https://wiki.ubuntu.com/UEFI/SecureBoot/Signing</a></li>
+  <li><a href="https://codeyarns.com/2013/02/07/how-to-fix-nvidia-driver-failure-on-ubuntu/">https://codeyarns.com/2013/02/07/how-to-fix-nvidia-driver-failure-on-ubuntu/</a></li>
+  <li><a href="https://github.com/Syllo/nvtop">https://github.com/Syllo/nvtop</a></li>
+  <li><a href="https://askubuntu.com/questions/112705/how-do-i-make-powertop-changes-permanent">https://askubuntu.com/questions/112705/how-do-i-make-powertop-changes-permanent</a></li>
+  <li><a href="https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html">https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html</a></li>
+</ul>
 
     </section>
 </article>

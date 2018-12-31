@@ -10,7 +10,7 @@
         <title>Linux on Matebook X Pro</title>
         
         
-          <description>&lt;p&gt;This laptop has very decent &lt;a href=&quot;https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/&quot;&gt;specs&lt;/a&gt;&lt;/p&gt;
+          <description>&lt;p&gt;This laptop has very decent &lt;a href=&quot;https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/&quot;&gt;specs&lt;/a&gt;:&lt;/p&gt;
 
 </description>
         
@@ -46,7 +46,7 @@
       </item>
     
       <item>
-        <title>Deploying OpenStack on Containers</title>
+        <title>Deploying OpenStack on Docker</title>
         
         
           <description>&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This is a Work-In-Progress Document and the most up-to-date information is available at: &lt;a href=&quot;https://github.com/memogarcia/openstack-deployer&quot;&gt;github.com/memogarcia/openstack-deployer&lt;/a&gt;&lt;/p&gt;
@@ -128,7 +128,7 @@ These digital certificates are used to validate the connection while using secur
         <title>Python Windows service</title>
         
         
-          <description>&lt;p&gt;Create a windows service in python is quite easy.&lt;/p&gt;
+          <description>&lt;p&gt;Creating a windows service in python is quite easy.&lt;/p&gt;
 
 </description>
         

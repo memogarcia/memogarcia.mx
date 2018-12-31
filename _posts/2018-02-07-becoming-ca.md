@@ -1,6 +1,7 @@
 ---
 title:  "Becoming a certificate authority for SSL"
 date:   2018-02-07 12:22:38 +0100
+description: "Generate self signed SSL certificates"
 ---
 
 A Certificate Authority or CA is an entity that signs digital certificates.

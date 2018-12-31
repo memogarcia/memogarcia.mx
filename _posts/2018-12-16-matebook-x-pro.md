@@ -1,9 +1,10 @@
 ---
 title: "Linux on Matebook X Pro"
 date: 2018-12-16 15:30:27.148322 +0100
+description: "Installing linux on Matebook X Pro"
 ---
 
-This laptop has very decent [specs](https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/)
+This laptop has very decent [specs](https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/):
 
 * [8th Generation Intel® Core™ i7-8550U processor](https://ark.intel.com/products/122589/Intel-Core-i7-8550U-Processor-8M-Cache-up-to-4-00-GHz)
 * [GPU: NVIDIA® GeForce® MX150 with 2 GB GDDR5 / Intel® UHD Graphics 620](https://www.geforce.com/hardware/notebook-gpus/geforce-mx150/specifications)
@@ -15,8 +16,8 @@ Don't expect running workstation level workloads in this machine, but you can pu
 
 ### Things I don't like about the laptop
 
-* Palm rejection, specially this one, maybe this is linux
-* Sound, it only outputs sound to two speakers under linux
+* Palm rejection, especially this one, maybe this is Linux
+* Sound, it only outputs sound to two speakers under Linux
 * BIOS configuration is too limited (but this is Huawei's fault)
 
 ### Distro
@@ -39,7 +40,7 @@ At this time, nvidia-driver-415 is the most up to date driver and the recommende
 
     prime-select query
 
-For high performance graphics, use:
+For high-performance graphics, use:
 
     prime-select nvidia
     # logout :(
@@ -64,7 +65,7 @@ I'm getting readings about `4.5W to 6W` discharge rate with this configuration.
 
     sudo apt install ubuntu-unity-desktop
 
-I started using unity instead of gnome for better DPI scalling per monitoring, but then I move to my beloved i3wm
+I started using unity instead of gnome for better DPI scaling per monitoring, but then I move to my beloved i3wm
 
 #### i3wm
 
@@ -89,7 +90,7 @@ I started using unity instead of gnome for better DPI scalling per monitoring, b
     # background
     exec --no-startup-id /usr/bin/feh --randomize --bg-scale /path/wallpaper/* -Z
 
-And them, just reload the configuration:
+And them, reload the configuration:
 
     i3-msg reload
     i3-msg restart
@@ -111,7 +112,7 @@ For screen brightness and key backlights, I'm using [Light](https://github.com/h
     bindsym XF86KbdBrightnessUp exec light -A 5
     bindsym XF86KbdBrightnessDown exec light -A 5
 
-For volume control I'm using [pactl](http://manpages.ubuntu.com/manpages/precise/man1/pactl.1.html)
+For volume control, I'm using [pactl](http://manpages.ubuntu.com/manpages/precise/man1/pactl.1.html)
 
     # Volume controls
     bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
@@ -128,13 +129,13 @@ For volume control I'm using [pactl](http://manpages.ubuntu.com/manpages/precise
 
 ### Disk I/O
 
-Following the [graphical method](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/) on this webpage, I get the following speeds for my 512 GB NVMe PCIe SSD:
+Following the [graphical method](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/) steps on this webpage, I get the following speeds for my 512 GB NVMe PCIe SSD:
 
     Average Read Rate: 1.4 GB/s (1000 samples)
     Average Write Read: 271.5 MB/s (1000 samples)
     Average Access Time: 0.11 msec (1000 samples)
 
-Maybe I'm testing it wrong but it seems to me the write speeds are quite low.
+Maybe I'm testing it wrong, but it seems to me the write speeds are quite low.
 
 #### Troubleshooting
 
@@ -148,9 +149,9 @@ Maybe I'm testing it wrong but it seems to me the write speeds are quite low.
 
 ### references
 
-<https://github.com/ValveSoftware/steam-for-linux/issues/5707>
-<https://wiki.ubuntu.com/UEFI/SecureBoot/Signing>
-<https://codeyarns.com/2013/02/07/how-to-fix-nvidia-driver-failure-on-ubuntu/>
-<https://github.com/Syllo/nvtop>
-<https://askubuntu.com/questions/112705/how-do-i-make-powertop-changes-permanent>
-<https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html>
+* <https://github.com/ValveSoftware/steam-for-linux/issues/5707>
+* <https://wiki.ubuntu.com/UEFI/SecureBoot/Signing>
+* <https://codeyarns.com/2013/02/07/how-to-fix-nvidia-driver-failure-on-ubuntu/>
+* <https://github.com/Syllo/nvtop>
+* <https://askubuntu.com/questions/112705/how-do-i-make-powertop-changes-permanent>
+* <https://int3ractive.com/2018/09/make-the-best-of-MacBook-touchpad-on-Ubuntu.html>

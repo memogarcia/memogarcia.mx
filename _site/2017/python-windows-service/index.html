@@ -32,7 +32,9 @@
         <h2 class="headline">October 20, 2017</h2>
     </header>
     <section id="post-body">
-        <p>Create a windows service in python is quite easy.</p>
+        <p>Creating a windows service in python is quite easy.</p>
+
+<p>NOTE: This is only tested for python 2.7</p>
 
 <p>first, install <a href="https://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/">pywin32</a>
 and <a href="https://www.microsoft.com/en-us/download/details.aspx?id=44266">Microsoft Visual C++ Compiler for Python 2.7</a></p>
@@ -51,7 +53,7 @@ and <a href="https://www.microsoft.com/en-us/download/details.aspx?id=44266">Mic
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
         <span class="n">win32serviceutil</span><span class="o">.</span><span class="n">ServiceFramework</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
-        <span class="c"># create an event to listen for stop requests on</span>
+        <span class="c"># create an event to listen for stop requests</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hWaitStop</span> <span class="o">=</span> <span class="n">win32event</span><span class="o">.</span><span class="n">CreateEvent</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">SvcDoRun</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

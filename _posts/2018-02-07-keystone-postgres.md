@@ -1,6 +1,7 @@
 ---
 title:  "Deploying Keystone using PosgreSQL"
 date:   2018-02-07 12:12:38 +0100
+description: "Change main OpenStack database to PostgreSQL"
 ---
 
 OpenStack is becoming more and more flexible on how you can configure it. One straightforward example is by switching from the default MySQL/MariaDB database to PostgreSQL.
