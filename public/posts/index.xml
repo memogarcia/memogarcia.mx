@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Memo Garcia</title>
+    <link>https://memogarcia.mx/posts/</link>
+    <description>Recent content in Posts on Memo Garcia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Jan 2019 13:10:28 +0100</lastBuildDate>
+    
+	<atom:link href="https://memogarcia.mx/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux on Matebook X Pro</title>
+      <link>https://memogarcia.mx/posts/linux-matebook/</link>
+      <pubDate>Fri, 04 Jan 2019 13:10:28 +0100</pubDate>
+      
+      <guid>https://memogarcia.mx/posts/linux-matebook/</guid>
+      <description>This laptop has very decent specs:
+ 8th Generation Intel® Core™ i7-8550U processor GPU: NVIDIA® GeForce® MX150 with 2 GB GDDR5 / Intel® UHD Graphics 620 16 GB LPDDR3 2133 MHz BT 4.1 (compatible with 3.0 and 2.1+EDR) 512 GB NVMe PCIe SSD  Don&amp;rsquo;t expect running workstation level workloads in this machine, but you can push it to run 1 Windows VM or 1/2/3 small VMs.
+Things I don&amp;rsquo;t like about the laptop  Palm rejection, especially this one, maybe this is Linux Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes BIOS configuration is too limited (but this is Huawei&amp;rsquo;s fault)  Distro Ubuntu 18.</description>
+    </item>
+    
+  </channel>
+</rss>
