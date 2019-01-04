@@ -1,0 +1,14 @@
+baseURL = "https://memogarcia.mx"
+languageCode = "en-us"
+title = "Memo Garcia"
+theme = "elephants"
+
+[params]
+    author = "Memo Garcia"
+    github = "memogarcia"
+    gitlab = "memogarcia"
+    sitename = "Memo Garcia"
+
+[author]
+    name = "Memo Garcia"
+    homepage = "https://memogarcia.mx"
