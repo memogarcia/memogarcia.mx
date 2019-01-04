@@ -6,10 +6,21 @@
     <description>Recent content on Memo Garcia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Jan 2019 19:49:47 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jan 2019 22:20:31 +0100</lastBuildDate>
     
 	<atom:link href="https://memogarcia.mx/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Some Richard Feynman videos</title>
+      <link>https://memogarcia.mx/posts/richard-feynman/</link>
+      <pubDate>Fri, 04 Jan 2019 22:20:31 +0100</pubDate>
+      
+      <guid>https://memogarcia.mx/posts/richard-feynman/</guid>
+      <description>The World from another point of view
+  Fun to imagine
+   </description>
+    </item>
     
     <item>
       <title>Waju</title>
@@ -19,14 +30,14 @@
       <guid>https://memogarcia.mx/posts/waju/</guid>
       <description>Waju or whatever is called is a game that until this day I don&amp;rsquo;t know from where it comes. But, is fun.
 Goal The goal of the game is very simple:
- Move your marbles for one lap from your home to your goal Don&amp;rsquo;t worry about winning but don&amp;rsquo;t let anyone else win. Have fun.  Board The board has six main components:
+ Move your marbles for one lap from your home to your goal. Don&amp;rsquo;t worry about winning but don&amp;rsquo;t let anyone else win. Have fun.  Board The board has six main components:
 Dice Shallow men believe in luck or in circumstance.</description>
     </item>
     
     <item>
       <title>Beyond PEP 8</title>
       <link>https://memogarcia.mx/posts/beyond-pep8/</link>
-      <pubDate>Fri, 04 Jan 2019 18:53:23 +0100</pubDate>
+      <pubDate>Thu, 03 Jan 2019 18:53:23 +0100</pubDate>
       
       <guid>https://memogarcia.mx/posts/beyond-pep8/</guid>
       <description>Best practices for beautiful intelligible code
@@ -36,7 +47,7 @@ Dice Shallow men believe in luck or in circumstance.</description>
     <item>
       <title>Linux on Matebook X Pro</title>
       <link>https://memogarcia.mx/posts/linux-matebook/</link>
-      <pubDate>Fri, 04 Jan 2019 13:10:28 +0100</pubDate>
+      <pubDate>Tue, 04 Dec 2018 13:10:28 +0100</pubDate>
       
       <guid>https://memogarcia.mx/posts/linux-matebook/</guid>
       <description>This laptop has very decent specs:
