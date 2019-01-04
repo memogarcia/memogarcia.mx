@@ -10,7 +10,7 @@ Waju or whatever is called is a game that until this day I don't know from where
 
 The goal of the game is very simple:
 
-1. Move your marbles for **one lap** from your home to your goal
+1. Move your marbles for **one lap** from your home to your goal.
 2. Don't worry about winning but don't let anyone else win.
 3. Have fun.
 
@@ -43,7 +43,7 @@ This is where the battle happens.
 
 I've seen people staying here for months!!
 
-The void is a shortcut you can take only from **your** starting point and **your** corner and only if you roll a `5` or `1` respectively.
+The void is a shortcut you can take only from **your** starting point or **your** corner and only if you roll a `5` or `1` respectively.
 
 Once in the void, you can only move back to the road by rolling a `1` and only a `1` to **your** corner to the right.
 

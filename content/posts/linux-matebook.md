@@ -1,6 +1,6 @@
 ---
 title: "Linux on Matebook X Pro"
-date: 2019-01-04T13:10:28+01:00
+date: 2018-12-04T13:10:28+01:00
 draft: false
 ---
 
