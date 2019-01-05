@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Memo Garcia</title>
-    <link>https://memogarcia.mx/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Memo Garcia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Jan 2019 22:20:31 +0100</lastBuildDate>
     
-	<atom:link href="https://memogarcia.mx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Some Richard Feynman videos</title>
-      <link>https://memogarcia.mx/posts/richard-feynman/</link>
+      <link>http://localhost:1313/posts/richard-feynman/</link>
       <pubDate>Fri, 04 Jan 2019 22:20:31 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/richard-feynman/</guid>
+      <guid>http://localhost:1313/posts/richard-feynman/</guid>
       <description>The World from another point of view
   Fun to imagine
    </description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Waju</title>
-      <link>https://memogarcia.mx/posts/waju/</link>
+      <link>http://localhost:1313/posts/waju/</link>
       <pubDate>Fri, 04 Jan 2019 19:49:47 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/waju/</guid>
+      <guid>http://localhost:1313/posts/waju/</guid>
       <description>Waju or whatever is called is a game that until this day I don&amp;rsquo;t know from where it comes. But, is fun.
 Goal The goal of the game is very simple:
  Move your marbles for one lap from your home to your goal. Don&amp;rsquo;t worry about winning but don&amp;rsquo;t let anyone else win. Have fun.  Board The board has six main components:
@@ -36,20 +36,20 @@ Dice Shallow men believe in luck or in circumstance.</description>
     
     <item>
       <title>Beyond PEP 8</title>
-      <link>https://memogarcia.mx/posts/beyond-pep8/</link>
+      <link>http://localhost:1313/posts/beyond-pep8/</link>
       <pubDate>Thu, 03 Jan 2019 18:53:23 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/beyond-pep8/</guid>
+      <guid>http://localhost:1313/posts/beyond-pep8/</guid>
       <description>Best practices for beautiful intelligible code
   </description>
     </item>
     
     <item>
       <title>Linux on Matebook X Pro</title>
-      <link>https://memogarcia.mx/posts/linux-matebook/</link>
+      <link>http://localhost:1313/posts/linux-matebook/</link>
       <pubDate>Tue, 04 Dec 2018 13:10:28 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/linux-matebook/</guid>
+      <guid>http://localhost:1313/posts/linux-matebook/</guid>
       <description>This laptop has very decent specs:
  8th Generation Intel® Core™ i7-8550U processor GPU: NVIDIA® GeForce® MX150 with 2 GB GDDR5 / Intel® UHD Graphics 620 16 GB LPDDR3 2133 MHz BT 4.1 (compatible with 3.0 and 2.1+EDR) 512 GB NVMe PCIe SSD  Don&amp;rsquo;t expect running workstation level workloads in this machine, but you can push it to run 1 Windows VM or 1/2/3 small VMs.
 Things I don&amp;rsquo;t like about the laptop  Palm rejection, especially this one, maybe this is Linux Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes BIOS configuration is too limited (but this is Huawei&amp;rsquo;s fault)  Distro Ubuntu 18.</description>

@@ -151,7 +151,7 @@ If your Matebook X Pro does not boot after installing nvidia drivers or the one 
 
     sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
 
-### references
+### References
 
 * <https://github.com/ValveSoftware/steam-for-linux/issues/5707>
 * <https://wiki.ubuntu.com/UEFI/SecureBoot/Signing>

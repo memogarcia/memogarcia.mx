@@ -1,10 +1,12 @@
 ---
 title: "Waju"
-date: 2019-01-04T19:49:47+01:00
+date: 2019-01-04T15:49:47+01:00
 draft: false
 ---
 
 Waju or whatever is called is a game that until this day I don't know from where it comes. But, is fun.
+
+Edit: The game is based on a German game called [Mensch ärgere Dich nicht](https://en.m.wikipedia.org/wiki/Mensch_%C3%A4rgere_Dich_nicht)
 
 ## Goal
 
@@ -83,3 +85,7 @@ Once in the void, you can only move back to the road by rolling a `1` and only a
 ## Schematics
 
 ![Waju](/img/waju.png)
+
+## References
+
+* <https://en.m.wikipedia.org/wiki/Mensch_%C3%A4rgere_Dich_nicht>
