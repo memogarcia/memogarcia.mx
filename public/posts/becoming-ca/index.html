@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+        <title>Becoming a certificate authority for SSL</title>
+
+        <link rel="stylesheet" href="/css/stylesheet.css">
+    </head>
+    <body>
+        <section id="page-title">
+            <h1><a href="/">Memo Garcia</a></h1>
+        </section>
+
+
+
+<section class="blog-post">
+    <h1>Becoming a certificate authority for SSL</h1>
+    <div class="blog-post-subheader text-muted">
+        February 5, 2018
+    </div>
+    <div class="blog-post-content">
+        
+
+<p>A Certificate Authority or CA is an entity that signs digital certificates.
+These digital certificates are used to validate the connection while using secure mechanisms.</p>
+
+<h2 id="generating-a-root-ca">Generating a root CA</h2>
+
+<p>We will use a root CA to create intermediate CA&rsquo;s which are trusted to sign certificates on its behalf.</p>
+
+<p>First, prepare the environment.</p>
+
+<pre><code class="language-bash">mkdir /root/ca &amp;&amp; cd /root/ca
+mkdir certs crl newcerts private
+chmod 700 private
+touch index.txt
+echo 1000 &gt; serial
+</code></pre>
+
+<p>Then download the template for <code>/root/ca/openssl.cnf</code> from <a href="https://gist.github.com/memogarcia/2ba4b4fee8a588a7448297bc8cc4e0d9">this gist</a> and edit it.</p>
+
+<pre><code class="language-bash">vim /root/ca/openssl.cnf
+</code></pre>
+
+<p>Create the root key <code>ca.key.pem</code> and make sure to keep it secure.</p>
+
+<pre><code class="language-bash">openssl genrsa -aes256 -out private/ca.key.pem 4096
+chmod 400 private/ca.key.pem
+</code></pre>
+
+<p>Create a root certificate <code>ca.cert.pem</code>.</p>
+
+<pre><code class="language-bash">openssl req -config openssl.cnf \
+    -key private/ca.key.pem \
+    -new -x509 -days 10957 -sha256 -extensions v3_ca \
+    -out certs/ca.cert.pem
+chmod 444 certs/ca.cert.pem
+</code></pre>
+
+<p>Verify the root certificate.</p>
+
+<pre><code class="language-bash">openssl x509 -noout -text -in certs/ca.cert.pem
+</code></pre>
+
+<h2 id="generating-an-intermediate-ca">Generating an intermediate CA</h2>
+
+<p>It&rsquo;s best practice to use intermediate CA&rsquo;s instead of root CA&rsquo;s to sign certificates, this practice allows a root CA to revoke a compromised intermediate CA and create a new one if necessary.</p>
+
+<p>Prepare the environment.</p>
+
+<pre><code class="language-bash">mkdir /root/ca/intermediate &amp;&amp; cd /root/ca/intermediate
+mkdir certs crl csr newcerts private
+chmod 700 private
+touch index.txt
+echo 1000 &gt; serial
+echo 1000 &gt; /root/ca/intermediate/crlnumber
+</code></pre>
+
+<p>Then download the template for <code>/root/ca/intermediate/openssl.cnf</code> from <a href="https://gist.github.com/memogarcia/4c82f92bb4daf7ebc22517df24ce7a61">this gist</a> and edit it.</p>
+
+<pre><code class="language-bash">vim /root/ca/intermediate/openssl.cnf
+</code></pre>
+
+<p>Create the intermediate key <code>intermediate.key.pem</code>.</p>
+
+<pre><code class="language-bash">cd /root/ca
+openssl genrsa -aes256 \
+    -out intermediate/private/intermediate.key.pem 4096
+chmod 400 intermediate/private/intermediate.key.pem
+</code></pre>
+
+<p>With the intermediate key create an intermediate certificate request <code>intermediate.csr.pem</code> for the root certificate to sign. <strong>Make sure that Common Name is different from your root CA</strong></p>
+
+<pre><code class="language-bash">openssl req -config intermediate/openssl.cnf -new -sha256 \
+    -key intermediate/private/intermediate.key.pem \
+    -out intermediate/csr/intermediate.csr.pem
+</code></pre>
+
+<p>The root CA will sign this certificate using <code>v3_intermediate_ca</code> extension. <strong>Make sure is valid for less time than the root CA</strong></p>
+
+<pre><code class="language-bash">openssl ca -config openssl.cnf -extensions v3_intermediate_ca \
+    -days 3650 -notext -md sha256 \
+    -in intermediate/csr/intermediate.csr.pem \
+    -out intermediate/certs/intermediate.cert.pem
+chmod 444 intermediate/certs/intermediate.cert.pem
+</code></pre>
+
+<p><code>index.txt</code> is the database file. <strong>Do NOT delete this file</strong></p>
+
+<p>Veify the intermediate certificate.</p>
+
+<pre><code class="language-bash">openssl x509 -noout -text \
+    -in intermediate/certs/intermediate.cert.pem
+</code></pre>
+
+<p>Verify the intermediate CA against the root CA, the output should be <code>OK</code>.</p>
+
+<pre><code class="language-bash">openssl verify -CAfile certs/ca.cert.pem \
+    intermediate/certs/intermediate.cert.pem
+</code></pre>
+
+<p>After the verification is <code>OK</code>, chain the root CA and intermediate CA into a chain CA. <strong>This is only necessary if the root certificate is not installed on the client machines</strong></p>
+
+<pre><code class="language-bash">cat intermediate/certs/intermediate.cert.pem \
+    certs/ca.cert.pem &gt; intermediate/certs/ca-chain.cert.pem
+chmod 444 intermediate/certs/ca-chain.cert.pem
+</code></pre>
+
+<h2 id="client-certificates">Client certificates</h2>
+
+<p>The intermediate certificate will be used to sign client certificates. <strong>Skip this step if you have a CSR already.</strong></p>
+
+<pre><code class="language-bash">cd /root/ca
+openssl genrsa -aes256 \
+    -out intermediate/private/www.example.com.key.pem 2048
+chmod 400 intermediate/private/www.example.com.key.pem
+</code></pre>
+
+<p>Using 2048 bits for encryption on the client certificates is faster for TLS handshakes and lighter on the CPU but is less secure than using 4096 bits. Use it at discretion.</p>
+
+<p>Using the private key <code>intermediate/private/www.example.com.key.pem</code>, create a CSR file. <strong>Skip this step if you have a CSR already.</strong></p>
+
+<pre><code class="language-bash">openssl req -config intermediate/openssl.cnf \
+    -key intermediate/private/www.example.com.key.pem \
+    -new -sha256 -out intermediate/csr/www.example.com.csr.pem
+</code></pre>
+
+<h3 id="signing-client-certificates">Signing client certificates</h3>
+
+<p>To create a certificate, use the intermediate CA to sign the CSR.</p>
+
+<p>If the certificate is going to use for:</p>
+
+<ol>
+<li>servers, use <code>server_cert</code> extension.</li>
+<li>authentication, use <code>usr_cert</code> extension.</li>
+</ol>
+
+<p>Usually, client certificates are valid for less time than the CA&rsquo;s.</p>
+
+<pre><code class="language-bash">cd /root/ca
+openssl ca -config intermediate/openssl.cnf \
+    -extensions server_cert -days 375 -notext -md sha256 \
+    -in intermediate/csr/www.example.com.csr.pem \
+    -out intermediate/certs/www.example.com.cert.pem
+chmod 444 intermediate/certs/www.example.com.cert.pem
+</code></pre>
+
+<h3 id="verification">Verification</h3>
+
+<p>Verify that <code>intermediate/index.txt</code> contains a <code>CN</code> for your domain.</p>
+
+<p>Verify the certificate.</p>
+
+<pre><code class="language-bash">openssl x509 -noout -text \
+    -in intermediate/certs/www.example.com.cert.pem
+</code></pre>
+
+<p>Verify the CA certificate chain. the output should be <code>OK</code>.</p>
+
+<pre><code class="language-bash">openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \
+    intermediate/certs/www.example.com.cert.pem
+</code></pre>
+
+<h3 id="distribution">Distribution</h3>
+
+<p>Distribute and/or deploy the following files:</p>
+
+<ul>
+<li><code>/root/ca/intermediate/certs/ca-chain.cert.pem</code></li>
+<li><code>/root/ca/intermediate/private/www.example.com.key.pem</code>  <strong>Only if you are signing the CSR</strong></li>
+<li><code>/root/ca/intermediate/certs/www.example.com.cert.pem</code></li>
+</ul>
+
+<h2 id="next-steps">Next steps</h2>
+
+<ol>
+<li>Sign certificates</li>
+<li>Cash in</li>
+<li>Sell out</li>
+<li>Bro down</li>
+</ol>
+
+<h2 id="references">References</h2>
+
+<p><a href="https://jamielinux.com/docs/openssl-certificate-authority/index.html">OpenSSL Certificate Authority</a></p>
+
+    </div>
+</section>
+
+    </body>
+</html>

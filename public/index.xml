@@ -68,5 +68,17 @@ Host configuration The default configuration for this environment is composed by
  Docker Libvirtd OpenVSwitch  Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.</description>
     </item>
     
+    <item>
+      <title>Becoming a certificate authority for SSL</title>
+      <link>https://memogarcia.mx/posts/becoming-ca/</link>
+      <pubDate>Mon, 05 Feb 2018 19:03:30 +0100</pubDate>
+      
+      <guid>https://memogarcia.mx/posts/becoming-ca/</guid>
+      <description>A Certificate Authority or CA is an entity that signs digital certificates. These digital certificates are used to validate the connection while using secure mechanisms.
+Generating a root CA We will use a root CA to create intermediate CA&amp;rsquo;s which are trusted to sign certificates on its behalf.
+First, prepare the environment.
+mkdir /root/ca &amp;amp;&amp;amp; cd /root/ca mkdir certs crl newcerts private chmod 700 private touch index.txt echo 1000 &amp;gt; serial  Then download the template for /root/ca/openssl.</description>
+    </item>
+    
   </channel>
 </rss>
