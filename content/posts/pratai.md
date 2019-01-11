@@ -2,6 +2,7 @@
 title: "Pratai, event driven platform for OpenStack"
 date: 2018-01-05T19:08:55+01:00
 draft: false
+tags: openstack, faas, event driven platform
 ---
 
 **Note** This is a Work-In-Progress Document.

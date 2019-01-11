@@ -2,6 +2,7 @@
 title: "Linux on Matebook X Pro"
 date: 2018-12-04T13:10:28+01:00
 draft: false
+tags: linux, matebook
 ---
 
 This laptop has very decent [specs](https://consumer.huawei.com/en/laptops/matebook-x-pro/specs/):

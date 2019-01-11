@@ -2,6 +2,7 @@
 title: "Becoming a certificate authority for SSL"
 date: 2018-02-05T19:03:30+01:00
 draft: false
+tags: security, ssl, certificates
 ---
 
 A Certificate Authority or CA is an entity that signs digital certificates.

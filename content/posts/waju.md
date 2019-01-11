@@ -2,6 +2,7 @@
 title: "Waju"
 date: 2019-01-04T15:49:47+01:00
 draft: false
+tags: boardgames
 ---
 
 Waju or whatever is called is a game that until this day I don't know from where it comes. But, is fun.
