@@ -2,7 +2,7 @@
 title: "Deploying OpenStack on Docker"
 date: 2018-05-05T18:53:14+01:00
 draft: false
-tags: openstack, containers, docker
+tags: python, openstack, containers, docker
 ---
 
 **Note** This is a Work-In-Progress Document and the most up-to-date information is available at: [github.com/memogarcia/openstack-deployer](https://github.com/memogarcia/openstack-deployer)

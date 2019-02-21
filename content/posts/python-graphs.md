@@ -9,6 +9,11 @@ A graph is a matematical model that is useful to map relations between objects.
 
 In a more technical way: A graph has noded (vertices) that can be connected to other by an edge.
 
+types:
+
+* undirected graph
+* directed graph
+
 {{< highlight python "linenos=table" >}}
 def hello():
     return
@@ -17,3 +22,4 @@ def hello():
 ## References
 
 * <https://www.python-course.eu/graphs_python.php>
+* <http://networkx.github.io/>

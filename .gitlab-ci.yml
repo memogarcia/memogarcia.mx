@@ -1,0 +1,6 @@
+---
+
+production:
+  stage: deploy
+  script:
+    - git clone git@gitlab.com:memogarcia/memogarcia.mx.git /home/gitlab/here
