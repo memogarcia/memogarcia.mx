@@ -3,5 +3,4 @@
 production:
   stage: deploy
   script:
-    - mkdir /home/gitlab/memogarcia.mx
-    - git clone https://gitlab.com/memogarcia/memogarcia.mx.git /home/gitlab/memogarcia.mx
+    - git clone https://gitlab.com/memogarcia/memogarcia.mx.git
