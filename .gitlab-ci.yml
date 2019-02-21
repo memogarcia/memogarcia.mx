@@ -1,6 +1,14 @@
 ---
 
+# Is performed before the scripts in the stages step
+# before_script:
+#   - source /etc/profile
+
+# Defines stages which are to be executed
+stages:
+  - deploy
+
 production:
   stage: deploy
   script:
-    - git clone https://gitlab.com/memogarcia/memogarcia.mx.git /home/gitlab-runner/memogarcia.mx
+    - cd /srv/http/memogarcia.mx && git pull https://gitlab.com/memogarcia/memogarcia.mx.git
