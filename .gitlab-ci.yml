@@ -3,4 +3,5 @@
 production:
   stage: deploy
   script:
+    - whoami
     - git clone https://gitlab.com/memogarcia/memogarcia.mx.git
