@@ -69,7 +69,7 @@ Host configuration The default configuration for this environment is composed by
     </item>
     
     <item>
-      <title>Becoming a certificate authority for SSL</title>
+      <title>OpenSSL Certificate Authority</title>
       <link>https://memogarcia.mx/posts/becoming-ca/</link>
       <pubDate>Mon, 05 Feb 2018 19:03:30 +0100</pubDate>
       
