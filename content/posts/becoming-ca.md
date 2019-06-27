@@ -1,5 +1,5 @@
 ---
-title: "Becoming a certificate authority for SSL"
+title: "OpenSSL Certificate Authority"
 date: 2018-02-05T19:03:30+01:00
 draft: false
 tags: security, ssl, certificates
