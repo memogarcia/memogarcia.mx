@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Memo Garcia</title>
-    <link>https://memogarcia.mx/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Memo Garcia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Jan 2019 22:20:31 +0100</lastBuildDate>
     
-	<atom:link href="https://memogarcia.mx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Some Richard Feynman videos</title>
-      <link>https://memogarcia.mx/posts/richard-feynman/</link>
+      <link>http://localhost:1313/posts/richard-feynman/</link>
       <pubDate>Fri, 04 Jan 2019 22:20:31 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/richard-feynman/</guid>
+      <guid>http://localhost:1313/posts/richard-feynman/</guid>
       <description>The World from another point of view
   Fun to imagine
    </description>
@@ -24,72 +24,35 @@
     
     <item>
       <title>Waju</title>
-      <link>https://memogarcia.mx/posts/waju/</link>
-      <pubDate>Fri, 04 Jan 2019 15:49:47 +0100</pubDate>
+      <link>http://localhost:1313/posts/waju/</link>
+      <pubDate>Fri, 04 Jan 2019 19:49:47 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/waju/</guid>
+      <guid>http://localhost:1313/posts/waju/</guid>
       <description>Waju or whatever is called is a game that until this day I don&amp;rsquo;t know from where it comes. But, is fun.
-Edit: The game is based on a German game called Mensch ärgere Dich nicht
 Goal The goal of the game is very simple:
- Move your marbles for one lap from your home to your goal. Don&amp;rsquo;t worry about winning but don&amp;rsquo;t let anyone else win. Have fun.</description>
+ Move your marbles for one lap from your home to your goal. Don&amp;rsquo;t worry about winning but don&amp;rsquo;t let anyone else win. Have fun.  Board The board has six main components:
+Dice Shallow men believe in luck or in circumstance.</description>
     </item>
     
     <item>
       <title>Beyond PEP 8</title>
-      <link>https://memogarcia.mx/posts/beyond-pep8/</link>
+      <link>http://localhost:1313/posts/beyond-pep8/</link>
       <pubDate>Thu, 03 Jan 2019 18:53:23 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/beyond-pep8/</guid>
+      <guid>http://localhost:1313/posts/beyond-pep8/</guid>
       <description>Best practices for beautiful intelligible code
   </description>
     </item>
     
     <item>
       <title>Linux on Matebook X Pro</title>
-      <link>https://memogarcia.mx/posts/linux-matebook/</link>
+      <link>http://localhost:1313/posts/linux-matebook/</link>
       <pubDate>Tue, 04 Dec 2018 13:10:28 +0100</pubDate>
       
-      <guid>https://memogarcia.mx/posts/linux-matebook/</guid>
+      <guid>http://localhost:1313/posts/linux-matebook/</guid>
       <description>This laptop has very decent specs:
  8th Generation Intel® Core™ i7-8550U processor GPU: NVIDIA® GeForce® MX150 with 2 GB GDDR5 / Intel® UHD Graphics 620 16 GB LPDDR3 2133 MHz BT 4.1 (compatible with 3.0 and 2.1+EDR) 512 GB NVMe PCIe SSD  Don&amp;rsquo;t expect running workstation level workloads in this machine, but you can push it to run 1 Windows VM or 1/2/3 small VMs.
 Things I don&amp;rsquo;t like about the laptop  Palm rejection, especially this one, maybe this is Linux Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes BIOS configuration is too limited (but this is Huawei&amp;rsquo;s fault)  Distro Ubuntu 18.</description>
-    </item>
-    
-    <item>
-      <title>Deploying OpenStack on Docker</title>
-      <link>https://memogarcia.mx/posts/openstack-containers/</link>
-      <pubDate>Sat, 05 May 2018 18:53:14 +0100</pubDate>
-      
-      <guid>https://memogarcia.mx/posts/openstack-containers/</guid>
-      <description>Note This is a Work-In-Progress Document and the most up-to-date information is available at: github.com/memogarcia/openstack-deployer
-Deploying OpenStack using containers allows easy customisation and flexibility on how to deploy the platform for development, testing and production environments.
-Current deployment: stable/queens
-Host configuration The default configuration for this environment is composed by 3 main components that need to run on the host:
- Docker Libvirtd OpenVSwitch  Docker will act as the control plane for OpenStack while the host will provide the hypervisor, network and storage.</description>
-    </item>
-    
-    <item>
-      <title>OpenSSL Certificate Authority</title>
-      <link>https://memogarcia.mx/posts/becoming-ca/</link>
-      <pubDate>Mon, 05 Feb 2018 19:03:30 +0100</pubDate>
-      
-      <guid>https://memogarcia.mx/posts/becoming-ca/</guid>
-      <description>A Certificate Authority or CA is an entity that signs digital certificates. These digital certificates are used to validate the connection while using secure mechanisms.
-Generating a root CA We will use a root CA to create intermediate CA&amp;rsquo;s which are trusted to sign certificates on its behalf.
-First, prepare the environment.
-mkdir /root/ca &amp;amp;&amp;amp; cd /root/ca mkdir certs crl newcerts private chmod 700 private touch index.txt echo 1000 &amp;gt; serial  Then download the template for /root/ca/openssl.</description>
-    </item>
-    
-    <item>
-      <title>Pratai, event driven platform for OpenStack</title>
-      <link>https://memogarcia.mx/posts/pratai/</link>
-      <pubDate>Fri, 05 Jan 2018 19:08:55 +0100</pubDate>
-      
-      <guid>https://memogarcia.mx/posts/pratai/</guid>
-      <description>Note This is a Work-In-Progress Document.
-Read the docs at memogarcia/pratai-docs
-Abstract Pratai provides an incredibly flexible and resilient platform to migrate workloads to the cloud that respond to events without having to manage any server or network.
-How it works The goal of Pratai is simple. Deploy &amp;ldquo;code&amp;rdquo; (disclaimer, from now on I will refer to code as functions), that will react to an event without worrying about anything else, the platform handles the execution.</description>
     </item>
     
   </channel>

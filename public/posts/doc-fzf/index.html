@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+        <title>Modular CLI Documentation Fuzzy Finder</title>
+
+        <link rel="stylesheet" href="/css/stylesheet.css">
+    </head>
+    <body>
+        <section id="page-title">
+            <h1><a href="/">Memo Garcia</a></h1>
+        </section>
+
+
+
+<section class="blog-post">
+    <h1>Modular CLI Documentation Fuzzy Finder</h1>
+    <div class="blog-post-subheader text-muted">
+        June 14, 2019
+    </div>
+    <div class="blog-post-content">
+        
+
+<p>Fuzzy Search documentation from the CLI</p>
+
+<p>See it in action here <a href="https://terminalizer.com/view/2c3935cf1418">https://terminalizer.com/view/2c3935cf1418</a></p>
+
+<p><strong>Disclaimer</strong> This tool was built to learn <code>FZF</code> capabilities. Feel free to use it or extend it.</p>
+
+<h2 id="usage">Usage</h2>
+
+<pre><code>doc-fzf ansible
+doc-fzf ansible -q yum
+</code></pre>
+
+<h2 id="installation">Installation</h2>
+
+<pre><code>pip3 install doc-fzf
+</code></pre>
+
+<p>Verify your installation:</p>
+
+<pre><code>doc-fzf -h
+</code></pre>
+
+<pre><code class="language-bash">usage: doc-fzf.py [-h] [-q QUERY] module_name
+
+doc-fzf.
+
+positional arguments:
+module_name  Name of the module to search
+
+optional arguments:
+-h, --help   show this help message and exit
+-q QUERY     Query the docs
+</code></pre>
+
+<h2 id="extending-doc-fzf">Extending Doc-FZF</h2>
+
+<p><code>doc-fzf</code> is a modular application. It can load modules at runtime that scrap websites in any way you like.</p>
+
+<p>Any module should always contain:</p>
+
+<ul>
+<li>class name must always be <code>Screapper(FZFDoc)</code></li>
+<li><code>self.documentation_url</code> attribute</li>
+<li><code>def get_documentation(self):</code> function that must always return a tuple (&ldquo;url&rdquo;, &ldquo;description&rdquo;)</li>
+</ul>
+
+<pre><code class="language-python">from doc_fzf.pyfzf import FZFDoc
+
+
+class Scrapper(FZFDoc):
+    def __init__(self):
+        self.base_url = &quot;https://docs.python.org/3&quot;
+        self.documentation_url = &quot;{0}/py-modindex.html&quot;.format(self.base_url)
+        FZFDoc.__init__(self, self.documentation_url)
+
+    def get_documentation(self):
+        &quot;&quot;&quot; Return a tuple of (url, description)
+        &quot;&quot;&quot;
+        docs = get_online_documentation()
+        for doc in docs:
+            yield (doc.url, doc.description)
+</code></pre>
+
+<p>Here is the <a href="https://gitlab.com/memogarcia/doc-fzf/blob/master/doc_fzf/modules/ansible.py">ansible documentation example</a></p>
+
+<h2 id="road-map">Road Map</h2>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Module definition</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> FZFDoc base class</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> File system cache layer</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Load dynamic modules</label></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://https://memogarcia.mx/posts/doc-fzf">Doc-FZF: Modular CLI Documentation Fuzzy Finder</a></li>
+<li><a href="https://github.com/junegunn/fzf">fzf, A command-line fuzzy finder</a></li>
+<li><a href="https://github.com/dahlia/iterfzf">iterfzf, Pythonic interface to fzf, a CLI fuzzy finder</a></li>
+</ul>
+
+    </div>
+</section>
+
+    </body>
+</html>
