@@ -23,6 +23,7 @@ a {
 
 .date-time-title {
     display: inline-block;
+    min-width: 100px;
 }
 
 #posts {
