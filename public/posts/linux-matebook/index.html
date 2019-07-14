@@ -6,7 +6,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
-        <title>Linux on Matebook X Pro</title>
+        <title>Linux on Huawei Matebook X Pro</title>
 
         <link rel="stylesheet" href="/css/stylesheet.css">
     </head>
@@ -18,7 +18,7 @@
 
 
 <section class="blog-post">
-    <h1>Linux on Matebook X Pro</h1>
+    <h1>Linux on Huawei Matebook X Pro</h1>
     <div class="blog-post-subheader text-muted">
         December 4, 2018
     </div>
@@ -35,24 +35,31 @@
 <li>512 GB NVMe PCIe SSD</li>
 </ul>
 
-<p>Don&rsquo;t expect running workstation level workloads in this machine, but you can push it to run 1 Windows VM or 1/2/3 small VMs.</p>
+<p>Don&rsquo;t expect running workstation level workloads in this machine but it is a wonderful dev machine.</p>
 
 <h3 id="things-i-don-t-like-about-the-laptop">Things I don&rsquo;t like about the laptop</h3>
 
 <ul>
-<li>Palm rejection, especially this one, maybe this is Linux</li>
-<li>Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes</li>
+<li>Palm rejection, especially this one, maybe this is Linux.</li>
+<li>Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes.</li>
 <li>BIOS configuration is too limited (but this is Huawei&rsquo;s fault)</li>
 </ul>
 
+<p><strong>Update</strong> 14/Jul/2019</p>
+
+<p>Palm rejection has improved a lot since I updated to the latest <code>Touchpad</code> software versions.</p>
+
 <h3 id="distro">Distro</h3>
 
-<p><a href="http://releases.ubuntu.com/18.04/">Ubuntu 18.04</a> with kernel 4.15.0-42-generic</p>
+<p><a href="http://releases.ubuntu.com/18.04/">Ubuntu 18.04</a> with kernel <code>4.15.0-42-generic</code></p>
+
+<p><strong>Update</strong> 14/Jul/2019</p>
+
+<p><code>do-release-upgrade</code> to <a href="http://releases.ubuntu.com/18.10/">Ubuntu 18.10</a> and upgraded kernel version to <code>5.0.0-050000-generic</code></p>
 
 <h3 id="touchpad">Touchpad</h3>
 
-<pre><code>sudo apt-get install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed
-sudo apt install xserver-xorg-input-synaptics
+<pre><code>sudo apt install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed xserver-xorg-input-synaptics
 </code></pre>
 
 <h3 id="nvidia-drivers">Nvidia drivers</h3>
@@ -71,7 +78,7 @@ prime-select query
 <p>For high-performance graphics, use:</p>
 
 <pre><code>prime-select nvidia
-# logout :(
+# log out and log in
 </code></pre>
 
 <p>Verify nvidia is correctly installed:</p>
@@ -85,19 +92,16 @@ glxinfo | grep OpenGL
 <p>For lower consumption, use:</p>
 
 <pre><code>prime-select intel
-# logout :(
+# log out and log in
 </code></pre>
 
 <p>I&rsquo;m getting readings about <code>4.5W to 6W</code> battery discharge rate with this configuration.</p>
 
+<p><strong>Update</strong> 14/Jul/2019</p>
+
+<p>After upgrading to kernel <code>5.0.0-050000-generic</code> I&rsquo;m getting discharge rates of <code>3.5W</code>, not bad!!!</p>
+
 <h3 id="desktop-manager">Desktop manager</h3>
-
-<h4 id="unity">Unity</h4>
-
-<pre><code>sudo apt install ubuntu-unity-desktop
-</code></pre>
-
-<p>I started using unity instead of gnome for better DPI scaling per monitoring, but then I move to my beloved i3wm</p>
 
 <h4 id="i3wm">i3wm</h4>
 
@@ -130,12 +134,6 @@ exec --no-startup-id /usr/bin/feh --randomize --bg-scale /path/wallpaper/* -Z
 i3-msg restart
 </code></pre>
 
-<h5 id="wallpaper">Wallpaper</h5>
-
-<pre><code>sudo apt install feh
-feh --bg-scale /path/to/image
-</code></pre>
-
 <h5 id="media-keys">Media keys</h5>
 
 <p>For screen brightness and key backlights, I&rsquo;m using <a href="https://github.com/haikarainen/light">Light</a></p>
@@ -159,10 +157,9 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 <h3 id="battery">Battery</h3>
 
-<pre><code>sudo apt install powertop
+<pre><code>sudo apt install powertop tlp
 sudo powertop --calibrate
 sudo powertop --autotune
-sudo apt install tlp
 sudo tlp start
 </code></pre>
 
@@ -181,11 +178,11 @@ Average Access Time: 0.11 msec (1000 samples)
 
 <h4 id="unsigned-driver-at-boot">Unsigned driver at boot</h4>
 
-<p>If your Matebook X Pro does not boot after installing nvidia drivers or the one downloaded from nvidia&rsquo;s website then disable the <code>Secure Boot</code> option in the BIOS.</p>
+<p>If your Matebook X Pro does not boot after installing this nvidia driver or the one downloaded from nvidia&rsquo;s website then disable the <code>Secure Boot</code> option in the BIOS.</p>
 
 <h5 id="reconfigure-the-kernel">Reconfigure the kernel</h5>
 
-<pre><code>sudo apt-get install --reinstall linux-image-generic linux-image-4.15.0-42-generic
+<pre><code>sudo apt install --reinstall linux-image-generic linux-image-4.15.0-42-generic
 </code></pre>
 
 <h5 id="remove-old-drivers">Remove old drivers</h5>
@@ -193,7 +190,7 @@ Average Access Time: 0.11 msec (1000 samples)
 <pre><code>sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
 </code></pre>
 
-<h3 id="references">References</h3>
+<h3 id="references">references</h3>
 
 <ul>
 <li><a href="https://github.com/ValveSoftware/steam-for-linux/issues/5707">https://github.com/ValveSoftware/steam-for-linux/issues/5707</a></li>

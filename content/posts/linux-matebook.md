@@ -1,5 +1,5 @@
 ---
-title: "Linux on Matebook X Pro"
+title: "Linux on Huawei Matebook X Pro"
 date: 2018-12-04T13:10:28+01:00
 draft: false
 tags: linux, matebook
@@ -13,22 +13,30 @@ This laptop has very decent [specs](https://consumer.huawei.com/en/laptops/mateb
 * BT 4.1 (compatible with 3.0 and 2.1+EDR)
 * 512 GB NVMe PCIe SSD
 
-Don't expect running workstation level workloads in this machine, but you can push it to run 1 Windows VM or 1/2/3 small VMs.
+Don't expect running workstation level workloads in this machine but it is a wonderful dev machine.
 
 ### Things I don't like about the laptop
 
-* Palm rejection, especially this one, maybe this is Linux
-* Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes
+* Palm rejection, especially this one, maybe this is Linux.
+* Sound, it only outputs sound to two speakers under Linux and it has a werid noise under high volumes.
 * BIOS configuration is too limited (but this is Huawei's fault)
+
+**Update** 14/Jul/2019
+
+Palm rejection has improved a lot since I updated to the latest `Touchpad` software versions.
+
 
 ### Distro
 
-[Ubuntu 18.04](http://releases.ubuntu.com/18.04/) with kernel 4.15.0-42-generic
+[Ubuntu 18.04](http://releases.ubuntu.com/18.04/) with kernel `4.15.0-42-generic`
+
+**Update** 14/Jul/2019
+
+`do-release-upgrade` to [Ubuntu 18.10](http://releases.ubuntu.com/18.10/) and upgraded kernel version to `5.0.0-050000-generic`
 
 ### Touchpad
 
-    sudo apt-get install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed
-    sudo apt install xserver-xorg-input-synaptics
+    sudo apt install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed xserver-xorg-input-synaptics
 
 ### Nvidia drivers
 
@@ -44,7 +52,7 @@ At this time, nvidia-driver-415 is the most up to date driver and the recommende
 For high-performance graphics, use:
 
     prime-select nvidia
-    # logout :(
+    # log out and log in
 
 Verify nvidia is correctly installed:
 
@@ -56,17 +64,15 @@ I'm getting readings about `12W to 17W` battery discharge rate with this configu
 For lower consumption, use:
 
     prime-select intel
-    # logout :(
+    # log out and log in
 
 I'm getting readings about `4.5W to 6W` battery discharge rate with this configuration.
 
+**Update** 14/Jul/2019
+
+After upgrading to kernel `5.0.0-050000-generic` I'm getting discharge rates of `3.5W`, not bad!!!
+
 ### Desktop manager
-
-#### Unity
-
-    sudo apt install ubuntu-unity-desktop
-
-I started using unity instead of gnome for better DPI scaling per monitoring, but then I move to my beloved i3wm
 
 #### i3wm
 
@@ -96,11 +102,6 @@ And then, reload the configuration:
     i3-msg reload
     i3-msg restart
 
-##### Wallpaper
-
-    sudo apt install feh
-    feh --bg-scale /path/to/image
-
 ##### Media keys
 
 For screen brightness and key backlights, I'm using [Light](https://github.com/haikarainen/light)
@@ -122,10 +123,9 @@ For volume control, I'm using [pactl](http://manpages.ubuntu.com/manpages/precis
 
 ### Battery
 
-    sudo apt install powertop
+    sudo apt install powertop tlp
     sudo powertop --calibrate
     sudo powertop --autotune
-    sudo apt install tlp
     sudo tlp start
 
 ### Disk I/O
@@ -142,17 +142,17 @@ Maybe I'm testing it wrong, but it seems to me the write speeds are quite low.
 
 #### Unsigned driver at boot
 
-If your Matebook X Pro does not boot after installing nvidia drivers or the one downloaded from nvidia's website then disable the `Secure Boot` option in the BIOS.
+If your Matebook X Pro does not boot after installing this nvidia driver or the one downloaded from nvidia's website then disable the `Secure Boot` option in the BIOS.
 
 ##### Reconfigure the kernel
 
-    sudo apt-get install --reinstall linux-image-generic linux-image-4.15.0-42-generic
+    sudo apt install --reinstall linux-image-generic linux-image-4.15.0-42-generic
 
 ##### Remove old drivers
 
     sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
 
-### References
+### references
 
 * <https://github.com/ValveSoftware/steam-for-linux/issues/5707>
 * <https://wiki.ubuntu.com/UEFI/SecureBoot/Signing>
