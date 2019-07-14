@@ -5,7 +5,7 @@ draft: false
 tags: fzf, python, documentation
 ---
 
-Fuzzy Search documentation from the CLI
+Fuzzy Search documentation from the CLI.
 
 See it in action here [https://terminalizer.com/view/2c3935cf1418](https://terminalizer.com/view/2c3935cf1418)
 

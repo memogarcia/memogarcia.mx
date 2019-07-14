@@ -17,7 +17,7 @@
       <pubDate>Fri, 14 Jun 2019 15:03:30 +0100</pubDate>
       
       <guid>https://memogarcia.mx/posts/doc-fzf/</guid>
-      <description>Fuzzy Search documentation from the CLI
+      <description>Fuzzy Search documentation from the CLI.
 See it in action here https://terminalizer.com/view/2c3935cf1418
 Disclaimer This tool was built to learn FZF capabilities. Feel free to use it or extend it.
 Usage doc-fzf ansible doc-fzf ansible -q yum  Installation pip3 install doc-fzf  Verify your installation:
