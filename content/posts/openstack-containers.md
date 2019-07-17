@@ -75,30 +75,38 @@ Configure your runtime environment by modifying [model.yml](https://github.com/m
 
 Apply the configuration with `config_processor`, which will create the necessary scripts to run the environment.
 
-    ansible-playbook -i hosts/localhost config_processor.yml
+```bash
+ansible-playbook -i hosts/localhost config_processor.yml
+```
 
 Config processor will create a new branch `deploy` where the runtime configuration will be ready for deployment.
 
-Verify the branch is created correctly:
+Verify the branch is created correctly.
 
-    git branch
-    # * deploy
-    git log
-    # Ready for deployment
+```bash
+git branch
+# * deploy
+git log
+# Ready for deployment
+```
 
 Deploy OpenStack
 
-    ./scripts/docker-network-create.sh
-    ./scripts/build.sh
-    ./scripts/start.sh
+```bash
+./scripts/docker-network-create.sh
+./scripts/build.sh
+./scripts/start.sh
+```
 
 ## Verify installation
 
-    source osrc-v3
-    openstack project list
-    openstack image list
-    openstack network list
-    openstack server list
+```bash
+source osrc-v3
+openstack project list
+openstack image list
+openstack network list
+openstack server list
+```
 
 ## References
 

@@ -25,8 +25,7 @@ The board has six main components:
 
 ### Dice
 
-    Shallow men believe in luck or in circumstance. Strong men believe in cause and effect.
-    Ralph Waldo Emerson
+> Shallow men believe in luck or in circumstance. Strong men believe in cause and effect.  --Ralph Waldo Emerson
 
 ### Home
 

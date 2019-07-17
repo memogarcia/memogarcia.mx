@@ -13,18 +13,22 @@ See it in action here [https://terminalizer.com/view/2c3935cf1418](https://termi
 
 ## Usage
 
-    doc-fzf ansible
-    doc-fzf ansible -q yum
+```bash
+doc-fzf ansible
+doc-fzf ansible -q yum
+```
 
 ## Installation
 
-    pip3 install doc-fzf
+```bash
+pip3 install doc-fzf
+```
 
 Verify your installation:
 
-    doc-fzf -h
-
 ```bash
+doc-fzf -h
+
 usage: doc-fzf.py [-h] [-q QUERY] module_name
 
 doc-fzf.

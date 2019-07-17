@@ -25,7 +25,6 @@ Don't expect running workstation level workloads in this machine but it is a won
 
 Palm rejection has improved a lot since I updated to the latest `Touchpad` software versions.
 
-
 ### Distro
 
 [Ubuntu 18.04](http://releases.ubuntu.com/18.04/) with kernel `4.15.0-42-generic`
@@ -36,35 +35,46 @@ Palm rejection has improved a lot since I updated to the latest `Touchpad` softw
 
 ### Touchpad
 
-    sudo apt install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed xserver-xorg-input-synaptics
+```bash
+sudo apt install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed xserver-xorg-input-synaptics
+```
 
 ### Nvidia drivers
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa
-    sudo apt update
+```bash
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+```
 
 At this time, nvidia-driver-415 is the most up to date driver and the recommended one.
 
-    sudo ubuntu-drivers autoinstall
-
-    prime-select query
+```bash
+sudo ubuntu-drivers autoinstall
+prime-select query
+```
 
 For high-performance graphics, use:
 
-    prime-select nvidia
-    # log out and log in
+```bash
+prime-select nvidia
+# log out and log in
+```
 
 Verify nvidia is correctly installed:
 
-    sudo lshw -C display
-    glxinfo | grep OpenGL
+```bash
+sudo lshw -C display
+glxinfo | grep OpenGL
+```
 
 I'm getting readings about `12W to 17W` battery discharge rate with this configuration.
 
 For lower consumption, use:
 
-    prime-select intel
-    # log out and log in
+```bash
+prime-select intel
+# log out and log in
+```
 
 I'm getting readings about `4.5W to 6W` battery discharge rate with this configuration.
 
@@ -76,65 +86,79 @@ After upgrading to kernel `5.0.0-050000-generic` I'm getting discharge rates of 
 
 #### i3wm
 
-    sudo apt install i3wm i3lock
+```bash
+sudo apt install i3wm i3lock
+```
 
 `vim ~/.config/i3/config`
 
-    # HDPI
-    exec xrandr --dpi 220
+```bash
+# HDPI
+exec xrandr --dpi 220
 
-    # Applets
-    exec --no-startup-id nm-applet
-    exec --no-startup-id blueman-applet
-    exec --no-startup-id gtk-redshift
-    exec --no-startup-id megasync
-    exec --no-startup-id dropbox start
-    exec --no-startup-id flameshot
+# Applets
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+exec --no-startup-id gtk-redshift
+exec --no-startup-id megasync
+exec --no-startup-id dropbox start
+exec --no-startup-id flameshot
 
-    # Lock screen
-    bindsym $mod+l exec i3lock -c 000000
+# Lock screen
+bindsym $mod+l exec i3lock -c 000000
 
-    # background
-    exec --no-startup-id /usr/bin/feh --randomize --bg-scale /path/wallpaper/* -Z
+# background
+exec --no-startup-id /usr/bin/feh --randomize --bg-scale /path/wallpaper/* -Z
+```
 
 And then, reload the configuration:
 
-    i3-msg reload
-    i3-msg restart
+```bash
+i3-msg reload
+i3-msg restart
+```
 
 ##### Media keys
 
 For screen brightness and key backlights, I'm using [Light](https://github.com/haikarainen/light)
 
-    # Sreen brightness controls
-    bindsym XF86MonBrightnessUp exec light -A 5
-    bindsym XF86MonBrightnessDown exec light -U 5
+```bash
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
-    # keyboard backlight controls
-    bindsym XF86KbdBrightnessUp exec light -A 5
-    bindsym XF86KbdBrightnessDown exec light -A 5
+# keyboard backlight controls
+bindsym XF86KbdBrightnessUp exec light -A 5
+bindsym XF86KbdBrightnessDown exec light -A 5
+```
 
 For volume control, I'm using [pactl](http://manpages.ubuntu.com/manpages/precise/man1/pactl.1.html)
 
-    # Volume controls
-    bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
-    bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+5%'
-    bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
+```bash
+# Volume controls
+bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
+bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+5%'
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
+```
 
 ### Battery
 
-    sudo apt install powertop tlp
-    sudo powertop --calibrate
-    sudo powertop --autotune
-    sudo tlp start
+```bash
+sudo apt install powertop tlp
+sudo powertop --calibrate
+sudo powertop --autotune
+sudo tlp start
+```
 
 ### Disk I/O
 
 Following the [graphical method](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/) steps on this webpage, I get the following speeds for my 512 GB NVMe PCIe SSD:
 
-    Average Read Rate: 1.4 GB/s (1000 samples)
-    Average Write Read: 271.5 MB/s (1000 samples)
-    Average Access Time: 0.11 msec (1000 samples)
+```bash
+Average Read Rate: 1.4 GB/s (1000 samples)
+Average Write Read: 271.5 MB/s (1000 samples)
+Average Access Time: 0.11 msec (1000 samples)
+```
 
 Maybe I'm testing it wrong, but it seems to me the write speeds are quite low.
 
@@ -146,11 +170,15 @@ If your Matebook X Pro does not boot after installing this nvidia driver or the 
 
 ##### Reconfigure the kernel
 
-    sudo apt install --reinstall linux-image-generic linux-image-4.15.0-42-generic
+```bash
+sudo apt install --reinstall linux-image-generic linux-image-4.15.0-42-generic
+```
 
 ##### Remove old drivers
 
-    sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
+```bash
+sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
+```
 
 ### references
 
