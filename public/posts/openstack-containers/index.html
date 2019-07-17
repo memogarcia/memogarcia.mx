@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 
         <title>Deploying OpenStack on Docker</title>
 
@@ -107,14 +109,14 @@
 
 <p>Apply the configuration with <code>config_processor</code>, which will create the necessary scripts to run the environment.</p>
 
-<pre><code>ansible-playbook -i hosts/localhost config_processor.yml
+<pre><code class="language-bash">ansible-playbook -i hosts/localhost config_processor.yml
 </code></pre>
 
 <p>Config processor will create a new branch <code>deploy</code> where the runtime configuration will be ready for deployment.</p>
 
-<p>Verify the branch is created correctly:</p>
+<p>Verify the branch is created correctly.</p>
 
-<pre><code>git branch
+<pre><code class="language-bash">git branch
 # * deploy
 git log
 # Ready for deployment
@@ -122,14 +124,14 @@ git log
 
 <p>Deploy OpenStack</p>
 
-<pre><code>./scripts/docker-network-create.sh
+<pre><code class="language-bash">./scripts/docker-network-create.sh
 ./scripts/build.sh
 ./scripts/start.sh
 </code></pre>
 
 <h2 id="verify-installation">Verify installation</h2>
 
-<pre><code>source osrc-v3
+<pre><code class="language-bash">source osrc-v3
 openstack project list
 openstack image list
 openstack network list

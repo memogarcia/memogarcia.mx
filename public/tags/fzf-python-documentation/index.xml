@@ -21,7 +21,7 @@
 See it in action here https://terminalizer.com/view/2c3935cf1418
 Disclaimer This tool was built to learn FZF capabilities. Feel free to use it or extend it.
 Usage doc-fzf ansible doc-fzf ansible -q yum  Installation pip3 install doc-fzf  Verify your installation:
-doc-fzf -h  usage: doc-fzf.py [-h] [-q QUERY] module_name doc-fzf. positional arguments: module_name Name of the module to search optional arguments: -h, --help show this help message and exit -q QUERY Query the docs  Extending Doc-FZF doc-fzf is a modular application.</description>
+doc-fzf -h usage: doc-fzf.py [-h] [-q QUERY] module_name doc-fzf. positional arguments: module_name Name of the module to search optional arguments: -h, --help show this help message and exit -q QUERY Query the docs  Extending Doc-FZF doc-fzf is a modular application.</description>
     </item>
     
   </channel>

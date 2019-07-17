@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 
         <title>Linux on Huawei Matebook X Pro</title>
 
@@ -59,31 +61,30 @@
 
 <h3 id="touchpad">Touchpad</h3>
 
-<pre><code>sudo apt install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed xserver-xorg-input-synaptics
+<pre><code class="language-bash">sudo apt install acpi acpi-support acpica-tools acpid acpidump acpitail acpitool libacpi0 laptop-detect pommed xserver-xorg-input-synaptics
 </code></pre>
 
 <h3 id="nvidia-drivers">Nvidia drivers</h3>
 
-<pre><code>sudo add-apt-repository ppa:graphics-drivers/ppa
+<pre><code class="language-bash">sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 </code></pre>
 
 <p>At this time, nvidia-driver-415 is the most up to date driver and the recommended one.</p>
 
-<pre><code>sudo ubuntu-drivers autoinstall
-
+<pre><code class="language-bash">sudo ubuntu-drivers autoinstall
 prime-select query
 </code></pre>
 
 <p>For high-performance graphics, use:</p>
 
-<pre><code>prime-select nvidia
+<pre><code class="language-bash">prime-select nvidia
 # log out and log in
 </code></pre>
 
 <p>Verify nvidia is correctly installed:</p>
 
-<pre><code>sudo lshw -C display
+<pre><code class="language-bash">sudo lshw -C display
 glxinfo | grep OpenGL
 </code></pre>
 
@@ -91,7 +92,7 @@ glxinfo | grep OpenGL
 
 <p>For lower consumption, use:</p>
 
-<pre><code>prime-select intel
+<pre><code class="language-bash">prime-select intel
 # log out and log in
 </code></pre>
 
@@ -105,12 +106,12 @@ glxinfo | grep OpenGL
 
 <h4 id="i3wm">i3wm</h4>
 
-<pre><code>sudo apt install i3wm i3lock
+<pre><code class="language-bash">sudo apt install i3wm i3lock
 </code></pre>
 
 <p><code>vim ~/.config/i3/config</code></p>
 
-<pre><code># HDPI
+<pre><code class="language-bash"># HDPI
 exec xrandr --dpi 220
 
 # Applets
@@ -130,7 +131,7 @@ exec --no-startup-id /usr/bin/feh --randomize --bg-scale /path/wallpaper/* -Z
 
 <p>And then, reload the configuration:</p>
 
-<pre><code>i3-msg reload
+<pre><code class="language-bash">i3-msg reload
 i3-msg restart
 </code></pre>
 
@@ -138,7 +139,7 @@ i3-msg restart
 
 <p>For screen brightness and key backlights, I&rsquo;m using <a href="https://github.com/haikarainen/light">Light</a></p>
 
-<pre><code># Sreen brightness controls
+<pre><code class="language-bash"># Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
@@ -149,7 +150,7 @@ bindsym XF86KbdBrightnessDown exec light -A 5
 
 <p>For volume control, I&rsquo;m using <a href="http://manpages.ubuntu.com/manpages/precise/man1/pactl.1.html">pactl</a></p>
 
-<pre><code># Volume controls
+<pre><code class="language-bash"># Volume controls
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+5%'
 bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -157,7 +158,7 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 <h3 id="battery">Battery</h3>
 
-<pre><code>sudo apt install powertop tlp
+<pre><code class="language-bash">sudo apt install powertop tlp
 sudo powertop --calibrate
 sudo powertop --autotune
 sudo tlp start
@@ -167,7 +168,7 @@ sudo tlp start
 
 <p>Following the <a href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/">graphical method</a> steps on this webpage, I get the following speeds for my 512 GB NVMe PCIe SSD:</p>
 
-<pre><code>Average Read Rate: 1.4 GB/s (1000 samples)
+<pre><code class="language-bash">Average Read Rate: 1.4 GB/s (1000 samples)
 Average Write Read: 271.5 MB/s (1000 samples)
 Average Access Time: 0.11 msec (1000 samples)
 </code></pre>
@@ -182,12 +183,12 @@ Average Access Time: 0.11 msec (1000 samples)
 
 <h5 id="reconfigure-the-kernel">Reconfigure the kernel</h5>
 
-<pre><code>sudo apt install --reinstall linux-image-generic linux-image-4.15.0-42-generic
+<pre><code class="language-bash">sudo apt install --reinstall linux-image-generic linux-image-4.15.0-42-generic
 </code></pre>
 
 <h5 id="remove-old-drivers">Remove old drivers</h5>
 
-<pre><code>sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
+<pre><code class="language-bash">sudo for FILE in $(dpkg-divert --list | grep nvidia-340 | awk '{print $3}'); do dpkg-divert --remove $FILE; done
 </code></pre>
 
 <h3 id="references">references</h3>
