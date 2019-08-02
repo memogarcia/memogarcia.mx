@@ -1,0 +1,33 @@
+server {
+    listen 80;
+    server_name memogarcia.mx www.memogarcia.mx memogarcia.io www.memogarcia.io;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+
+    server_name memogarcia.mx www.memogarcia.mx memogarcia.io www.memogarcia.io;
+
+    ssl_protocols TLSv1.1 TLSv1.2;
+
+    ssl_certificate /etc/letsencrypt/live/www.memogarcia.mx/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.memogarcia.mx/privkey.pem;
+
+    root /srv/http/memogarcia.mx/public;
+
+    location / {
+        index index.html index.htm;
+    }
+
+    location ~* \.(js|jpg|png|css)$ {
+        expires 1M;
+    }
+
+    location /nginx_status {
+        stub_status on;
+        access_log   off;
+        allow 127.0.0.1;
+        deny all;
+    }
+}
