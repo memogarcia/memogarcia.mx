@@ -48,6 +48,14 @@ img {
 }
 
 table {
-    font-size: 100px;
-    color: aqua;
+    color: #212529;
+    border-collapse: collapse;
+    border: 0;
+}
+
+table th,
+table td {
+    padding: 1rem;
+    vertical-align: top;
+    font-size: 120%;
 }
