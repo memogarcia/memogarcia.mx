@@ -21,11 +21,13 @@ toc: true
 | r | ra ら ラ  | ri り リ  | ru る ル  | re れ レ | ro ろ ロ |
 | w | wa わ ワ  |           |           |          | wo を ヲ |
 | - | n ん ン |           |           |          |          |
+|  |           |           |          |          |
 | g | ga が ガ  | gi ぎ ギ  | gu ぐ グ  | ge げ ゲ | go ご ゴ |
 | z | za ざ ザ  | ji じ ジ  | zu ず ズ  | ze ぜ ゼ | zo ぞ ゾ |
 | d | da だ ダ  | ji ぢ ヂ  | zu づ ヅ  | de で デ | do ど ド |
 | b | ba ば バ  | bi び ビ  | bu ぶ ブ  | be べ ベ | bo ぼ ボ |
 | p | pa ぱ パ  | pi ぴ パ  | pu ぷ プ  | pe ぺ ペ | po ぽ ポ |
+|  |           |           |          |          |
 | k | kya きゃ キャ |   | kyu きゅ キュ |  | kyo きょ キョ |
 | s | sha しゃ シャ |   | shu しゅ シュ |  | sho しょ ショ |
 | c | cha ちゃ チャ |   | chu ちゅ チュ |  | cho ちょ チョ |
@@ -39,3 +41,7 @@ toc: true
 
 * [Telegram の ボット]("")
 * [Rikaichamp Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/rikaichamp/)
+
+## コメント (Comments)
+
+* [New comment or issue](https://github.com/memogarcia/memogarcia.mx/issues/new?labels=japanese-reference-card)
