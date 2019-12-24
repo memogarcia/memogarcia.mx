@@ -6,6 +6,10 @@
         {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}
     </div>
     <div class="blog-post-content">
+        {{ if .Params.toc }}
+            <h2>ToC</h2>
+                {{ .TableOfContents }}
+        {{ end }}
         {{ .Content }}
     </div>
 </section>

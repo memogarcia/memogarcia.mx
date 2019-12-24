@@ -3,6 +3,7 @@ title: "日本 参照カード"
 date: 2019-11-22T07:53:23+01:00
 draft: false
 tags: japanese
+toc: true
 ---
 
 ## ひらがな + カタカナ
@@ -25,3 +26,10 @@ tags: japanese
 | d | da だ ダ  | ji ぢ ヂ  | zu づ ヅ  | de で デ | do ど ド |
 | b | ba ば バ  | bi び ビ  | bu ぶ ブ  | be べ ベ | bo ぼ ボ |
 | p | pa ぱ パ  | pi ぴ パ  | pu ぷ プ  | pe ぺ ペ | po ぽ ポ |
+
+## すうじ
+
+## Extra Tools
+
+* [Telegram の ボット]("")
+* [Rikaichamp Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/rikaichamp/)
