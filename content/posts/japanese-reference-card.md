@@ -26,6 +26,12 @@ toc: true
 | d | da だ ダ  | ji ぢ ヂ  | zu づ ヅ  | de で デ | do ど ド |
 | b | ba ば バ  | bi び ビ  | bu ぶ ブ  | be べ ベ | bo ぼ ボ |
 | p | pa ぱ パ  | pi ぴ パ  | pu ぷ プ  | pe ぺ ペ | po ぽ ポ |
+| k | kya きゃ キャ |   | kyu きゅ キュ |  | kyo きょ キョ |
+| s | sha しゃ シャ |   | shu しゅ シュ |  | sho しょ ショ |
+| c | cha ちゃ チャ |   | chu ちゅ チュ |  | cho ちょ チョ |
+| n | nya にゃ ニャ |   | nyu にゅ ニュ |  | nyo にょ ニョ |
+| m | mya みゃ ミャ |   | myu みゅ ミュ |  | myo みょ ミョ |
+| r | rya りゃ リャ |   | ryu りゅ リュ |  | ryo りょ リョ |
 
 ## すうじ
 
