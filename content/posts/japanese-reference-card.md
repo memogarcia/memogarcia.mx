@@ -41,7 +41,6 @@ toc: true
 | by | bya びゃ ビャ |   | byu びゅ ビュ |  | byo びょ ビョ |
 | py | pya ぴゃ ピャ |   | pyu ぴゅ ピュ |  | pyo ぴょ ピョ |
 
-
 <br>
 
 ## すうじ
@@ -54,18 +53,22 @@ Different counting suffixes
 |-----------|-----------|-----------|-----------|-----------|
 |   じ      |    いち**じ**です      | ~ji |  ichiji desu | AM ごぜん  -  PM ごご |
 
-### Minutes
+* What time is it? | なん**じ**ですか | nan**ji** desu ka
+
+<!-- ### Minutes
 
 |    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
 |-----------|-----------|-----------|-----------|-----------|
 |   a     |    b      | c |  d | f |
-|   a     |    b      | c |  d | f |
+|   a     |    b      | c |  d | f | -->
 
 ### Year
 
-|    日本ご      |     日本ごの例      |      romaji    |   romaji example       |
+|    日本ご      |     日本ごの例   |   romaji    |   romaji example       |
 |-----------|-----------|-----------|-----------|
 |    -ねん    |    にせんろく-**ねん**     | -nen |  nisen roku-nen |
+
+* What year is it? | なん**ねん**ですか | nan**nen** desu ka
 
 ### Age
 
@@ -73,21 +76,23 @@ Different counting suffixes
 |-----------|-----------|-----------|-----------|
 |   ~さい     |   ご**さい**      | ~sai |  gosai |
 
-### Money
+* How old are you? | なん**さい**ですか | nan**sai** desu ka
+
+<!-- ### Money
 
 |    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
 |-----------|-----------|-----------|-----------|-----------|
 |        |   b      | ~en |  d | f |
 |        |   b      | ~yaku |  d | f |
-|        |   b      | ~man |  d | f |
-
+|        |   b      | ~man |  d | f | -->
+<!--
 ### Counters
 
 |    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
 |-----------|-----------|-----------|-----------|-----------|
 |        |   b      | ~mai |  d | f |
 |        |   b      | ~hon |  d | f |
-|        |   b      | ~tsu |  d | f |
+|        |   b      | ~tsu |  d | f | -->
 <!-- page 39 -->
 
 ### Some numbers
@@ -125,77 +130,87 @@ Different counting suffixes
 | 100  |   ひゃく      |    hyaku     |
 | 1000  |    せん      |    sen     |
 | 10000  |    まん    |    ichiman     |
+
 <br>
 
-## Days
+## Dates
+
+### Days of the week
 
 <!-- page 60 -->
 
-|   |          |          |
-|---|-----------|-----------|
-| Sunday  |     にちようび     |    nichi-youbi      |
-| Monday  |     げつようび     |    getsu-youbi      |
-| Tuesday  |     かようび     |   ka-youbi       |
-| Wednesday  |   かようび       |   sui-youbi       |
-| Thursday  |    もくようび      |     moku-youbi     |
-| Friday  |      きんようび    |     kin-youbi    |
-| Saturday  |    どようび      |     do-youbi     |
+|           |            |             |
+|-----------|------------|-------------|
+| Sunday    | にちようび | nichi-youbi |
+| Monday    | げつようび | getsu-youbi |
+| Tuesday   | かようび   | ka-youbi    |
+| Wednesday | かようび   | sui-youbi   |
+| Thursday  | もくようび | moku-youbi  |
+| Friday    | きんようび | kin-youbi   |
+| Saturday  | どようび   | do-youbi    |
 
-|   |          |          |
-|---|-----------|-----------|
-| Today  |          |          |
+### Days of the month
 
-|   |          |          |
-|---|-----------|-----------|
-| 1st  |          |    tsuitachi      |
-| 2nd |          |    futsuka      |
-| 3rd  |          |      mikka    |
-| 4th  |          |      yokka    |
-| 5th  |          |      itsuka    |
-| 6th  |          |     muika     |
-| 7th  |          |     nanoka     |
-| 8th  |          |     youka     |
-| 9th  |          |      kokonoka    |
-| 10th  |          |     touka     |
-| 11th  |          |     juuichi-nichi     |
-| 12th  |          |    juuni-nichi      |
-| 13th |          |    juusan-nichi      |
-| 14th  |          |   juuyokka-nichi       |
-| 15th  |          |    juugo-nichi      |
-| 16th  |          |    yuuroku-nichi      |
-| 17th  |          |    juushichi-nichi      |
-| 18th  |          |    juuhachi-nichi      |
-| 19th  |          |    juuku-nichi      |
-| 20th  |          |    hatsuka      |
-| 21th  |          |    nijuuichi-nichi      |
-| 22th  |          |    nijuuni-nichi      |
-| 23th  |          |    nijuusan-nichi      |
-| 24th  |          |    nijuuyokka      |
-| 25th  |          |    nijuugo-nichi      |
-| 26th  |          |    nijuuroku-nichi      |
-| 27th  |          |    nijuushichi-nichi      |
-| 28th  |          |    nijuuhachi-nichi      |
-| 29th  |          |     nijuuku-nichi     |
-| 30th |          |      sanjuu-nichi    |
-| 31th  |          |     sanjuuichi-nichi     |
+|      |                    |                   |          |
+|-----:|--------------------|-------------------|----------|
+| 1st  | ついたち           | tsuitachi         | 一日     |
+| 2nd  | ふつか             | futsuka           | 二日     |
+| 3rd  | よっか             | mikka             | 三日     |
+| 4th  | みっか             | yokka             | 四日     |
+| 5th  | いつか             | itsuka            | 五日     |
+| 6th  | むいか             | muika             | 六日     |
+| 7th  | なのか             | nanoka            | 七日     |
+| 8th  | ようか             | youka             | 八日     |
+| 9th  | ここのか           | kokonoka          | 九日     |
+| 10th | とおか             | tooka             | 十日     |
+| 11th | じゅういちにち     | juuichi-nichi     | 十日     |
+| 12th | じゅうににち       | juuni-nichi       | 十二日   |
+| 13th | じゅうさんにち     | juusan-nichi      | 十三日   |
+| 14th | じゅうよっか       | juuyokka-nichi    | 十四日   |
+| 15th | じゅうごにち       | juugo-nichi       | 十五日   |
+| 16th | じゅうろくにち     | yuuroku-nichi     | 十六日   |
+| 17th | じゅうしちにち     | juushichi-nichi   | 十七日   |
+| 18th | じゅうはちにち     | juuhachi-nichi    | 十八日   |
+| 19th | じゅうくにち       | juuku-nichi       | 十九日   |
+| 20th | はつか             | hatsuka           | 二十日   |
+| 21th | にじゅういちにち   | nijuuichi-nichi   | 二十一日 |
+| 22th | にじゅうににち     | nijuuni-nichi     | 二十二日 |
+| 23th | にじゅうさんにち   | nijuusan-nichi    | 二十三日 |
+| 24th | にじゅうよっか     | nijuuyokka        | 二十四日 |
+| 25th | にじゅうごにち     | nijuugo-nichi     | 二十五日 |
+| 26th | にじゅうろくにち   | nijuuroku-nichi   | 二十六日 |
+| 27th | にじゅうしちにち   | nijuushichi-nichi | 二十七日 |
+| 28th | にじゅうはちにち   | nijuuhachi-nichi  | 二十八日 |
+| 29th | にじゅうくにち     | nijuuku-nichi     | 二十九日 |
+| 30th | さんじゅうにち     | sanjuu-nichi      | 三十日   |
+| 31th | さんじゅういちにち | sanjuuichi-nichi  | 三十一日 |
 
-## Months
+### Months
 
-|   |          |          |
-|---|-----------|-----------|
-| January  |    いちがつ      |    ichi-gatsu      |
-| February  |    にがつ      |    ni-gatsu      |
-| March  |    さんがつ      |     san-gatsu     |
-| April  |    よんがつ      |     yon-gatsu     |
-| May  |      ごがつ    |     go-gatsu     |
-| June  |     ろくがつ     |    roku-gatsu      |
-| July  |      しちがつ    |     shichi-gatsu   |
-| Ausgust  |     はちがつ     |    hachi-gatsu      |
-| September  |   くがつ       |    ku-gatsu      |
-| October  |     じゅうがつ     |     juu-gatsu     |
-| November  |    じゅういちがつ      |    juuichi-gatsu      |
-| December  |    じゅうにがつ      |    juuni-gatsu      |
+|           |                |               |
+|-----------|----------------|---------------|
+| January   | いちがつ       | ichi-gatsu    |
+| February  | にがつ         | ni-gatsu      |
+| March     | さんがつ       | san-gatsu     |
+| April     | よんがつ       | yon-gatsu     |
+| May       | ごがつ         | go-gatsu      |
+| June      | ろくがつ       | roku-gatsu    |
+| July      | しちがつ       | shichi-gatsu  |
+| Ausgust   | はちがつ       | hachi-gatsu   |
+| September | くがつ         | ku-gatsu      |
+| October   | じゅうがつ     | juu-gatsu     |
+| November  | じゅういちがつ | juuichi-gatsu |
+| December  | じゅうにがつ   | juuni-gatsu   |
 
+<!-- ### Time words
+
+|  Day |     Week     |     Month     |    year   |
+|---|-----------|-----------|-----------|
+| Two days ago  |    two weeks ago      |     two months ago     |   two years ago |
+| Yesterday  |      last week    |     last month     |   last year   |
+| Today  |     this week     |    this month      |    this year    |
+| Tomorrow  |    next week      |     next month     |   next year    |
+| Day after tomorrow  |      in two weeks    |    in two months      |  in two years     | -->
 
 ## Extra Tools
 
@@ -215,3 +230,4 @@ Different counting suffixes
 * <https://en.wikipedia.org/wiki/Hiragana>
 * <https://en.wikipedia.org/wiki/Katakana>
 * <https://www.kanpai-japan.com/learn-japanese/how-write-date-japanese>
+* <https://www.sljfaq.org/afaq/month-days.html>
