@@ -21,8 +21,8 @@ server {
     server_name memogarcia.mx www.memogarcia.mx;
 
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
-    ssl_certificate /etc/letsencrypt/live/www.memogarcia.mx/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/www.memogarcia.mx/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/memogarcia.mx/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/memogarcia.mx/privkey.pem; # managed by Certbot
 
     root /srv/http/memogarcia.mx/public;
     location / {
