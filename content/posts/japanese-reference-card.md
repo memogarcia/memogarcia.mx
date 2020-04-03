@@ -3,7 +3,7 @@ title: "日本 参照カード"
 date: 2019-11-22T07:53:23+01:00
 draft: false
 tags: japanese
-toc: true
+toc: false
 ---
 
 ## ひらがな + カタカナ
@@ -43,56 +43,6 @@ toc: true
 
 <br>
 
-## すうじ
-
-Different counting suffixes
-
-### Hours
-
-|    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
-|-----------|-----------|-----------|-----------|-----------|
-|   じ      |    いち**じ**です      | ~ji |  ichiji desu | AM ごぜん  -  PM ごご |
-
-* What time is it? | なん**じ**ですか | nan**ji** desu ka
-
-<!-- ### Minutes
-
-|    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
-|-----------|-----------|-----------|-----------|-----------|
-|   a     |    b      | c |  d | f |
-|   a     |    b      | c |  d | f | -->
-
-### Year
-
-|    日本ご      |     日本ごの例   |   romaji    |   romaji example       |
-|-----------|-----------|-----------|-----------|
-|    -ねん    |    にせんろく-**ねん**     | -nen |  nisen roku-nen |
-
-* What year is it? | なん**ねん**ですか | nan**nen** desu ka
-
-### Age
-
-|    日本ご      |     日本ごの例      |      romaji    |   romaji example       |
-|-----------|-----------|-----------|-----------|
-|   ~さい     |   ご**さい**      | ~sai |  gosai |
-
-* How old are you? | なん**さい**ですか | nan**sai** desu ka
-
-<!-- ### Money
-
-|    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
-|-----------|-----------|-----------|-----------|-----------|
-|        |   b      | ~en |  d | f |
-|        |   b      | ~yaku |  d | f |
-|        |   b      | ~man |  d | f | -->
-<!--
-### Counters
-
-|    日本ご      |     日本ごの例      |      romaji    |   romaji example       |      extra      |
-|-----------|-----------|-----------|-----------|-----------|
-|        |   b      | ~mai |  d | f |
-|        |   b      | ~hon |  d | f |
-|        |   b      | ~tsu |  d | f | -->
 <!-- page 39 -->
 
 ### Some numbers
@@ -202,25 +152,9 @@ Different counting suffixes
 | November  | じゅういちがつ | juuichi-gatsu |
 | December  | じゅうにがつ   | juuni-gatsu   |
 
-<!-- ### Time words
-
-|  Day |     Week     |     Month     |    year   |
-|---|-----------|-----------|-----------|
-| Two days ago  |    two weeks ago      |     two months ago     |   two years ago |
-| Yesterday  |      last week    |     last month     |   last year   |
-| Today  |     this week     |    this month      |    this year    |
-| Tomorrow  |    next week      |     next month     |   next year    |
-| Day after tomorrow  |      in two weeks    |    in two months      |  in two years     | -->
-
 ## Extra Tools
 
 * [Rikaichamp Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/rikaichamp/)
-
-<br>
-
-## コメント (Comments)
-
-* [New comment or issue](https://github.com/memogarcia/memogarcia.mx/issues/new?labels=japanese-reference-card)
 
 <br>
 

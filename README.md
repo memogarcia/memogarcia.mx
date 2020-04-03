@@ -10,6 +10,13 @@ Run a local server
 
     hugo server
 
+
+## Deployment
+
+### nginx
+
+### letsencrypt
+
 ## References
 
 * [nginx static files](https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/)
